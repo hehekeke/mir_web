@@ -1,0 +1,8 @@
+.canlendar .col-xs-2 span{line-height: 69px;font-size: 20px;cursor: pointer;}
+/*.canlendar{overflow: hidden;height:69px;}*/
+.canlendar-day{position: relative;top:0px;}
+.canlendar h1{margin: 0;padding: 0;}
+.canlendar h1 small{line-height: 69px;}
+#dustbin { position:fixed;bottom: 40px;left:180px;}
+#dustbin span{font-size:60px;}
+.course input.form-control{width:100%;min-width: 100px;padding-right:0px;padding-left:0px;}

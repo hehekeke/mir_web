@@ -1,0 +1,7 @@
+td.course{height: 40px;}
+.scheduling-top100 th{width: 128px}
+div.course-select{cursor: move;}
+.coursesList div.course-select{max-height:40px;overflow: hidden;}
+.coursesList div.course-select:hover{height: auto;}
+.coursesList .col-xs-2{overflow-y: scroll;max-height: 400px;}
+#selectCourse{position: fixed;top:80px;right: 0px;background: #fff;max-height: 500px;overflow: scroll;}
