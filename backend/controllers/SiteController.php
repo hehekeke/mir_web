@@ -2,18 +2,18 @@
 namespace backend\controllers;
 
 use Yii;
-use frontend\models\SignupForm;
-use yii\filters\AccessControl;
 use yii\web\Controller;
-use common\models\LoginForm;
-// use dektrium\user\models\User;
-use common\models\User;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+
+use common\models\User;
+use common\models\LoginForm;
+use backend\controllers\CommonController;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends CommonController
 {
     /**
      * @inheritdoc
@@ -57,25 +57,19 @@ class SiteController extends Controller
     }
 
     public function actionIndex()
-    {
-        $this->layout  = 'main_back';        
+    {       
         return $this->render('index');
     }
 
     public function actionLogin()
     {
-        // $model = new SignupForm();
-        // $model->username = 'msup';
-        // $model->email = '751239183@qq.com';
-        // $model->password = '112233';
-        // $model->signup();
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            $this->actionIndex();
+            return $this->redirect(['site/index']);
         } else {
             return $this->render('login', [
                 'model' => $model,

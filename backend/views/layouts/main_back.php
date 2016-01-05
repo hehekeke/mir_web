@@ -86,21 +86,12 @@ beginPage() ?>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-user"></span>
-                                教练管理
+                                会员管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/lecturer/my">我维护的教练</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/lecturer/index">教练列表</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/lecturer/member-lecturer">会员教练列表</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/lecturer/create">添加教练</a>
+                                    <a href="/admin.php/user/index">会员列表</a>
                                 </li>
                             </ul>
                         </li>
