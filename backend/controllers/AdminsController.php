@@ -119,6 +119,11 @@ class AdminsController extends CommonController
 
         return $this->redirect(['index']);
     }
+    /**
+     * 修改当前账户密码
+     * @author wonguohui
+     * @Date   2016-01-06T23:23:46+0800
+     */
     public function actionPassword()
     {
         $model = new Admins();
