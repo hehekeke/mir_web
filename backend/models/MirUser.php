@@ -61,4 +61,18 @@ class MirUser extends \backend\models\MirBase
             'user_com' => '单位',
         ];
     }
+    /**
+     * 审核
+     * @author wonguohui
+     * @Date   2016-01-06T21:02:29+0800
+     * @param  $id 主键id 
+     */
+    public function chageStatus($id)
+    {
+        $statusArray = ['0'=>1,'1'=>0];
+        $data = $this->find()->where(['user_id'=>$id])->select(['user_chk'])->asArray()->one();
+        $curStatus = $data['user_chk'];
+        return $this->updateAll(['user_chk'=>$statusArray[$curStatus]],['user_id'=>$id]);
+    }
+
 }

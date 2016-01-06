@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\MirUser;
-use backend\models\MirUserSearch;
+use backend\models\Admins;
+use yii\data\ActiveDataProvider;
 use backend\controllers\CommonController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UserController implements the CRUD actions for MirUser model.
+ * AdminsController implements the CRUD actions for Admins model.
  */
-class UserController extends CommonController
+class AdminsController extends CommonController
 {
     public function behaviors()
     {
@@ -27,36 +27,35 @@ class UserController extends CommonController
     }
 
     /**
-     * Lists all MirUser models.
+     * Lists all Admins models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new MirUserSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = new ActiveDataProvider([
+            'query' => Admins::find(),
+        ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
     /**
-     * 审核
+     * 修改超级管理员
      * @author wonguohui
-     * @Date   2016-01-06T20:54:25+0800
+     * @Date   2016-01-06T22:21:34+0800
      */
     public function actionStatus()
     {
         $id = Yii::$app->request->get('id');
-        $model = new \backend\models\MirUser;
+        $model = new \backend\models\Admins;
         $res = $model->chageStatus($id);
         if($res){
-            return $this->redirect(['user/index']);
+            return $this->redirect(['admins/index']);
         }
     }
-
     /**
-     * Displays a single MirUser model.
+     * Displays a single Admins model.
      * @param integer $id
      * @return mixed
      */
@@ -68,17 +67,21 @@ class UserController extends CommonController
     }
 
     /**
-     * Creates a new MirUser model.
+     * Creates a new Admins model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new MirUser();
+        $model = new Admins();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->user_id]);
-        } else {
+        if($model->load(Yii::$app->request->post())){
+
+            $res = $model->saveAdmin(Yii::$app->request->post());
+            if($res){
+                return $this->redirect(['view', 'id' => $model->Admin_id]);
+            }
+        }else{
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -86,7 +89,7 @@ class UserController extends CommonController
     }
 
     /**
-     * Updates an existing MirUser model.
+     * Updates an existing Admins model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +99,7 @@ class UserController extends CommonController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->user_id]);
+            return $this->redirect(['view', 'id' => $model->Admin_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -105,7 +108,7 @@ class UserController extends CommonController
     }
 
     /**
-     * Deletes an existing MirUser model.
+     * Deletes an existing Admins model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -116,17 +119,36 @@ class UserController extends CommonController
 
         return $this->redirect(['index']);
     }
+    public function actionPassword()
+    {
+        $model = new Admins();
+        if(Yii::$app->request->isPost){
+            $data = Yii::$app->request->post();
 
+            if($model->validatePassword($data['Admins']['Admin_opass'],Yii::$app->user->identity->id)){
+                $map = ['Admin_id'=>Yii::$app->user->identity->id];
+                $res = $model->updateByMap(['Admin_pass'=>$data['Admins']['Admin_pass']],$map);
+                if($res) return $this->redirect(['admins/index']);
+            }else{
+                Yii::$app->getSession()->setFlash('user.error', '原始密码错误');
+                $this->refresh();
+                return;
+            }
+        }
+        return $this->render('password',[
+            'model'=>$model
+        ]);
+    }
     /**
-     * Finds the MirUser model based on its primary key value.
+     * Finds the Admins model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return MirUser the loaded model
+     * @return Admins the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = MirUser::findOne($id)) !== null) {
+        if (($model = Admins::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

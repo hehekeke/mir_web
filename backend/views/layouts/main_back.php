@@ -98,21 +98,18 @@ beginPage() ?>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-tasks"></span>
-                                课程管理
+                                管理员管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/course/index">课程列表</a>
+                                    <a href="/admin.php/admins/create">管理员添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/course/my">我上传的课程</a>
+                                    <a href="/admin.php/admins/index">管理员管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/course/create">添加课程</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/course-usedtime/index">课程时长管理</a>
+                                    <a href="/admin.php/admins/password">修改密码</a>
                                 </li>
                             </ul>
                         </li>
