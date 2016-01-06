@@ -98,22 +98,14 @@ beginPage() ?>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-tasks"></span>
-                                课程管理
+                                展会信息管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/course/index">课程列表</a>
+                                    <a href="/admin.php/mir-meeting/index">展会信息列表</a>
                                 </li>
-                                <li>
-                                    <a href="/admin.php/course/my">我上传的课程</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/course/create">添加课程</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/course-usedtime/index">课程时长管理</a>
-                                </li>
+                                
                             </ul>
                         </li>
                         <li class="nav-item">
