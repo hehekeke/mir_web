@@ -237,7 +237,7 @@ beginPage() ?>
                 </a>
             </li>
             <li>
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=job/index" class='text-center'>
                     行业招聘
                     <span class='pull-right'>
                         <div class="kongbai "></div>

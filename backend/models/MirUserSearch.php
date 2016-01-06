@@ -68,8 +68,8 @@ class MirUserSearch extends MirUser
             ->andFilterWhere(['like', 'user_email', $this->user_email])
             ->andFilterWhere(['like', 'user_place', $this->user_place])
             ->andFilterWhere(['like', 'user_xm', $this->user_xm])
-            ->andFilterWhere(['like', 'user_com', $this->user_com]);
-
+            ->andFilterWhere(['like', 'user_com', $this->user_com])
+            ->orderBy("user_date desc");
         return $dataProvider;
     }
 }

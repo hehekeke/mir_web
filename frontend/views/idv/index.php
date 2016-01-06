@@ -156,25 +156,25 @@
 
 	<div class="col-sm-1 col-md-3 er">
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/idv_1.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_05.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_07.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_12.png" ></div>
 
 	</div>
 
 	<div class="col-sm-1 col-md-3 er">
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_14.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_18.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/首页-01_19.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img src="/public/frontend/img/idv_2.png" ></div>
 	</div>
 	<div class="col-sm-1 col-md-3">
 		<div class="col-sm-1 col-md-3 first">

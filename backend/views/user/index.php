@@ -11,7 +11,7 @@ $this->title = Yii::t('app', '会员列表');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mir-user-index">
-
+    <p><?= Html::a(Yii::t('app', '添加出品人'), ['create'], ['class' => 'btn btn-success floatBtn']) ?></p>
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <?= GridView::widget([
@@ -25,7 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'user_name',
             'user_com',
             'user_tel',
-            'user_email',
+            [
+                'attribute'=>'user_email',
+                'headerOptions' => ['width' => '60'],
+            ],
             [
                 'attribute'=>'user_date',
                 'value'=>function($data){
