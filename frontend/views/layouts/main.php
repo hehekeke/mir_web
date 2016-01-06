@@ -197,7 +197,7 @@ beginPage() ?>
                 </a>
             </li>
             <li >
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=new/index" class='text-center'>
                     新闻中心
                     <span class='pull-right'>
                         <div class="kongbai "></div>
@@ -229,7 +229,7 @@ beginPage() ?>
                 </a>
             </li>
             <li>
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=video/index" class='text-center'>
                     视屏中心
                     <span class='pull-right'>
                         <div class="kongbai "></div>
@@ -237,7 +237,7 @@ beginPage() ?>
                 </a>
             </li>
             <li>
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=job/index" class='text-center'>
                     行业招聘
                     <span class='pull-right'>
                         <div class="kongbai "></div>

@@ -1,6 +1,5 @@
 <?php
 namespace frontend\controllers;
-
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -16,7 +15,7 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class IdvController extends Controller
+class NewController extends Controller
 {
     
 
@@ -31,8 +30,3 @@ class IdvController extends Controller
     }
 
 }
-
-    
-
-    
-

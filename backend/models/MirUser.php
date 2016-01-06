@@ -50,14 +50,14 @@ class MirUser extends \backend\models\MirBase
         return [
             'user_id' => '编号',
             'user_name' => '姓名',
-            'user_pwd' => 'User Pwd',
+            'user_pwd' => '用户密码',
             'user_class' => 'User Class',
             'user_tel' => '联系电话',
             'user_email' => '电子邮件',
             'user_chk' => '是否审核',
             'user_date' => '注册日期',
             'user_place' => '所在地',
-            'user_xm' => 'User Xm',
+            'user_xm' => '用户真实姓名',
             'user_com' => '单位',
         ];
     }

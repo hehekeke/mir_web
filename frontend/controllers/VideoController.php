@@ -16,7 +16,7 @@ use yii\filters\AccessControl;
 /**
  * Site controller
  */
-class IdvController extends Controller
+class VideoController extends Controller
 {
     
 
