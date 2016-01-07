@@ -35,9 +35,69 @@
 	.first-p{
 		margin-top: 100px;
 	}
+     @media screen and (max-width:1000px) {
+        .top{
+            width: 100%;
+            height: 43px;
+            background-color: #3c80a2;
+        }
+        .top p{
+            padding-top: 8px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+        #triangle-left { 
+            width: 0; 
+            height: 0; 
+            border-top: 15px solid transparent; 
+            border-right:15px solid #076595; 
+            border-bottom :15px solid transparent; 
+            float: left;
+        } 
+        #left{
+            width: 34px;
+            height: 30px;
+            background: #076595;
+            margin-left: 15px;
+        }
+        .top span{
+            display: inline-block;
+            color: white;
+        }
+        .title h6{
+            color: grey;
+        }
+        .shangxia{
+            /*margin-left: 2%;*/
+            padding-left: 8%;
+        }
+     }
 </style>
+
+<div class="top _m">
+    <div class="pull-left" style="margin-top:8px;margin-left:28px;">
+        <div id="triangle-left"></div>
+        <div id='left'>
+            <span style="margin-top:5px;">返回</span>
+        </div>
+    </div>
+    <p class="pull-left" style="width:70%;">新闻中心</p>
+</div>
+    <div class='title _m'>
+        <h3 class="text-center">新闻中心新闻中心新闻中心</h3>
+        <h6 class="text-center">发布日期是：2323121</h6>
+        <div style="padding:0 6%;">
+            萨福克斯开发和打算考第三方还打算考几分还是打款发货的萨克 第三方好的撒付款哈舒服空间的
+        </div>
+    </div>
+    <div class='shangxia _m'>
+       <p class='first-p'><span>上一篇</span>：1231232132</p>
+        <p><span>下一遍</span>：1231232132</p> 
+    </div>
+        
 <!-- 中间的内容 -->
-    <div class="content">
+    <div class="content _pc">
         <div class="pull-left content-left">
             <ul class="nav nav-tabs " role="tablist" id="myTab">
                 <li class="active">
@@ -88,7 +148,4 @@
 
         </div>
         <div class="clearfix"></div>
-    </div>
-    <div class='dibu'>
-    	
     </div>

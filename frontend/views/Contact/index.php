@@ -13,8 +13,7 @@
 }
 .wenzi{
 	margin-top: 40px;
-	margin-left: 70px;
-	
+	margin-left: 9%;
 }
 h3{
 	color: blue;
@@ -24,6 +23,7 @@ h3{
 	border-bottom: 1px solid black;
 	margin-bottom: 20px;
 }
+ @media screen and (max-width:1000px) {}
 </style>
 <ol class="breadcrumb">
 	<li>
@@ -54,12 +54,27 @@ h3{
 		<p class="text-center">免责声明</p>
 	</li>
 </ul>
-<div class="pull-left wenzi">
+<div class="pull-left wenzi _pc">
 	<h3>联系我们</h3>
 	<address>
 		<p>尊敬的用户您好：</p>
 
-		<p>欢迎浏览MIR医学仪器与试剂网！您有任何关于网站信息或网络问题，欢迎垂询！</p>
+		<p class="text-justify">欢迎浏览MIR医学仪器与试剂网！您有任何关于网站信息或网络问题，欢迎垂询！</p>
+		<p>热线电话：022-23593650/51转客服部</p>
+		<p>传真号码：022-23593656</p>
+		<p>
+			电子邮箱：mir@mir168.com 	&nbsp;	&nbsp;	&nbsp;mir-c.s.d@mir168.com
+		</p>
+
+	</address>
+</div>
+<div class="pull-left wenzi _m">
+	<h3>联系我们</h3>
+	<address>
+		<p>尊敬的用户您好：</p>
+
+		<p class="text-justify">欢迎浏览MIR医学仪器与试剂网！<br/>
+		您有任何关于网站信息或网络问题，欢迎垂询！</p>
 		<p>热线电话：022-23593650/51转客服部</p>
 		<p>传真号码：022-23593656</p>
 		<p>
@@ -69,4 +84,3 @@ h3{
 	</address>
 </div>
 <div class="clearfix"></div>
-<div class="bottom"></div>

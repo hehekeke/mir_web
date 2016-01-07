@@ -117,135 +117,153 @@ beginPage() ?>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-dashboard"></span>
-                                排课管理
+                                信息管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/scheduling/index">排课列表</a>
+                                    <a href="/admin.php/scheduling/index">信息添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/scheduling/my">我上传的排课</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/scheduling/create">添加排课</a>
+                                    <a href="/admin.php/scheduling/my">信息修改</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-comment"></span>
-                                话题管理
+                                IVD访谈管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/topic/create">添加话题</a>
+                                    <a href="/admin.php/topic/create">IVD访谈添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/topic/index">话题管理</a>
+                                    <a href="/admin.php/topic/index">IVD访谈修改</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-dashboard"></span>
-                                报名预约管理
+                                产品管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/appoint/course-signup">课程报名管理</a>
+                                    <a href="/admin.php/mir-product/create">产品添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/appoint/appoint-course">课程预约管理</a>
+                                    <a href="/admin.php/mir-product/index">产品管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/appoint/contact-lecturer">联系教练申请</a>
+                                    <a href="/admin.php/appoint/contact-lecturer">产品回收站</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/appoint/lecturer">教练入驻申请</a>
+                                    <a href="/admin.php/appoint/lecturer">产品分类管理</a>
+                                </li>
+                                <li>
+                                    <a href="/admin.php/appoint/lecturer">产品品牌管理</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-dashboard"></span>
-                                会员管理
+                                经销商管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/user-member/index">会员管理</a>
+                                    <a href="/admin.php/mir-maker/create">厂商添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/producer/index">出品人管理</a>
+                                    <a href="/admin.php/mir-maker/index">厂商管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/tickling-question-answer/diff">反馈人员合并</a>
+                                    <a href="/admin.php/tickling-question-answer/diff">厂商回收站</a>
+                                </li>
+                                 <li>
+                                    <a href="/admin.php/tickling-question-answer/diff">厂商留言管理</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-dashboard"></span>
-                                TOP100功能管理
+                                留言管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/case-submit/index">提交案例管理</a>
+                                    <a href="/admin.php/case-submit/index">互动话题添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/case-list/index">案例榜单管理</a>
+                                    <a href="/admin.php/case-list/index">互动话题查看</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/luck-draw/index">现场抽奖</a>
+                                    <a href="/admin.php/luck-draw/index">互动回复管理</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-lock"></span>
-                                系统用户管理
+                                友情链接管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/auth-item/index">角色管理</a>
+                                    <a href="/admin.php/friend-link/create">友情链接添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/auth-item/item">权限管理</a>
-                                </li>
-                                <li>
-                                    <a href="/admin.php/user/admin">用户管理</a>
+                                    <a href="/admin.php/friend-link/index">友情链接管理</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-tags"></span>
-                                标签管理
+                                视屏管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/category/index">标签栏目管理</a>
+                                    <a href="/admin.php/category/index">视屏添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/tags/index">标签管理</a>
+                                    <a href="/admin.php/tags/index">视屏列表</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-eye-open"></span>
-                                审核管理
+                                展会信息管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/review/index">审核列表</a>
+                                    <a href="/admin.php/review/index">展会信息添加</a>
+                                </li>
+                                <li>
+                                    <a href="/admin.php/review/index">展会信息列表</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-dashboard"></span>
+                                在线杂志管理
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin.php/user-member/index">期刊页面添加</a>
+                                </li>
+                                <li>
+                                    <a href="/admin.php/producer/index">期刊页面列表</a>
                                 </li>
                             </ul>
                         </li>

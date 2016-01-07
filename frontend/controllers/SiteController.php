@@ -13,6 +13,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
+use backend\models\FriendLink;
+
 /**
  * Site controller
  */
@@ -67,8 +69,17 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        
-        return $this->render('index');
+        p();
+        $friendLink = new FriendLink();
+        $friendLinks = $friendLink->getFriendLinks();
+        $num = ceil(count($friendLinks)/8);
+        for ($i=0; $i < count($friendLinks); $i++) { 
+            $newFriendLinks[floor($i/8)][] = $friendLinks[$i];
+        }
+        // p($newFriendLinks[0][1]);
+        return $this->render('index',[
+                'newFriendLinks'=>$newFriendLinks
+            ]);
     }
 
     public function actionLogin()

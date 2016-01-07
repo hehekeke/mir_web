@@ -9,11 +9,7 @@
 	display: inline-block;
 	margin-right: 20px;
 }
-.end{
-	width: 100%;
-	margin-top: 40px;
-	border-bottom: 1px solid black;
-}
+
 </style>
 <div>
 	<ul class="nav nav-tabs " role="tablist" id="myTab">
@@ -79,4 +75,3 @@
 	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
 	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
 </div>
-<div class="end"></div>
