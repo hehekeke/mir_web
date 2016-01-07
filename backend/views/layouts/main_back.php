@@ -122,10 +122,10 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/scheduling/index">信息添加</a>
+                                    <a href="/admin.php/article/create">信息添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/scheduling/my">信息修改</a>
+                                    <a href="/admin.php/article/index">信息修改</a>
                                 </li>
                             </ul>
                         </li>
