@@ -50,9 +50,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                     'buttons'=>[
                                         'status' => function ($url, $model, $key) {
                                             if($model->user_chk == '0'){
-                                                return Html::a('<span class="glyphicon glyphicon-ok-circle"></span>', $url,['title' => '审核','class'=>'btn btn-success btn-xs']);
+                                                return Html::a('<span class="glyphicon glyphicon-ok-circle"></span>', $url,['title' => '审核','class'=>'btn btn-xs']);
                                             }else{
-                                                return Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', $url,['class'=>'btn btn-warning btn-xs','title'=>'取消审核']);
+                                                return Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', $url,['class'=>'btn btn-xs','title'=>'取消审核']);
                                             }
                                          },
                                     ],
