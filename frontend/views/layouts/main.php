@@ -17,6 +17,8 @@ beginPage() ?>
 <html lang="<?= Yii::$app->
     language ?>">
 <head>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta charset="<?= Yii::$app->
     charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -275,10 +277,10 @@ beginPage() ?>
                 </a>
             </li>
             <li>
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=meeting/index" class='text-center'>
                     会议信息
                     <span class='pull-right'>
-                        <div class="kongbai "></div>
+                        <div class="kongbai"></div>
                     </span>
                 </a>
             </li>
@@ -352,9 +354,32 @@ beginPage() ?>
 
     <?php $this->endBody() ?></body>
     <script>
-        // $(function () {
-        //     $('#myTab a[href="#profile"]').tab('show');
-        // });
+        $(function () {
+            $('#myTab a').click(function (e) { 
+              e.preventDefault();//阻止a链接的跳转行为 
+              // $(this).tab('show');//显示当前选中的链接及关联的content 
+            });
+             $('.nav-pills a').click(function (e) { 
+              e.preventDefault();//阻止a链接的跳转行为 
+              // $(this).tab('show');//显示当前选中的链接及关联的content 
+            });
+            // $('.nav-tabs a[data-toggle="tab"]').click(function(e){
+            //      $(this).tab('show')
+            //     var activeTab = $(e.target).text();
+            //     console.log(e.target);
+            //     console.log(e.relatedTarget);
+            //     $(e.relatedTarget); 
+            //     // var previousTab = $(e.relatedTarget).text(); 
+            //     alert(activeTab);
+            //     // $(".active-tab span").html(activeTab);
+            //     // $(".previous-tab span").html(previousTab);
+            // });
+            // $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            //   // e.target // 激活的标签页
+            //   alert(111);
+            //   // e.relatedTarget // 前一个激活的标签页
+            // });
+        });
 </script>
 </html>
 <?php $this->

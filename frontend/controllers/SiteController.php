@@ -15,6 +15,8 @@ use yii\filters\AccessControl;
 
 use backend\models\FriendLink;
 
+use backend\models\MirMeeting;
+
 /**
  * Site controller
  */
@@ -69,7 +71,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        p();
+        //友情链接
         $friendLink = new FriendLink();
         $friendLinks = $friendLink->getFriendLinks();
         $num = ceil(count($friendLinks)/8);
@@ -77,8 +79,15 @@ class SiteController extends Controller
             $newFriendLinks[floor($i/8)][] = $friendLinks[$i];
         }
         // p($newFriendLinks[0][1]);
+        //学术会议和展览展会
+        $meetingModel = new MirMeeting();
+        $xueshuMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'1'])->orderBy('meeting_id desc')->limit(5)->all();
+        $zhanhuiMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'2'])->orderBy('meeting_id desc')->limit(5)->all();
+        $meetingModel = new MirMeeting();
         return $this->render('index',[
-                'newFriendLinks'=>$newFriendLinks
+                'newFriendLinks'=>$newFriendLinks,
+                'zhanhuiMeetings'=>$zhanhuiMeetings,
+                'xueshuMeetings'=>$xueshuMeetings,
             ]);
     }
 

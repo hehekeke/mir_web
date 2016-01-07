@@ -87,7 +87,7 @@ h5{
     <p class="pull-left" style="width:70%;">行业招聘</p>
 </div>
 <div class="clearfix"></div>
-<div>
+<div class="_m">
 	<div class="one">
 		<p>诚招：php</p>
 		<p>[北京]Msup</p>

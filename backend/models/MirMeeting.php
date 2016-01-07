@@ -51,13 +51,13 @@ class MirMeeting extends \yii\db\ActiveRecord
     {
         return [
             'meeting_id' => '会议序号',
-            'meeting_class' => '会议类别',
+            'meeting_class' => '会议类别',//1是学术会议  2是展会信息
             'meeting_loc' => '会议召开地点',
             'meeting_loc_e' => '会议召开地点英文',
             'meeting_name' => '会议标题',
             'meeting_name_e' => '标题英文',
             'meeting_bdate' => '会议召开时间',
-            'meeting_edate' => '会议介绍时间',
+            'meeting_edate' => '会议结束时间',
             'meeting_pic' => '会议图片',
             'meeting_mem' => '会议详情',
             'meeting_mem_e' => '会议详情英文',

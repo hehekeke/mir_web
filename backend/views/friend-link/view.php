@@ -28,13 +28,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'Link_id',
+            // 'Link_id',
             'Link_url:url',
             'Link_name',
             'Link_imgurl:url',
             'Link_info:ntext',
-            'Link_state',
-            'Link_addtime',
+            
+            // 'Link_state',
+            // 'Link_addtime',
         ],
     ]) ?>
 

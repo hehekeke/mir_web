@@ -1,3 +1,8 @@
+<style type="text/css">
+    a{
+        color: black;
+    }
+</style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
     <img src="/public/frontend/img/indexTop.png" class="img-responsive"></div>
@@ -139,24 +144,33 @@
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">展会展览</a>
+                <a href="#zhanhuiMeetings" role="tab" data-toggle="tab">展会展览</a>
             </li>
             <li >
-                <a href="#home" role="tab" data-toggle="tab">学术会议</a>
+                <a href="#xueshuMeetings" role="tab" data-toggle="tab">学术会议</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active " id="zhanhuizhanlan">
+            <div class="tab-pane active " id="zhanhuiMeetings">
                 <div class='pull-left'>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
+                    <?php for($i=0;$i<count($zhanhuiMeetings);$i++){ ?>
+                        <a href="">
+                            <h4>&bull;<?php echo $zhanhuiMeetings[$i]->meeting_name;?></h4>
+                        </a>
+                     <?php }?>
                 </div>
                 <div class="clearfix"></div>
             </div>
-
+            <div class="tab-pane  " id="xueshuMeetings">
+                <div class='pull-left'>
+                    <?php for($i=0;$i<count($xueshuMeetings);$i++){ ?>
+                        <a href="">
+                            <h4>&bull;<?php echo $xueshuMeetings[$i]->meeting_name;?></h4>
+                        </a>
+                     <?php }?>
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
     <div class="pull-left content-right three">

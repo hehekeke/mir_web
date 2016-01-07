@@ -245,10 +245,10 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/review/index">展会信息添加</a>
+                                    <a href="/admin.php/mir-meeting/create">展会信息添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/review/index">展会信息列表</a>
+                                    <a href="/admin.php/mir-meeting/index">展会信息列表</a>
                                 </li>
                             </ul>
                         </li>
@@ -260,10 +260,10 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/user-member/index">期刊页面添加</a>
+                                    <a href="/admin.php/mir-mgz/create">期刊页面添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/producer/index">期刊页面列表</a>
+                                    <a href="/admin.php/mir-mgz/index">期刊页面列表</a>
                                 </li>
                             </ul>
                         </li>

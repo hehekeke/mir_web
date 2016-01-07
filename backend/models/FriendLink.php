@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use backend\models\UploadForm;
 
 /**
  * This is the model class for table "FriendLink".
@@ -15,7 +16,7 @@ use Yii;
  * @property integer $Link_state
  * @property string $Link_addtime
  */
-class FriendLink extends \yii\db\ActiveRecord
+class FriendLink extends UploadForm 
 {
     /**
      * @inheritdoc
@@ -34,8 +35,8 @@ class FriendLink extends \yii\db\ActiveRecord
             [['Link_info'], 'string'],
             [['Link_state'], 'integer'],
             [['Link_addtime'], 'safe'],
-            [['Link_url', 'Link_name', 'Link_imgurl'], 'string', 'max' =>
-255]
+            [['Link_imgurl'],'file'],
+            [['Link_url', 'Link_name'], 'string', 'max' =>255]
         ];
     }
 
@@ -62,13 +63,23 @@ class FriendLink extends \yii\db\ActiveRecord
 
     public function beforeSave($insert){
         if (parent::beforeSave($insert)) {
-            $this->Link_addtime=date("Y-m-d H:i:s",time());
+            if(empty($this->Link_addtime)){
+                $this->Link_addtime=date("Y-m-d H:i:s",time());
+            }
+            if(empty($this->Link_state)){
+                $this->Link_state=1;
+            }
         }
         return true;
     }
      public function beforeUpdate($insert){
         if (parent::beforeUpdate($insert)) {
-            $this->Link_addtime=date("Y-m-d H:i:s",time());
+            if(empty($this->Link_addtime)){
+                $this->Link_addtime=date("Y-m-d H:i:s",time());
+            }
+            if(empty($this->Link_state)){
+                $this->Link_state=1;
+            }
         }
         return true;
     }
