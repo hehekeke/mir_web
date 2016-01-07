@@ -27,13 +27,32 @@ beginPage() ?>
     body{
         margin: 17px 10% 0 10%;
     }
+     ._m{
+            display: none;
+        }
+    ._pc{
+            display: block;
+        }
     .header form{
-        margin-right: 30%;
+        margin-right: 11%;
+        margin-top: 28px;
     }
     /*登陆 注册按钮*/
     .header .loign{
-        padding:6px 0px;
+        font-size: 24px;
+        padding: 6px 0;
     }
+    .logo img{
+        width: 257px;
+        height: 63px;
+        margin-bottom:20px;
+    }
+    .logo .btn-primary{
+        margin-top: 20px;
+    }
+    .logo .pull-right{
+        margin-top: 20px;
+    } 
     /*导航栏*/
     .navbar li,.navbar .active{
         width: 125px;
@@ -164,17 +183,53 @@ beginPage() ?>
         border-bottom: 1px solid black;
         margin-bottom: 20px;
     }
+    .end{
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid black;
+    }
+    @media screen and (max-width:1000px) {
+        ._pc{
+            display: none;
+        }
+        ._m{
+            display: block;
+        }
+        .header{
+            margin: 0;
+            padding: 0;
+        }
+        .logo img{
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        .daohang{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #e5e5e5;
+        }
+        .daohang a{
+            width: 32%;
+            text-align: center;
+            margin-bottom: 4px;
+            font-size: 24px;
+        } 
+        .daohang .line{
+            border-right: 1px solid grey;
+        }  
+    }
     </style>
 </head>
 <body class="header">
     <!-- 这个是公用的header.html -->
-    <div>
-        <img src='https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3233073314,694013259&fm=58&s=39C718720E8EBE011B398BAC0300F024'>
-        <span class="pull-right btn btn-primary">English</span>
+    <div class='logo _pc'>
+        <img src='/public/frontend/img/logo_03.png'>
+        <span class="pull-right btn btn-primary" style='margin-top:28px;'>English</span>
 
-        <span class="pull-right btn btn-primary">中文</span>
+        <span class="pull-right btn btn-primary" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
 
-        <span class="pull-right btn loign">注册</span>
+        <span class="pull-right btn loign" style='margin-right:55px;'>注册</span>
         <span class="pull-right btn loign">登陆 |</span>
         <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -182,11 +237,10 @@ beginPage() ?>
                 <button type="submit" class="btn btn-default">搜索</button>
             </div>
         </form>
-
     </div>
-
+   
     <!-- 导航栏 -->
-    <nav class="navbar " role="navigation">
+    <nav class="navbar _pc" role="navigation">
         <ul class="nav navbar-nav">
             <li class="active">
                 <a href="/frontend/web" class='text-center'>
@@ -213,7 +267,7 @@ beginPage() ?>
                 </a>
             </li>
             <li>
-                <a href="##" class='text-center'>
+                <a href="/frontend/web/index.php?r=see/index" class='text-center'>
                     精彩看点
                     <span class='pull-right'>
                         <div class="kongbai "></div>
@@ -249,8 +303,6 @@ beginPage() ?>
             </li>
         </ul>
     </nav>
-    
-
         <?php $this->beginBody() ?>
                 <?= Breadcrumbs::widget([
             'links' =>
@@ -258,8 +310,10 @@ beginPage() ?>
         ]) ?>
                 <?= Alert::widget() ?>
                 <?= $content ?>
-       
-        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <div class="clearfix "></div>
+       <div class="end _pc"></div>
+       <div class="_pc">
+        <table class=' text-center' width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
             <tr>
                 <td height="30" align="center">
                     <a href="about1.asp">MIR医学仪器与试剂网</a>
@@ -287,6 +341,12 @@ beginPage() ?>
                 </td>
             </tr>
         </table>
+    </div>
+    <div class="_m">
+        <p class="text-center">关于我们</p>
+        <p class="text-center">热线电话：022-23593650/51转客服部</p>
+        <p class="text-center">返回顶部</p>
+    </div>
         <!-- 友情链接 -->
         
 

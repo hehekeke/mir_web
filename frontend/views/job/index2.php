@@ -17,8 +17,52 @@ h1{
 .gongsi .tab-content{
     margin-left: 30px;
 }
+ @media screen and (max-width:1000px) {
+    .top{
+            width: 100%;
+            height: 43px;
+            background-color: #3c80a2;
+        }
+        .top p{
+            padding-top: 8px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+        #triangle-left { 
+            width: 0; 
+            height: 0; 
+            border-top: 15px solid transparent; 
+            border-right:15px solid #076595; 
+            border-bottom :15px solid transparent; 
+            float: left;
+        } 
+        #left{
+            width: 34px;
+            height: 30px;
+            background: #076595;
+            margin-left: 15px;
+        }
+        .top span{
+            display: inline-block;
+            color: white;
+        }
+        h6{
+            color: grey;
+        }
+ }
 </style>
-<ol class="breadcrumb">
+<div class="top _m">
+    <div class="pull-left" style="margin-top:8px;margin-left:28px;">
+        <div id="triangle-left"></div>
+        <div id='left'>
+            <span style="margin-top:5px;">返回</span>
+        </div>
+    </div>
+    <p class="pull-left" style="width:70%;">行业招聘</p>
+</div>
+<div class="clearfix"></div>
+<ol class="breadcrumb _pc">
     <li>
         <a href="#">首页</a>
     </li>
@@ -30,8 +74,15 @@ h1{
     </li>
 </ol>
 <h1 class="text-center">科技公司</h1>
-<div >
-    <div class="gongsi">
+
+  <h6 class="text-center">发布日期是：2323121</h6>
+
+<div class="_m" style="padding:0 6%;">
+     
+</div>
+
+<div class="_pc">
+    <div class="gongsi ">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
                 <a href="#home" role="tab" data-toggle="tab">公司简介</a>

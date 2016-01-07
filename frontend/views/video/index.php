@@ -19,9 +19,26 @@ h5{
 	width: 100%;
 	height: 300px;
 }
+.video{
+	float: left;
+	width: 47%;
+	padding-bottom: 20px;
+	margin-left: 30px;
+	border-bottom: 1px dashed grey; 
+}
 .video img{
 	width: 200px;
 	height: 100px;
+}
+.wenzi{
+	margin-top: 30px;
+	margin-left: 30px;
+}
+.end{
+	margin-top: 30px;
+	border-bottom: 1px solid black; 
+	margin-bottom: 30px;
+}
 }
 </style>
 <ol class="breadcrumb">
@@ -40,13 +57,61 @@ h5{
 
 <div class="seond">
 	<h5>|&nbsp;&nbsp;其他视屏</h5>
-	<div class="video">
+	<div class="video ">
 		<div class="pull-left">
 			<img src = '/public/frontend/img/indexTop.png'>
 		</div>
-		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+		<div class="pull-left wenzi">
+			的萨芬肯定
 		</div>
+		<div class="clearfix"></div>
 	</div>
+	<div class="video ">
+		<div class="pull-left">
+			<img src = '/public/frontend/img/indexTop.png'>
+		</div>
+		<div class="pull-left wenzi">
+			的萨芬肯定
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="video ">
+		<div class="pull-left">
+			<img src = '/public/frontend/img/indexTop.png'>
+		</div>
+		<div class="pull-left wenzi">
+			的萨芬肯定
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="video ">
+		<div class="pull-left">
+			<img src = '/public/frontend/img/indexTop.png'>
+		</div>
+		<div class="pull-left wenzi">
+			的萨芬肯定
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="video ">
+		<div class="pull-left">
+			<img src = '/public/frontend/img/indexTop.png'>
+		</div>
+		<div class="pull-left wenzi">
+			的萨芬肯定
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="video ">
+		<div class="pull-left">
+			<img src = '/public/frontend/img/indexTop.png'>
+		</div>
+		<div class="pull-left wenzi">
+			的萨芬肯定
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
 	<div class="clearfix"></div>
 </div>
+<div class="end"></div>

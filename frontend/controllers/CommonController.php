@@ -1,24 +1,21 @@
 <?php
-namespace backend\controllers;
-
+namespace frontend\controllers;
 use Yii;
 use yii\web\Controller;
-use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-use yii\web\NotFoundHttpException;
+use yii\filters\AccessControl;
+
+use backend\models\FriendLink;
 
 /**
- * 公用的controller
+ * Site controller
  */
 class CommonController extends Controller
 {
+    
 
-    /**
-     * @inheritdoc
-     */
-    public function actions()
+	public function actions()
     {
-        
         
         return [
             'error' => [
@@ -26,7 +23,7 @@ class CommonController extends Controller
             ],
         ];
     }
-    public function beforeAction($action)
+     public function beforeAction($action)
     {
     	if($action->id !== 'login'){
     		$this->layout = 'main_back';
@@ -34,6 +31,9 @@ class CommonController extends Controller
     	return true;
     }
 
+}
 
     
-}
+
+    
+

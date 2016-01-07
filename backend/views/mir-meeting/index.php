@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\MirMeetingSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Mir Meetings';
+$this->title = '展会列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mir-meeting-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Mir Meeting', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加新会议', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,14 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'meeting_id',
-            'meeting_class',
+            // 'meeting_id',
+            // 'meeting_class',
+            'meeting_name',
             'meeting_loc',
             'meeting_loc_e',
-            'meeting_name',
             // 'meeting_name_e',
-            // 'meeting_bdate',
-            // 'meeting_edate',
+            'meeting_bdate',
+            'meeting_edate',
             // 'meeting_pic',
             // 'meeting_mem:ntext',
             // 'meeting_mem_e:ntext',
