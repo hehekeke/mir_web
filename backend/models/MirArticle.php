@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use backend\models\MirMaker;
 
 /**
  * This is the model class for table "mir_article".
@@ -21,7 +22,7 @@ use Yii;
  */
 class MirArticle extends \backend\models\MirBase
 {
-    public $classify = ['0'=>'新闻中心','1'=>'展会报道','2'=>'展会报道','3'=>'技术分享','4'=>'产品应用','5'=>'人才招聘'];
+    public $classify = ['0'=>'新闻中心','1'=>'展会报道','2'=>'招标公告','3'=>'技术分享','4'=>'产品应用','5'=>'人才招聘'];
     /**
      * @inheritdoc
      */
@@ -36,7 +37,6 @@ class MirArticle extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['article_id'], 'required'],
             [['article_id', 'article_istop'], 'integer'],
             [['article_date'], 'safe'],
             [['article_contents', 'article_contents_e'], 'string'],
@@ -63,4 +63,19 @@ class MirArticle extends \backend\models\MirBase
             'article_zy' => Yii::t('app', '新闻摘要'),
         ];
     }
+
+    public function articleToIndex($type){
+        $list = $this->find()->select("article_id,article_title,article_date,article_pic,article_zy")
+                ->where(["article_class"=>$type])->orderBy('article_id desc')->limit(5)->all();
+        for ($i=0; $i < count($list); $i++) { 
+            $article_date = date("Y-m-d",strtotime($list[$i]->article_date));
+            $list[$i]->article_date = $article_date;
+        }
+        return $list;
+    }
+    //如果是招聘的话 获得招聘企业的信息
+    public function getMirMake(){
+        return $this->hasOne(MirMaker::className(), ['maker_id' => 'article_makerid']);
+    }
+    
 }

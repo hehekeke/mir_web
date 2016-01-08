@@ -1,4 +1,17 @@
 <style type="text/css">
+ /* .breadcrumb{
+    background-color: white;
+    border-bottom: 1px solid grey;
+    border-radius:0px;
+  }*/
+  .breadcrumb > li + li:before {
+        color: #CCCCCC;
+        content: ">";
+        padding: 0 5px;
+    }
+    .breadcrumb a{
+        font-size: 19px;
+    }
     .date{
         float: right;
         color: #808080;
@@ -72,7 +85,10 @@
         }
     }
 </style>
+<?php
 
+use yii\widgets\LinkPager;
+?>
 <div class="top _m">
     <div class="pull-left" style="margin-top:8px;margin-left:28px;">
         <div id="triangle-left"></div>
@@ -87,6 +103,7 @@
     <img src="/public/frontend/img/indexTop.png" class="img-responsive"></div>
 <div class="tab-content  _m">
     <div class="tab-pane active" id="linchuang">
+        <?php for($i=0;$i<count($news);$i++){?>
         <div class="content">
             <div class='pull-left tab-content-left'>
                 <img src='/public/frontend/img/indexTop.png'></div>
@@ -96,99 +113,48 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="content">
-            <div class='pull-left tab-content-left'>
-                <img src='/public/frontend/img/indexTop.png'></div>
-            <div class='pull-left tab-content-right'>
-                <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                <div class='tab-content-date'>2015/3/18</div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="content">
-            <div class='pull-left tab-content-left'>
-                <img src='/public/frontend/img/indexTop.png'></div>
-            <div class='pull-left tab-content-right'>
-                <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                <div class='tab-content-date'>2015/3/18</div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+        <?php }?>
+     
     </div>
 </div>
 
 <!-- 中间的内容 -->
 <div class="content _pc">
     <div class="pull-left content-left">
-        <ul class="nav nav-tabs " role="tablist" id="myTab">
+        <!-- <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">首页 > 新闻中心</a>
+                <a href="/frontend/web/" role="tab" data-toggle="tab">
+                    首页 > 新闻中心
+                </a>
             </li>
-        </ul>
+        </ul> -->
+         <ol class="breadcrumb _pc">
+            <li>
+                <a href="/frontend/web/">首页</a>
+            </li>
+            <li>
+                <a href="/frontend/web/index.php?r=new/index">新闻中心</a>
+            </li>
+        </ol>
         <div class="tab-content">
+        <?php for($i=0;$i<count($news);$i++){?>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id; ?>">
             <div class="tab-pane active tab-content-one" id="home">
                 <div class='pull-left tab-content-left'>
                     <img src='/public/frontend/img/indexTop.png'></div>
                 <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
+                    <h4><?php echo $news[$i]->article_title; ?></h4>
+                    <div class='tab-content-title-small'><?php echo $news[$i]->article_zy; ?></div>
+                    <div class='date'><?php echo date("Y-m-d",strtotime($news[$i]->article_date));?></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <div class='tab-content-title-small'>我是我王宇奇我是王宇奇我奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
+        </a>
+        <?php }?>    
         </div>
+        <?= LinkPager::widget(['pagination' => $pages]); ?>
     </div>
+
     <div class="pull-left content-right rendian">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active" style="border-bottom:9px solid orange;">

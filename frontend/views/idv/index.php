@@ -12,7 +12,9 @@
 	width: 100%;
 	height: 232px;
 }
-
+a{
+	color: black;
+}
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img{
 	height: 100px;
 }
@@ -110,14 +112,9 @@
 </div>
 
 <div class="btn-group">
-	<button type="button" class="btn btn-default">按钮 1</button>
-	<button type="button" class="btn btn-default">按钮 2</button>
-	<button type="button" class="btn btn-default">按钮 3</button>
-	<button type="button" class="btn btn-default">按钮 4</button>
-	<button type="button" class="btn btn-default">按钮 5</button>
-	<button type="button" class="btn btn-default">按钮 6</button>
-	<button type="button" class="btn btn-default">按钮 7</button>
-	<button type="button" class="btn btn-default">按钮 8</button>
+	<?php for($i=0;$i<count($dafenlei);$i++){?>
+		<button type="button" class="btn btn-default"><?php echo $dafenlei[$i]->ClassName; ?></button>
+	<?php }?>
 </div>
 <div class="row">
 	<div class="col-sm-5 col-md-4">
@@ -212,11 +209,11 @@
 		<div class="tab-content">
 			<div class="tab-pane active " id="zhanhuizhanlan">
 				<div class='pull-left'>
-					<h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-					<h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-					<h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-					<h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-					<h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
+				<?php for($i=0;$i<count($jobs);$i++){?>
+					<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $jobs[$i]->article_id;?>">
+						<h4>&bull;<?php echo $jobs[$i]->article_title;?></h4>
+					</a>
+				<?php }?>
 				</div>
 				<div class="clearfix"></div>
 			</div>

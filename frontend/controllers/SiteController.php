@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 use backend\models\FriendLink;
 
 use backend\models\MirMeeting;
+use backend\models\MirArticle;
 
 /**
  * Site controller
@@ -84,10 +85,18 @@ class SiteController extends Controller
         $xueshuMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'1'])->orderBy('meeting_id desc')->limit(5)->all();
         $zhanhuiMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'2'])->orderBy('meeting_id desc')->limit(5)->all();
         $meetingModel = new MirMeeting();
+        //新闻中心
+        $articleModel = new MirArticle();
+        $news = $articleModel->articleToIndex(0);
+        //招标公告
+        $zhaobiao = $articleModel->articleToIndex(2);
+        // p($zhaobiao);
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
                 'zhanhuiMeetings'=>$zhanhuiMeetings,
                 'xueshuMeetings'=>$xueshuMeetings,
+                'news'=>$news,
+                'zhaobiao'=>$zhaobiao,
             ]);
     }
 

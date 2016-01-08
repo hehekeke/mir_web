@@ -7,6 +7,9 @@
 .breadcrumb a{
 	font-size: 19px;
 }
+a{
+	color: black;
+}
 .first{
 	margin-top: 20px;
 	padding-bottom: 20px;
@@ -120,50 +123,31 @@ h5{
 <div class="first _pc">
 	<h5>|&nbsp;&nbsp;名企招聘</h5>
 	<div>
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img  src="/public/frontend/img/indexTop.png">
-
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png">
-		<img src="/public/frontend/img/indexTop.png"></div>
+		<?php for($i=0;$i<10;$i++){?>
+			<img src="<?php echo $list[$i]->article_pic ;?>">
+		<?php }?>
+	</div>
 	<div class="clearfix"></div>
 </div>
 
 <div class='second _pc'>
 	<h5>|&nbsp;&nbsp;推荐招聘</h5>
-	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:100px;overflow:auto; position: relative;">
+	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:200px;overflow:auto; position: relative;">
 		<div class='tuijian'>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇奇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
-		</div>
-		<div class='tuijian'>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇奇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
-			<div class='pull-left'>
-				 <h6>&bull;我是宇奇我是王宇</h6>
-				 <h6>[上海]:公司</h6>
-			</div>
+			<?php for($i=0;$i<count($list);$i++){?>
+				<div class='pull-left'>
+				<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $list[$i]->article_id;?>">
+					 <h6>&bull;<?php echo $list[$i]->article_title ;?></h6>
+					 <h6>
+					 &nbsp;
+					 <?php if($list[$i]->mirMake->maker_place){?>
+					 [<?php echo $list[$i]->mirMake->maker_place ;?>]:
+					 <?php echo $list[$i]->mirMake->maker_name ;?>
+					 <?php }?>
+					 </h6>
+				</a>
+				</div>
+			<?php }?>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,12 @@
 <style type="text/css">
+    .breadcrumb > li + li:before {
+        color: #CCCCCC;
+        content: ">";
+        padding: 0 5px;
+    }
+    .breadcrumb a{
+        font-size: 19px;
+    }
 	.tab-div{
 		padding-bottom: 20px;
 		border-bottom: 1px solid black;
@@ -98,17 +106,24 @@
         
 <!-- 中间的内容 -->
     <div class="content _pc">
+    <ol class="breadcrumb _pc">
+        <li>
+            <a href="/frontend/web/">首页</a>
+        </li>
+        <li>
+            <a href="/frontend/web/index.php?r=new/index">新闻中心</a>
+        </li>
+        <li>
+            <a href="#" class="active">正文</a>
+        </li>
+    </ol>
         <div class="pull-left content-left">
-            <ul class="nav nav-tabs " role="tablist" id="myTab">
-                <li class="active">
-                    <a href="#home" role="tab" data-toggle="tab">首页 > 新闻中心 > 正文</a>
-                </li>
-            </ul>
+            
             <div class="tab-content shangxia">
-            	<h2 class="text-center">新型血液检查可及早查出宫外孕</h2>
-            	<span>发布日期：2015-12-30 &nbsp;&nbsp;&nbsp;来源：***网</span>
+            	<h2 class="text-center"><?php echo $model->article_title;?></h2>
+            	<span>发布日期：<?php echo date("Y-m-d",strtotime($model->article_date)); ?> &nbsp;&nbsp;&nbsp;来源：***网</span>
             	<div class="neirong">
-            		的撒范德萨法萨芬
+            		<?php echo $model->article_contents;?>
             	</div>
             	<p class='first-p'><span>上一篇</span>：1231232132</p>
     			<p><span>下一遍</span>：1231232132</p>

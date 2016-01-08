@@ -113,7 +113,7 @@ beginPage() ?>
     }
     .tab-content img{
         width: 178px;
-        height: 116px;
+        height: 118px;
     }
     .tab-content-left{
         width: 33%;

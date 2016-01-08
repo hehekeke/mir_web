@@ -88,28 +88,21 @@
                 <a href="#home" role="tab" data-toggle="tab">新闻中心</a>
             </li>
         </ul>
-        <div class="tab-content">
-            <div class="tab-pane active tab-content-one" id="home">
+        <div class="tab-content" id="home">
+            <?php for($i=0;$i<count($news);$i++){?>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
+            <div class="tab-pane active tab-content-one" >
                 <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <div class='tab-content-title'>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='tab-content-title-small'>shfdiashfdsafk</div>
-                    <div class='tab-content-date'>2015/3/18</div>
+                    <img src="http://www.mir168.com/edming/uppic/art/<?php echo $news[$i]->article_pic?>"></div>
+                <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
+                    <div class='tab-content-title'><?php echo $news[$i]->article_title?></div>
+                    <div class='tab-content-title-small'><?php echo  mb_substr($news[$i]->article_zy,0,60,'utf-8'); ?></div>
+                    <div class='tab-content-date'><?php echo $news[$i]->article_date?></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
-
-            <div class="tab-pane active tab-content-one" id="home">
-                <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
-                <div class='pull-left tab-content-right'>
-                    <div class='tab-content-title'>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</div>
-                    <div class='tab-content-title-small'>shfdiashfdsafk</div>
-                    <div class='tab-content-date'>2015/3/18</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+            </a>
+            <?php }?>
             <div class="tab-pane active tab-content-one" id="home">广告位</div>
 
         </div>
@@ -184,14 +177,17 @@
             <div class="tab-content-third pull-left">
                 <img src="/public/frontend/img/indexTop.png"></div>
             <div class="r-top pull-left">
-                <p>居中对齐文本</p>
+                <a href="">
+                    <p><?php echo $zhaobiao[0]->article_title;?></p>
+                </a>
             </div>
             <div class="clearfix"></div>
         </div>
-        <h6>公司1</h6>
-        <h6>公司2</h6>
-        <h6>公司3</h6>
-        <h6>公司4</h6>
+        <?php for($i=1;$i<count($zhaobiao);$i++){ ?>
+        <a href="">
+            <h6><?php echo $zhaobiao[$i]->article_title;?></h6>
+        </a>
+        <?php }?>
     </div>
 </div>
 
