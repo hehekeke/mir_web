@@ -7,12 +7,20 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\MirUser */
 /* @var $form yii\widgets\ActiveForm */
 ?>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header"><?= Html::encode($this->title)?>
+        <small>带<span class="required">*</span>的为必填项</small></h1>
+    </div>
+</div>
 
 <div class="mir-user-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'user_id')->textInput() ?>
+    <div class="col-xs-12">
+     <?= $form->field($model, 'user_id')->textInput() ?>
+    </div>
+   
 
     <?= $form->field($model, 'user_name')->textInput(['maxlength' => true]) ?>
 

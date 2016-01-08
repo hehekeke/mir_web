@@ -12,7 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="admins-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?>
+    	<small>带<span class="required">*</span>的为必填项</small></h1>
+    </h1>
 
     <?= $this->render('_form', [
         'model' => $model,

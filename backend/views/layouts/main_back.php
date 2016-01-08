@@ -73,7 +73,6 @@ beginPage() ?>
                 </li>
 
             </ul>
-
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -280,3 +279,11 @@ beginPage() ?>
 </html>
 <?php $this->
 endPage() ?>
+<script src="http://www.msup.com/Public/Admin/js/local.js"></script>
+<script src="/assets/d9156a5f/yii.js"></script>
+<script src="/Public/Admin/js/bootstrap.min.js"></script>
+<script src="/Public/Admin/js/json2.js"></script>
+<script src="/Public/Admin/js/plugins/metisMenu/metisMenu.min.js"></script>
+<script src="/Public/Admin/js/plugins/morris/raphael.min.js"></script>
+<script src="/Public/Admin/js/date.js"></script>
+<script src="/Public/Admin/js/sb-admin-2.js"></script>

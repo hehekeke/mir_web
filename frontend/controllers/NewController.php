@@ -30,7 +30,7 @@ class NewController extends Controller
     	$data = $articleModel->find()->where(["article_class"=>'0']);
        	$pages = new Pagination(['totalCount'=>$data->count(), 'pageSize' => '10']);
         $news = $articleModel->articleToIndex(0);
-        $news = $data->offset($pages->offset)->limit($pages->limit)->all();
+        $news = $data->offset($pages->offset)->limit($pages->limit)->orderBy("article_id desc")->all();
         // p(count($news));
         return $this->render('index',[
         	 'news' => $news,

@@ -143,8 +143,8 @@ use yii\widgets\LinkPager;
                 <div class='pull-left tab-content-left'>
                     <img src='/public/frontend/img/indexTop.png'></div>
                 <div class='pull-left tab-content-right'>
-                    <h4><?php echo $news[$i]->article_title; ?></h4>
-                    <div class='tab-content-title-small'><?php echo $news[$i]->article_zy; ?></div>
+                    <h4><?php echo $news[$i]->article_title;?></h4>
+                    <div class='tab-content-title-small'><?php echo  mb_substr($news[$i]->article_zy,0,60,'utf-8'); ?></div>
                     <div class='date'><?php echo date("Y-m-d",strtotime($news[$i]->article_date));?></div>
                 </div>
                 <div class="clearfix"></div>
