@@ -30,7 +30,7 @@
         <div class="tab-content">
             <div class="scroll" data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:242px;overflow:auto; position: relative;">
                 <?php for($i=0;$i<count($xueshuMeetings);$i++){ ?>
-                <a href="">
+                <a href="/frontend/web/index.php?r=meeting/index2&id=<?php echo $xueshuMeetings[$i]->meeting_id;?>">
                     <div>
                         <h6 class="pull-left h6-1">
                             &bull;
@@ -54,7 +54,7 @@
 
             <div class="scroll" data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:242px;overflow:auto; position: relative;">
                 <?php for($i=0;$i<count($zhanhuiMeetings);$i++){ ?>
-                <a href="">
+                <a href="/frontend/web/index.php?r=meeting/index2&id=<?php echo $zhanhuiMeetings[$i]->meeting_id;?>">
                     <div>
                         <h6 class="pull-left h6-1">
                             &bull;
@@ -68,7 +68,6 @@
                 </a>
                 <?php }?></div>
             </div>
-
         </div>
     </div>
     <div class="pull-left content-right rendian">

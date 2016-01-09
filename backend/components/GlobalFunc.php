@@ -11,7 +11,15 @@ use Yii;
 
 class GlobalFunc{
 	
-
+	/**
+	 * 
+	 */
+	public function enOrCh($data,$filed){
+		if($filed == 'article_title'){
+			$filed = 'article_titile_e';
+		}
+		return $data->$filed;
+	}
 	/**
 	 * json格式化输出上传文件后的表单
 	 *

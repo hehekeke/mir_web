@@ -1,3 +1,8 @@
+<?php
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+
+?>
 <style type="text/css">
     a{
         color: black;
@@ -95,7 +100,7 @@
                 <div class='pull-left tab-content-left'>
                     <img src="http://www.mir168.com/edming/uppic/art/<?php echo $news[$i]->article_pic?>"></div>
                 <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
-                    <div class='tab-content-title'><?php echo $news[$i]->article_title?></div>
+                    <div class='tab-content-title'><?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
                     <div class='tab-content-title-small'><?php echo  mb_substr($news[$i]->article_zy,0,60,'utf-8'); ?></div>
                     <div class='tab-content-date'><?php echo $news[$i]->article_date?></div>
                 </div>
@@ -202,11 +207,9 @@
         <div class="tab-content">
             <div class="tab-pane active " id="zhanhuizhanlan">
                 <div class='pull-left'>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                    <h4>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
+                <?php for($i=0;$i<count($jishus);$i++){?>
+                    <h4>&bull;<?php echo $jishus[$i]->article_title;?></h4>
+                <?php }?>
                 </div>
                 <div class="clearfix"></div>
             </div>

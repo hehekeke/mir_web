@@ -43,7 +43,16 @@ class MeetingController extends Controller
 
     public function actionIndex2()
     {
-        return $this->render('index2');
+        $meetingModel = new MirMeeting();
+        $newMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->orderBy('meeting_id desc')->limit(10)->all();
+        
+        $id =Yii::$app->request->get("id");
+        $model = $meetingModel->findOne(["meeting_id"=>$id]);
+        // p($model);
+        return $this->render('index2',[
+            'newMeetings'=>$newMeetings,
+            'model'=>$model,
+        ]);
     }
 
 }

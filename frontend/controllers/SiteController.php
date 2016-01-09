@@ -90,6 +90,8 @@ class SiteController extends Controller
         $news = $articleModel->articleToIndex(0);
         //招标公告
         $zhaobiao = $articleModel->articleToIndex(2);
+        //技术分享
+        $jishus = $articleModel->articleToIndex(3);
         // p($zhaobiao);
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
@@ -97,6 +99,7 @@ class SiteController extends Controller
                 'xueshuMeetings'=>$xueshuMeetings,
                 'news'=>$news,
                 'zhaobiao'=>$zhaobiao,
+                'jishus'=>$jishus,
             ]);
     }
 

@@ -227,9 +227,9 @@ beginPage() ?>
     <!-- 这个是公用的header.html -->
     <div class='logo _pc'>
         <img src='/public/frontend/img/logo_03.png'>
-        <span class="pull-right btn btn-primary" style='margin-top:28px;'>English</span>
+        <span class="pull-right btn btn-primary yingwen" style='margin-top:28px;'>English</span>
 
-        <span class="pull-right btn btn-primary" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
+        <span class="pull-right btn btn-primary zhongwen" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
 
         <span class="pull-right btn loign" style='margin-right:55px;'>注册</span>
         <span class="pull-right btn loign">登陆 |</span>
@@ -355,6 +355,12 @@ beginPage() ?>
     <?php $this->endBody() ?></body>
     <script>
         $(function () {
+            $(".yingwen").click(function(){
+                alert("英文");
+            });
+            $(".zhongwen").click(function(){
+                alert("zhongwen");
+            });
             $('#myTab a').click(function (e) { 
               e.preventDefault();//阻止a链接的跳转行为 
               // $(this).tab('show');//显示当前选中的链接及关联的content 

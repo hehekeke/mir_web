@@ -31,6 +31,7 @@
 		border-bottom: 1px dashed black;
 	}
 	.neirong{
+        padding-top: 40px;
 		border-top: 1px dashed black;
 	}
 	.shangxia{
@@ -121,7 +122,7 @@
             
             <div class="tab-content shangxia">
             	<h2 class="text-center"><?php echo $model->article_title;?></h2>
-            	<span>发布日期：<?php echo date("Y-m-d",strtotime($model->article_date)); ?> &nbsp;&nbsp;&nbsp;来源：***网</span>
+            	<span>发布日期：<?php echo date("Y-m-d",strtotime($model->article_date)); ?> &nbsp;&nbsp;&nbsp;来源：医学检验网</span>
             	<div class="neirong">
             		<?php echo $model->article_contents;?>
             	</div>

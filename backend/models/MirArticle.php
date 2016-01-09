@@ -65,7 +65,7 @@ class MirArticle extends \backend\models\MirBase
     }
 
     public function articleToIndex($type){
-        $list = $this->find()->select("article_id,article_title,article_date,article_pic,article_zy")
+        $list = $this->find()->select("article_id,article_title,article_titile_e,article_date,article_pic,article_zy")
                 ->where(["article_class"=>$type])->orderBy('article_id desc')->limit(5)->all();
         for ($i=0; $i < count($list); $i++) { 
             $article_date = date("Y-m-d",strtotime($list[$i]->article_date));
