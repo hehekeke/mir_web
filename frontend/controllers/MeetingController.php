@@ -10,11 +10,11 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
  
 use backend\models\MirMeeting;
-
+use frontend\controllers\CommonController;
 /**
  * Site controller
  */
-class MeetingController extends Controller
+class MeetingController extends CommonController
 {
     
 

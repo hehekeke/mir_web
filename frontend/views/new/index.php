@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
  /* .breadcrumb{
     background-color: white;
@@ -130,10 +136,10 @@ use yii\widgets\LinkPager;
         </ul> -->
          <ol class="breadcrumb _pc">
             <li>
-                <a href="/frontend/web/">首页</a>
+                <a href="/frontend/web/"><?php echo Yii::$app->params['title']['home'][$language];?></a>
             </li>
             <li>
-                <a href="/frontend/web/index.php?r=new/index">新闻中心</a>
+                <a href="/frontend/web/index.php?r=new/index"><?php echo Yii::$app->params['title']['news'][$language];?></a>
             </li>
         </ol>
         <div class="tab-content">
@@ -143,8 +149,8 @@ use yii\widgets\LinkPager;
                 <div class='pull-left tab-content-left'>
                     <img src='/public/frontend/img/indexTop.png'></div>
                 <div class='pull-left tab-content-right'>
-                    <h4><?php echo $news[$i]->article_title;?></h4>
-                    <div class='tab-content-title-small'><?php echo  mb_substr($news[$i]->article_zy,0,60,'utf-8'); ?></div>
+                    <h4><?php echo $glo->enOrCh($news[$i],'article_title');?></h4>
+                    <div class='tab-content-title-small'><?php echo  $glo->enOrCh($news[$i],'article_zy','60');?></div>
                     <div class='date'><?php echo date("Y-m-d",strtotime($news[$i]->article_date));?></div>
                 </div>
                 <div class="clearfix"></div>

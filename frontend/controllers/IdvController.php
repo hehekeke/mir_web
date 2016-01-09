@@ -11,11 +11,11 @@ use yii\filters\AccessControl;
 
 use backend\models\Classify;
 use backend\models\MirArticle;
-
+use frontend\controllers\CommonController;
 /**
  * Site controller
  */
-class IdvController extends Controller
+class IdvController extends CommonController
 {
     
 

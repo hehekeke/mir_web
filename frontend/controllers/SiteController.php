@@ -18,10 +18,12 @@ use backend\models\FriendLink;
 use backend\models\MirMeeting;
 use backend\models\MirArticle;
 
+use frontend\controllers\CommonController;
+
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends CommonController
 {
     /**
      * @inheritdoc

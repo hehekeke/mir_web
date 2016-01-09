@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
     .h6-1{
         width: 55%;
@@ -53,14 +59,14 @@
     <div class="pull-left content-left">
         <ol class="breadcrumb _pc">
             <li>
-                <a href="/frontend/web/">首页</a>
+                <a href="/frontend/web/"><?php echo Yii::$app->params['title']['home'][$language];?></a>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=meeting/index">
                     <?php if($model->meeting_class == '1'){?>
-                        学术会议
+                        <?php echo Yii::$app->params['title']['xueshuhuiyi'][$language];?>
                     <?php }else{ ?>
-                        展会信息
+                        <?php echo Yii::$app->params['title']['zhanhuixinxi'][$language];?>
                     <?php }?>
                 </a>
             </li>
@@ -68,9 +74,10 @@
         <div class="tab-content">
             <div>
                 <h3 class="text-center">
-                    <?php echo $model->meeting_name;?></h3>
+                    <?php echo $glo->enOrCh($model,"meeting_name");?>
+                </h3>
                 <div class="neirong_date">
-                    <span>发布时间：2015-3-28</span>
+                    <span><?php echo Yii::$app->params['title']['faburiqi'][$language];?>：2015-3-28</span>
                     <span class='zhangtai'>状态：未开始</span>
                 </div>
                 <table class="table table-hover table-bordered">
@@ -89,7 +96,9 @@
                         </tr>
                         <tr>
                             <td class="first text-center">会议地址</td>
-                            <td><?php echo $model->meeting_loc;?></td>
+                            <td>
+                                <?php echo $glo->enOrCh($model,"meeting_loc");?>
+                            </td>
                         </tr>
                         <tr >
                             <td class="first text-center">展馆名称</td>
@@ -102,9 +111,10 @@
 
                     </tbody>
                 </table>
-                <p class="shuoming">展会说明</p>
+                <p class="shuoming"><?php echo Yii::$app->params['title']['zhanhuishuoming'][$language];?></p>
                 <div>
-                    <?php echo $model->meeting_mem;?></div>
+                    <?php echo $glo->enOrCh($model,"meeting_mem");?>
+                </div>
             </div>
 
         </div>
@@ -114,7 +124,9 @@
 <div class="pull-left content-right rendian">
     <ul class="nav nav-tabs " role="tablist" id="myTab">
         <li class="active" style="border-bottom:9px solid orange;">
-            <a href="#home" role="tab" data-toggle="tab" style="color:orange;">最新会议</a>
+            <a href="#home" role="tab" data-toggle="tab" style="color:orange;">
+                <?php echo Yii::$app->params['title']['zuixinhuiyi'][$language];?>
+            </a>
         </li>
     </ul>
     <div class="tab-content tab-div" style="border-bottom: 1px dashed grey;">
@@ -123,7 +135,8 @@
             meeting_id;?>">
             <h6>
                 &bull;
-                <?php echo $newMeetings[$i]->meeting_name;?></h6>
+                <?php echo $glo->enOrCh($newMeetings[$i],"meeting_name");?>
+            </h6>
         </a>
         <?php }?></div>
 
