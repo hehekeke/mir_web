@@ -41,20 +41,6 @@ use backend\widget\Attachment;
                         <?= $form->field($model, 'article_istop')->radioList(['1'=>'是','0'=>'否'])?>
 
                         <?= $form->field($model, 'article_pic')->fileInput() ?>
-                        <div class="panel panel-default">
-                            <h5 class="panel-heading nm">申请人头像（用于网站展示，分辨率 300*300）
-                                <span class="required">*</span>
-                            </h5>
-                            <div class="panel-body">
-                                <?= Attachment::widget([ 
-                                        'url'=>'attachment/upload',
-                                        'model' => $model,
-                                        'field' => $model->formName().'[article_pic]',
-                                        'number' => 1,
-                                    ] ) ;
-                                ?>
-                            </div>
-                        </div>
 
                         <?= $form->field($model, 'article_zy')->textarea(['rows' => 5]) ?>
                         </div>
