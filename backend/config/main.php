@@ -27,6 +27,13 @@ return [
                 ],
             ],
         ],
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [//禁止加载默认jquery.js
+                    'js'=>[]
+                ],
+            ],
+        ],
         //url设置
         'urlManager' => [
             'enablePrettyUrl' => true,

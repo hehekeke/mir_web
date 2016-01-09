@@ -4,12 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\datetimepicker\DateTimePicker;
 use backend\widget\Ueditor;
-use backend\widget\Attachment;
+use backend\widget\Uploadify;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirArticle */
 /* @var $form yii\widgets\ActiveForm */
 ?>
+
 <div class="mir-article-form">
     <div class="row">
         <div class="col-lg-12">
@@ -40,22 +41,9 @@ use backend\widget\Attachment;
 
                         <?= $form->field($model, 'article_istop')->radioList(['1'=>'是','0'=>'否'])?>
 
-                        <?= $form->field($model, 'article_pic')->fileInput() ?>
-                        <div class="panel panel-default">
-                            <h5 class="panel-heading nm">申请人头像（用于网站展示，分辨率 300*300）
-                                <span class="required">*</span>
-                            </h5>
-                            <div class="panel-body">
-                                <?= Attachment::widget([ 
-                                        'url'=>'attachment/upload',
-                                        'model' => $model,
-                                        'field' => $model->formName().'[article_pic]',
-                                        'number' => 1,
-                                    ] ) ;
-                                ?>
-                            </div>
-                        </div>
-
+                        <?= $form->field($model, 'article_pic',['labelOptions' => ['id' => 'f']])->textInput() ?>
+                        <?= Uploadify::widget(['targetId'=>'f','multi'=>true])?>
+                        
                         <?= $form->field($model, 'article_zy')->textarea(['rows' => 5]) ?>
                         </div>
                         <div class="col-xs-12">
@@ -89,3 +77,4 @@ use backend\widget\Attachment;
     </div>
     <!-- /.row -->
 </div>
+
