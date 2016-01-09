@@ -41,8 +41,9 @@ use backend\widget\Uploadify;
 
                         <?= $form->field($model, 'article_istop')->radioList(['1'=>'是','0'=>'否'])?>
 
-                        <?= $form->field($model, 'article_pic',['labelOptions' => ['id' => 'f']])->textInput() ?>
-                        <?= Uploadify::widget(['targetId'=>'f','multi'=>true])?>
+                        <?= $form->field($model, 'article_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
+
+                        <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
                         
                         <?= $form->field($model, 'article_zy')->textarea(['rows' => 5]) ?>
                         </div>
