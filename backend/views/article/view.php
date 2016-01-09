@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirArticle */
 
-$this->title = $model->article_id;
+$this->title = '文章信息';
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Mir Articles'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

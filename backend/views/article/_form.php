@@ -46,7 +46,7 @@ use backend\widget\Uploadify;
                         
                         <?= $form->field($model, 'article_zy')->textarea(['rows' => 5]) ?>
                         </div>
-                        <div class="col-xs-12">
+                        <div class="col-xs-10">
                             <div class="form-group" style="">
 
                                 <label>文章内容</label>

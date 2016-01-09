@@ -128,10 +128,10 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/topic/create">IVD访谈添加</a>
+                                    <a href="/admin.php/ivd/create">IVD访谈添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/topic/index">IVD访谈修改</a>
+                                    <a href="/admin.php/ivd/index">IVD访谈修改</a>
                                 </li>
                             </ul>
                         </li>
