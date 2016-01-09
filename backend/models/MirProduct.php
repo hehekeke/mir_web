@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "mir_product".
@@ -36,6 +37,7 @@ use Yii;
  */
 class MirProduct extends \yii\db\ActiveRecord
 {
+    public $makerMap = [];
     /**
      * @inheritdoc
      */
@@ -67,7 +69,7 @@ class MirProduct extends \yii\db\ActiveRecord
             'product_name' => '产品名称',
             'product_name_e' => '英文名称',
             'product_price' => '产品价格',
-            'product_date' => 'Product Date',
+            'product_date' => '添加时间',
             'product_class' => 'Product Class',
             'product_place' => '产地',
             'product_place_e' => '产地英文',
@@ -91,4 +93,29 @@ class MirProduct extends \yii\db\ActiveRecord
             'product_disp' => 'Product Disp',
         ];
     }
+    /**
+     * 根据厂商id获取其名称
+     * @author wonguohui
+     * @Date   2016-01-10T00:56:52+0800
+     * @param  $id 厂商id
+     */
+    public static function makerMap($id)
+    {
+        $maker = new \backend\models\MirMaker;
+        $map = $maker->getMakerNameIdMap();
+        return $map[$id];
+    }
+    /**
+     * 搜索某一个生产厂商生产的产品
+     * @author wonguohui
+     * @Date   2016-01-10T01:22:32+0800
+     * @param  $name 厂商名称
+     * @return array
+     */
+    public function searchMaker($name)
+    {
+        $maker = \backend\models\MirMaker::find()->select(['maker_id'])->where(['like','maker_name',$name])->asArray()->all();
+        return ArrayHelper::getColumn($maker,'maker_id');
+    }
+
 }

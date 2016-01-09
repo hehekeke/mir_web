@@ -3,6 +3,7 @@
 namespace backend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "mir_maker".
@@ -23,7 +24,7 @@ use Yii;
  * @property string $maker_contact_e
  * @property integer $maker_disp
  */
-class MirMaker extends \yii\db\ActiveRecord
+class MirMaker extends \backend\models\MirBase
 {
     /**
      * @inheritdoc
@@ -68,5 +69,17 @@ class MirMaker extends \yii\db\ActiveRecord
             'maker_contact_e' => '英文联系方式',
             'maker_disp' => 'Maker Disp',
         ];
+    }
+    /**
+     * 获取生产厂商的名称与id作为map返回
+     * @author wonguohui
+     * @Date   2016-01-10T00:42:59+0800
+     */
+    public function getMakerNameIdMap()
+    {
+        $maker = $this->find()->select(['maker_id','maker_name'])
+                      ->asArray()->all();
+        $map = ArrayHelper::map($maker,'maker_id','maker_name');
+        return $map;
     }
 }

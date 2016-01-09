@@ -8,6 +8,8 @@ use backend\models\MirProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
+
 
 /**
  * MirProductController implements the CRUD actions for MirProduct model.
@@ -32,8 +34,18 @@ class MirProductController extends CommonController
      */
     public function actionIndex()
     {
+        $model = new MirProduct;
         $searchModel = new MirProductSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $params = Yii::$app->request->queryParams;
+
+        if(empty(Yii::$app->request->get('sort'))){
+            $_GET['sort'] = '-product_id';
+        }
+        
+        if(isset($params['MirProductSearch']['product_maker']) && !empty($params['MirProductSearch']['product_maker'])){
+            $params['MirProductSearch']['product_maker'] = $model->searchMaker($params['MirProductSearch']['product_maker']);
+        }
+        $dataProvider = $searchModel->search($params);
 
         return $this->render('index', [
             'searchModel' => $searchModel,

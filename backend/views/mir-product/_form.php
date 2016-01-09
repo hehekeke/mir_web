@@ -9,10 +9,13 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="mir-product-form">
-
+    <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'product_id')->textInput() ?>
 
     <?= $form->field($model, 'product_name')->textInput(['maxlength' => true]) ?>
 

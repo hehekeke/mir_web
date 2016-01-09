@@ -84,7 +84,7 @@ class MirProductSearch extends MirProduct
             ->andFilterWhere(['like', 'product_mainclass', $this->product_mainclass])
             ->andFilterWhere(['like', 'product_brand', $this->product_brand])
             ->andFilterWhere(['like', 'product_tui', $this->product_tui])
-            ->andFilterWhere(['like', 'product_maker', $this->product_maker]);
+            ->andFilterWhere(['in', 'product_maker', $this->product_maker]);
 
         return $dataProvider;
     }
