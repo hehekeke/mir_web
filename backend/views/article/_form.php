@@ -33,7 +33,6 @@ use backend\widget\Uploadify;
                             'pickButtonIcon' => 'glyphicon glyphicon-time',
                             'clientOptions' => [
                                 'autoclose' => true,
-                                // 'linkFormat' => 'Y/m/d', // if inline = true
                                 'format' => 'yyyy/mm/dd', // if inline = false
                                 'todayBtn' => true
                             ]
