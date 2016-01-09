@@ -56,7 +56,7 @@ class AppAsset extends AssetBundle
         'js/sb-admin-2.js',        
     ];
     public $depends = [
-       'yii\web\YiiAsset',
+       // 'yii\web\YiiAsset',
        // 'yii\bootstrap\BootstrapAsset',
     ];
 }

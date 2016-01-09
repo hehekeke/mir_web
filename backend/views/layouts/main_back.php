@@ -25,20 +25,12 @@ beginPage() ?>
 
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->
-    head() ?>
-    <link href="/Public/Admin/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Public/Admin/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <link href="/Public/Admin/css/plugins/timeline.css" rel="stylesheet">
-    <link href="/Public/Admin/css/sb-admin-2.css" rel="stylesheet">
-    <link href="/Public/Admin/css/plugins/morris.css" rel="stylesheet">
-    <link href="/Public/Admin/css/../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="/assets/31ce011a/jquery.js"></script>
+    <?php $this->head() ?>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
 <body>
-    <?php $this->
-    beginBody() ?>
+    <?php $this->beginBody() ?>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -279,11 +271,4 @@ beginPage() ?>
 </html>
 <?php $this->
 endPage() ?>
-<script src="http://www.msup.com/Public/Admin/js/local.js"></script>
-<script src="/assets/d9156a5f/yii.js"></script>
-<script src="/Public/Admin/js/bootstrap.min.js"></script>
-<script src="/Public/Admin/js/json2.js"></script>
-<script src="/Public/Admin/js/plugins/metisMenu/metisMenu.min.js"></script>
-<script src="/Public/Admin/js/plugins/morris/raphael.min.js"></script>
-<script src="/Public/Admin/js/date.js"></script>
-<script src="/Public/Admin/js/sb-admin-2.js"></script>
+<script src="/Public/Admin/js/local.js"></script>
