@@ -1,7 +1,8 @@
 <?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
 use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
-
 ?>
 <style type="text/css">
     a{
@@ -16,16 +17,16 @@ $glo =new GlobalFunc();
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">临床医学</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['linchuanyixue'][$language];?></a>
             </li>
             <li>
-                <a href="#profile" role="tab" data-toggle="tab">主题专访</a>
+                <a href="#profile" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['zhutizhuanfang'][$language];?></a>
             </li>
             <li>
-                <a href="#messages" role="tab" data-toggle="tab">专家专栏</a>
+                <a href="#messages" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['zhuanjiazhuanlan'][$language];?></a>
             </li>
             <li>
-                <a href="#settings" role="tab" data-toggle="tab">品牌力量</a>
+                <a href="#settings" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['pinpaililiang'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content">
@@ -56,7 +57,7 @@ $glo =new GlobalFunc();
     <div class="pull-left content-right">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">IDV展厅</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['ivd'][$language];?></a>
             </li>
         </ul>
 
@@ -90,7 +91,7 @@ $glo =new GlobalFunc();
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">新闻中心</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['news'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content" id="home">
@@ -101,7 +102,7 @@ $glo =new GlobalFunc();
                     <img src="http://www.mir168.com/edming/uppic/art/<?php echo $news[$i]->article_pic?>"></div>
                 <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                     <div class='tab-content-title'><?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
-                    <div class='tab-content-title-small'><?php echo  mb_substr($news[$i]->article_zy,0,60,'utf-8'); ?></div>
+                    <div class='tab-content-title-small'><?php echo  $glo->enOrCh($news[$i],"article_contents",60); ?></div>
                     <div class='tab-content-date'><?php echo $news[$i]->article_date?></div>
                 </div>
                 <div class="clearfix"></div>
@@ -115,7 +116,7 @@ $glo =new GlobalFunc();
     <div class="pull-left content-right">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">视屏中心</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['video'][$language];?></a>
             </li>
         </ul>
 
@@ -142,10 +143,10 @@ $glo =new GlobalFunc();
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#zhanhuiMeetings" role="tab" data-toggle="tab">展会展览</a>
+                <a href="#zhanhuiMeetings" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['zhanhuixinxi'][$language];?></a>
             </li>
             <li >
-                <a href="#xueshuMeetings" role="tab" data-toggle="tab">学术会议</a>
+                <a href="#xueshuMeetings" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['xueshuhuiyi'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content">
@@ -153,7 +154,10 @@ $glo =new GlobalFunc();
                 <div class='pull-left'>
                     <?php for($i=0;$i<count($zhanhuiMeetings);$i++){ ?>
                         <a href="">
-                            <h4>&bull;<?php echo $zhanhuiMeetings[$i]->meeting_name;?></h4>
+                            <h4>
+                            &bull;
+                                <?php echo  $glo->enOrCh($zhanhuiMeetings[$i],"meeting_name");?>
+                            </h4>
                         </a>
                      <?php }?>
                 </div>
@@ -163,7 +167,9 @@ $glo =new GlobalFunc();
                 <div class='pull-left'>
                     <?php for($i=0;$i<count($xueshuMeetings);$i++){ ?>
                         <a href="">
-                            <h4>&bull;<?php echo $xueshuMeetings[$i]->meeting_name;?></h4>
+                            <h4>&bull;
+                             <?php echo  $glo->enOrCh($xueshuMeetings[$i],"meeting_name");?>
+                            </h4>
                         </a>
                      <?php }?>
                 </div>
@@ -174,7 +180,7 @@ $glo =new GlobalFunc();
     <div class="pull-left content-right three">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">招标广告</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['zhaobiaoguanggao'][$language];?></a>
             </li>
         </ul>
 
@@ -201,7 +207,7 @@ $glo =new GlobalFunc();
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">技术分享</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['jishufenxiang'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content">
@@ -218,11 +224,10 @@ $glo =new GlobalFunc();
     <div class="pull-left content-right">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#home" role="tab" data-toggle="tab">索刊</a>
+                <a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['suokan'][$language];?></a>
             </li>
         </ul>
         <div class="tab-pane active" id="home">1111</div>
-
     </div>
 </div>
 <!-- 友情链接 -->

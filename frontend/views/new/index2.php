@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
     .breadcrumb > li + li:before {
         color: #CCCCCC;
@@ -38,7 +44,7 @@
 		padding-left: 30px;
 	}
 	.shangxia span{
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 800px;
 	}
 	.first-p{
@@ -109,22 +115,29 @@
     <div class="content _pc">
     <ol class="breadcrumb _pc">
         <li>
-            <a href="/frontend/web/">首页</a>
+            <a href="/frontend/web/"><?php echo Yii::$app->params['title']['home'][$language];?></a>
         </li>
         <li>
-            <a href="/frontend/web/index.php?r=new/index">新闻中心</a>
+            <a href="/frontend/web/index.php?r=new/index"><?php echo Yii::$app->params['title']['news'][$language];?></a>
         </li>
         <li>
-            <a href="#" class="active">正文</a>
+            <a href="#" class="active"><?php echo Yii::$app->params['title']['zhengwen'][$language];?></a>
         </li>
     </ol>
         <div class="pull-left content-left">
             
             <div class="tab-content shangxia">
-            	<h2 class="text-center"><?php echo $model->article_title;?></h2>
-            	<span>发布日期：<?php echo date("Y-m-d",strtotime($model->article_date)); ?> &nbsp;&nbsp;&nbsp;来源：医学检验网</span>
+            	<h2 class="text-center"><?php echo $glo->enOrCh($model,'article_title');?></h2>
+            	<span>
+                    <?php echo Yii::$app->params['title']['faburiqi'][$language];?>:
+                    <?php echo date("Y-m-d",strtotime($model->article_date)); ?> 
+                    &nbsp;&nbsp;&nbsp;
+                    <?php echo Yii::$app->params['title']['laiyuan'][$language];?>
+                    ：
+                    <?php echo Yii::$app->params['title']['yixuejiancewang'][$language];?>
+                </span>
             	<div class="neirong">
-            		<?php echo $model->article_contents;?>
+                    <?php echo $glo->enOrCh($model,'article_contents');?>
             	</div>
             	<p class='first-p'><span>上一篇</span>：1231232132</p>
     			<p><span>下一遍</span>：1231232132</p>

@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
 .breadcrumb > li + li:before {
     color: #CCCCCC;
@@ -114,14 +120,14 @@ h5{
 </div>
 <ol class="breadcrumb _pc">
 	<li>
-		<a href="#">首页</a>
+		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
 	</li>
 	<li>
-		<a href="#" class="active">行业招聘</a>
+		<a href="#" class="active"><?php echo Yii::$app->params['title']['job'][$language];?></a>
 	</li>
 </ol>
 <div class="first _pc">
-	<h5>|&nbsp;&nbsp;名企招聘</h5>
+	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['mingqizhaopin'][$language];?></h5>
 	<div>
 		<?php for($i=0;$i<10;$i++){?>
 			<img src="<?php echo $list[$i]->article_pic ;?>">
@@ -131,18 +137,18 @@ h5{
 </div>
 
 <div class='second _pc'>
-	<h5>|&nbsp;&nbsp;推荐招聘</h5>
+	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tuijianzhaopin'][$language];?></h5>
 	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:200px;overflow:auto; position: relative;">
 		<div class='tuijian'>
 			<?php for($i=0;$i<count($list);$i++){?>
 				<div class='pull-left'>
 				<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $list[$i]->article_id;?>">
-					 <h6>&bull;<?php echo $list[$i]->article_title ;?></h6>
+					 <h6>&bull;<?php echo $glo->enOrCh($list[$i],"article_title");?></h6>
 					 <h6>
 					 &nbsp;
 					 <?php if($list[$i]->mirMake->maker_place){?>
-					 [<?php echo $list[$i]->mirMake->maker_place ;?>]:
-					 <?php echo $list[$i]->mirMake->maker_name ;?>
+					 [<?php echo $glo->enOrCh($list[$i]->mirMake,"maker_place") ;?>]:
+					 <?php echo $glo->enOrCh($list[$i]->mirMake,"maker_name") ;?>
 					 <?php }?>
 					 </h6>
 				</a>

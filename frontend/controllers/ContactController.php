@@ -12,11 +12,11 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-
+use frontend\controllers\CommonController;
 /**
  * Site controller
  */
-class ContactController extends Controller
+class ContactController extends CommonController
 {
     
 

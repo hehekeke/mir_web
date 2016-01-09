@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
 .breadcrumb > li + li:before {
     color: #CCCCCC;
@@ -64,18 +70,20 @@ h1{
 <div class="clearfix"></div>
 <ol class="breadcrumb _pc">
     <li>
-        <a href="/frontend/web/index.php">首页</a>
+        <a href="/frontend/web/index.php"><?php echo Yii::$app->params['title']['home'][$language];?></a>
     </li>
     <li>
-        <a href="/frontend/web/index.php?r=job/index" >行业招聘</a>
+        <a href="/frontend/web/index.php?r=job/index" ><?php echo Yii::$app->params['title']['job'][$language];?></a>
     </li>
      <li>
-        <a href="#" class="active">企业信息</a>
+        <a href="#" class="active"><?php echo Yii::$app->params['title']['qiyexinxi'][$language];?></a>
     </li>
 </ol>
-<h1 class="text-center"><?php echo $model->mirMake->maker_name;?></h1>
+<h1 class="text-center"><?php echo $glo->enOrCh($model->mirMake,"maker_name");?></h1>
 
-  <h6 class="text-center">发布日期是：<?php echo date("Y-m-d",strtotime($model->article_date));?></h6>
+  <h6 class="text-center">
+  <?php echo Yii::$app->params['title']['faburiqi'][$language];?>
+  ：<?php echo date("Y-m-d",strtotime($model->article_date));?></h6>
 
 <div class="_m" style="padding:0 6%;">
      
@@ -85,18 +93,21 @@ h1{
     <div class="gongsi">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#gongsijieshao" role="tab" data-toggle="tab">公司简介</a>
+                <a href="#gongsijieshao" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['gongsijieshao'][$language];?></a>
             </li>
             <li >
-                <a href="#zhaopinzhiwei" role="tab" data-toggle="tab">招聘职位</a>
+                <a href="#zhaopinzhiwei" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['zhaopinzhiwei'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content active">
             <div class="tab-pane active " id="gongsijieshao">
-                 <?php echo $model->mirMake->maker_info;?>
+                <?php echo $glo->enOrCh($model->mirMake,"maker_info");?>
+                 <!-- <?php echo $model->mirMake->maker_info;?> -->
+
             </div>
             <div class="tab-pane " id="zhaopinzhiwei">
-                <?php echo $model->article_contents;?>
+                <?php echo $glo->enOrCh($model,"article_contents");?>
+                <!-- <?php echo $model->article_contents;?> -->
             </div>
            
         </div>

@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
 	
 .breadcrumb > li + li:before {
@@ -80,10 +86,10 @@ a{
 </style>
 <ol class="breadcrumb">
 	<li>
-		<a href="#">首页</a>
+		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
 	</li>
 	<li>
-		<a href="#" class="active">Idv展厅</a>
+		<a href="#" class="active"><?php echo Yii::$app->params['title']['ivd'][$language];?></a>
 	</li>
 </ol>
 <div class='idv_topImg'>
@@ -113,7 +119,7 @@ a{
 
 <div class="btn-group">
 	<?php for($i=0;$i<count($dafenlei);$i++){?>
-		<button type="button" class="btn btn-default"><?php echo $dafenlei[$i]->ClassName; ?></button>
+		<button type="button" class="btn btn-default"><?php echo $glo->enOrCh($dafenlei[$i],'ClassName'); ?></button>
 	<?php }?>
 </div>
 <div class="row">
@@ -183,7 +189,7 @@ a{
 	<div class="pull-left idv-left contne">
 		<ul class="nav nav-tabs " role="tablist" id="myTab">
 			<li class="active">
-				<a href="#home" role="tab" data-toggle="tab">技术分享</a>
+				<a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['jishufenxiang'][$language];?></a>
 			</li>
 		</ul>
 		<div class="tab-content">
@@ -203,7 +209,7 @@ a{
 	<div class="pull-left idv-left">
 		<ul class="nav nav-tabs " role="tablist" id="myTab">
 			<li class="active">
-				<a href="#home" role="tab" data-toggle="tab">行业招聘</a>
+				<a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['job'][$language];?></a>
 			</li>
 		</ul>
 		<div class="tab-content">
@@ -211,7 +217,7 @@ a{
 				<div class='pull-left'>
 				<?php for($i=0;$i<count($jobs);$i++){?>
 					<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $jobs[$i]->article_id;?>">
-						<h4>&bull;<?php echo $jobs[$i]->article_title;?></h4>
+						<h4>&bull;<?php echo $glo->enOrCh($jobs[$i],'article_title'); ?></h4>
 					</a>
 				<?php }?>
 				</div>
@@ -225,7 +231,7 @@ a{
 <div class="pinpaizhanshi">
 	<ul class="nav nav-tabs " role="tablist" id="myTab">
 		<li class="active">
-			<a href="#home" role="tab" data-toggle="tab">品牌展示</a>
+			<a href="#home" role="tab" data-toggle="tab"><?php echo Yii::$app->params['title']['pinpaizhanshi'][$language];?></a>
 		</li>
 	</ul>
 	<div class="row">

@@ -10,11 +10,11 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 use backend\models\MirArticle;
-
+use frontend\controllers\CommonController;
 /**
  * Site controller
  */
-class JobController extends Controller
+class JobController extends CommonController
 {
     
 

@@ -25,6 +25,14 @@ beginPage() ?>
 
     <?php $this->
     head() ?>
+    <?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+
+?>
     <style type="text/css">
     body{
         margin: 17px 10% 0 10%;
@@ -96,7 +104,7 @@ beginPage() ?>
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 22px;
+        font-size: 19px;
     }
     .nav-tabs a{
         color: black;
@@ -231,8 +239,8 @@ beginPage() ?>
 
         <span class="pull-right btn btn-primary zhongwen" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
 
-        <span class="pull-right btn loign" style='margin-right:55px;'>注册</span>
-        <span class="pull-right btn loign">登陆 |</span>
+        <span class="pull-right btn loign" style='margin-right:55px;'><?php echo $title['register'][$language];?></span>
+        <span class="pull-right btn loign"><?php echo $title['login'][$language];?> |</span>
         <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="输入关键字">
@@ -246,7 +254,7 @@ beginPage() ?>
         <ul class="nav navbar-nav">
             <li class="active">
                 <a href="/frontend/web" class='text-center'>
-                    首页
+                <?php echo Yii::$app->params['title']['home'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
@@ -254,7 +262,7 @@ beginPage() ?>
             </li>
             <li >
                 <a href="/frontend/web/index.php?r=new/index" class='text-center'>
-                    新闻中心
+                    <?php echo Yii::$app->params['title']['news'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
@@ -262,7 +270,7 @@ beginPage() ?>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=idv/index" class='text-center'>
-                    IVD展厅
+                    <?php echo Yii::$app->params['title']['ivd'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
@@ -270,7 +278,7 @@ beginPage() ?>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=see/index" class='text-center'>
-                    精彩看点
+                    <?php echo Yii::$app->params['title']['WonderfulAspect'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
@@ -278,7 +286,7 @@ beginPage() ?>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=meeting/index" class='text-center'>
-                    会议信息
+                    <?php echo Yii::$app->params['title']['meeting'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai"></div>
                     </span>
@@ -286,7 +294,7 @@ beginPage() ?>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=video/index" class='text-center'>
-                    视屏中心
+                    <?php echo Yii::$app->params['title']['video'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
@@ -294,14 +302,16 @@ beginPage() ?>
             </li>
             <li>
                 <a href="/frontend/web/index.php?r=job/index" class='text-center'>
-                    行业招聘
+                    <?php echo Yii::$app->params['title']['job'][$language];?>
                     <span class='pull-right'>
                         <div class="kongbai "></div>
                     </span>
                 </a>
             </li>
             <li>
-                <a href="/frontend/web/index.php?r=contact/index" class='text-center'>关于我们</a>
+                <a href="/frontend/web/index.php?r=contact/index" class='text-center'>
+                    <?php echo Yii::$app->params['title']['aboutUs'][$language];?>
+                </a>
             </li>
         </ul>
     </nav>
@@ -356,10 +366,14 @@ beginPage() ?>
     <script>
         $(function () {
             $(".yingwen").click(function(){
-                alert("英文");
+                $.post("/admin.php/index/index",{id:1},function(data){
+                    window.location.reload();
+                });
             });
             $(".zhongwen").click(function(){
-                alert("zhongwen");
+                 $.post("/admin.php/index/index",{id:0},function(data){
+                    window.location.reload();
+                });
             });
             $('#myTab a').click(function (e) { 
               e.preventDefault();//阻止a链接的跳转行为 

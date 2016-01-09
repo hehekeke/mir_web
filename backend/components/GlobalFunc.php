@@ -14,11 +14,24 @@ class GlobalFunc{
 	/**
 	 * 
 	 */
-	public function enOrCh($data,$filed){
-		if($filed == 'article_title'){
-			$filed = 'article_titile_e';
+	public function enOrCh($data,$filed,$len=""){
+		$session = Yii::$app->session;
+		// p($session['language']);
+		if(!empty($session['language'])){
+			if($filed == 'article_title'){
+				$filedNew = 'article_titile_e';
+			}else{
+				$filedNew = $filed."_e";
+			}
 		}
-		return $data->$filed;
+		if(empty($data->$filedNew)){
+			$filedNew = $filed;
+		}
+		if($len){
+			return mb_substr($data->$filedNew,0,$len,'utf-8');
+		}else{
+			return $data->$filedNew;
+		}
 	}
 	/**
 	 * json格式化输出上传文件后的表单
