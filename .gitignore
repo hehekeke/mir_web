@@ -37,3 +37,4 @@ phpunit.phar
 /public/uploads/logo/*
 /index.php
 /public/uploads/*
+/files/*
