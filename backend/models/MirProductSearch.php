@@ -42,7 +42,15 @@ class MirProductSearch extends MirProduct
      */
     public function search($params)
     {
-        $query = MirProduct::find();
+        /**
+         *  根据参数选择展示的商品
+         *  @var dis=>1 不现实的 0=>显示的 
+         */
+        $display = Yii::$app->request->get('dis');
+
+        $map = ['product_disp'=>$display];
+
+        $query = MirProduct::find()->where($map);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

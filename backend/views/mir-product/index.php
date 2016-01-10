@@ -39,7 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'product_pic',
-                                'format'=>'raw',
+                                'format'=>['image',['width'=>'172','height'=>'56']],
+                                // 'headerOptions'=>['width'=>'172','height'=>'56'],
                                 'value'=>function($data){
                                     /** 图片链接待确定 */
                                     return Html::img("http://www.mir168.com/UpPic/pro/".$data->product_pic);
@@ -72,7 +73,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             // 'product_tui',
                             // 'product_disp',
 
-                            ['class' => 'yii\grid\ActionColumn'],
+                            [
+                                'class' => 'yii\grid\ActionColumn',
+                                'header'=>'操作',
+                                'template' => '{view}  {update} {delete}',
+                                'headerOptions' => ['width' => '100'],
+                            ],
                         ],
                     ]); ?>
 

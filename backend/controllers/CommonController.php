@@ -33,7 +33,11 @@ class CommonController extends Controller
     	}
     	return true;
     }
-
+    public function ajaxJson($data)
+    {
+        echo json_encode($data);
+        exit;
+    }
 
     
 }

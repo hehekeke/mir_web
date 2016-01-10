@@ -70,15 +70,15 @@ class MirProduct extends \yii\db\ActiveRecord
             'product_name_e' => '英文名称',
             'product_price' => '产品价格',
             'product_date' => '添加时间',
-            'product_class' => 'Product Class',
+            'product_class' => '产品类别',
             'product_place' => '产地',
             'product_place_e' => '产地英文',
             'product_standards' => '产品规格',
             'product_standards_e' => '产品规格英文',
-            'product_model' => 'Product Model',
-            'product_model_e' => 'Product Model E',
-            'product_performance' => 'Product Performance',
-            'product_performance_e' => 'Product Performance E',
+            'product_model' => '产品型号',
+            'product_model_e' => '产品型号英文',
+            'product_performance' => '性能',
+            'product_performance_e' => '性能英文',
             'product_parameter' => '产品参数',
             'product_parameter_e' => '产品参数英文',
             'product_contrast' => 'Product Contrast',
@@ -86,7 +86,7 @@ class MirProduct extends \yii\db\ActiveRecord
             'product_appraise' => 'Product Appraise',
             'product_appraise_e' => 'Product Appraise E',
             'product_pic' => '产品图片',
-            'product_mainclass' => 'Product Mainclass',
+            'product_mainclass' => '产品主分类',
             'product_brand' => '产品品牌',
             'product_tui' => '推荐产品',
             'product_maker' => '生产厂商',
@@ -117,5 +117,78 @@ class MirProduct extends \yii\db\ActiveRecord
         $maker = \backend\models\MirMaker::find()->select(['maker_id'])->where(['like','maker_name',$name])->asArray()->all();
         return ArrayHelper::getColumn($maker,'maker_id');
     }
+    /**
+     * 产品主分类 用于下拉列表
+     * @author wonguohui
+     * @Date   2016-01-10T19:19:30+0800
+     */
+    public static function mainClass()
+    {
+        $classModel = new \backend\models\Classify;
+        $mainClass = $classModel->find()->select(['ID','ClassName'])->where(['ParentID'=>0])
+                                ->asArray()->all();
+        return ArrayHelper::map($mainClass,'ID','ClassName');
+    }
+    /**
+     * 返回产品的子分类
+     * @author wonguohui
+     * @Date   2016-01-10T19:27:06+0800
+     * @param  $parentId 主分类id
+     */
+    public function childClass($parentId)
+    {
+        $classModel = new \backend\models\Classify;
+        $childData = $classModel->find()->select(['ChildStr'])->where(['ID'=>$parentId])
+                                 ->asArray()->one();
 
+        $ids = explode(',', $childData['ChildStr']);
+        $map = ['in','ID',$ids];
+        $childClass = $classModel->find()->select(['ID','ClassName'])->where($map)
+                                 ->asArray()->all();
+
+        return ArrayHelper::map($childClass,'ID','ClassName');
+    }
+    /**
+     * 产品的生产厂商id=>name的map供下拉列表使用
+     * @author wonguohui
+     * @Date   2016-01-10T20:08:53+0800
+     */
+    public static function productMakerMap()
+    {
+        $maker = new \backend\models\MirMaker;
+        $map = $maker->getMakerNameIdMap();
+        return $map;
+    }
+    /**
+     * 全部的品牌列表 map
+     * @author wonguohui
+     * @Date   2016-01-10T20:14:31+0800
+     */
+    public static function productBrandMap()    
+    {
+        $brand = new \backend\models\MirBrand;
+        $map = $brand->getBrandNameIdMap();
+        return $map;
+    }
+    /**
+     * 城市下来列表用
+     * @author wonguohui
+     * @Date   2016-01-10T22:46:56+0800
+     */
+    public static function cityMap()
+    {
+        $city = Yii::$app->params['city'];
+        foreach ($city as $k => $v) {
+            $list[$k] = $k;
+        }
+        return $list;
+    }
 }
+
+
+
+
+
+
+
+

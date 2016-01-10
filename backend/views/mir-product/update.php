@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirProduct */
 
-$this->title = 'Update Mir Product: ' . ' ' . $model->product_id;
+$this->title = '修改产品信息';
 $this->params['breadcrumbs'][] = ['label' => 'Mir Products', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->product_id, 'url' => ['view', 'id' => $model->product_id]];
 $this->params['breadcrumbs'][] = 'Update';

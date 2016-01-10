@@ -35,6 +35,7 @@ class MirProductController extends CommonController
     public function actionIndex()
     {
         $model = new MirProduct;
+
         $searchModel = new MirProductSearch();
         $params = Yii::$app->request->queryParams;
 
@@ -52,7 +53,30 @@ class MirProductController extends CommonController
             'dataProvider' => $dataProvider,
         ]);
     }
+    /**
+     * 返回主分类下面的子分类，供ajax请求使用
+     * @author wonguohui
+     * @Date   2016-01-10T19:59:45+0800
+     */
+    public function actionChildClass()
+    {
+        $data = Yii::$app->request->post();
+        $model = new MirProduct;
+        $childClass = $model->childClass($data['parentId']);
 
+        $this->ajaxJson($childClass);
+    }
+    /**
+     * 返回城市的拼音
+     * @author wonguohui
+     * @Date   2016-01-10T23:17:30+0800
+     */
+    public function actionCityEnglish()
+    {
+        $data = Yii::$app->request->post();
+        $en = Yii::$app->params['city'][$data['cityName']];
+        $this->ajaxJson(['city_en'=>$en]);
+    }
     /**
      * Displays a single MirProduct model.
      * @param integer $id

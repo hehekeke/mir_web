@@ -54,8 +54,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             // 'mir360_company',
                             // 'mir360_company_e',
                             // 'mir360_zy',
-
-                            ['class' => 'yii\grid\ActionColumn'],
+                            [
+                                'class' => 'yii\grid\ActionColumn',
+                                'header'=>'操作',
+                                'template' => '{view}  {update} {delete}',
+                                'headerOptions' => ['width' => '100'],
+                            ],
                         ],
                     ]); ?>
 

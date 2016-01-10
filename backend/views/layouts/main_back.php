@@ -146,10 +146,10 @@ beginPage() ?>
                                     <a href="/admin.php/mir-product/create">产品添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/mir-product/index">产品管理</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-product/index','dis'=>0])?>">产品管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/appoint/contact-lecturer">产品回收站</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-product/index','dis'=>1])?>">产品回收站</a>
                                 </li>
                                 <li>
                                     <a href="/admin.php/appoint/lecturer">产品分类管理</a>

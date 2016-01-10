@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirProduct */
 
-$this->title = 'Create Mir Product';
+$this->title = '添加产品信息';
 $this->params['breadcrumbs'][] = ['label' => 'Mir Products', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
