@@ -143,7 +143,7 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/mir-product/create">产品添加</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-product/create'])?>">产品添加</a>
                                 </li>
                                 <li>
                                     <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-product/index','dis'=>0])?>">产品管理</a>
