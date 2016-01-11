@@ -12,8 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'ID')->textInput() ?>
-
     <?= $form->field($model, 'ModuleID')->textInput() ?>
 
     <?= $form->field($model, 'RootID')->textInput() ?>
@@ -28,15 +26,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Orders')->textInput() ?>
 
-    <?= $form->field($model, 'ParentID')->textInput() ?>
+    <?= $form->field($model, 'ParentID')->dropDownList(['1'=>'一级','2'=>['3'=>'子1','4'=>'子2']]) ?>
 
     <?= $form->field($model, 'ParentStr')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'Child')->textInput() ?>
 
     <?= $form->field($model, 'ChildStr')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'ShowCount')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

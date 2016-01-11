@@ -8,11 +8,11 @@ use backend\models\ClassifySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\controllers\CommonController;
 /**
  * ClassifyController implements the CRUD actions for Classify model.
  */
-class ClassifyController extends Controller
+class ClassifyController extends CommonController
 {
     public function behaviors()
     {
@@ -32,10 +32,14 @@ class ClassifyController extends Controller
      */
     public function actionIndex()
     {
+        $model = new Classify;
         $searchModel = new ClassifySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $mainClass = Classify::mainClass();
+
         return $this->render('index', [
+            'mainClass'=>$mainClass,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

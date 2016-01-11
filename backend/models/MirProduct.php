@@ -124,10 +124,7 @@ class MirProduct extends \yii\db\ActiveRecord
      */
     public static function mainClass()
     {
-        $classModel = new \backend\models\Classify;
-        $mainClass = $classModel->find()->select(['ID','ClassName'])->where(['ParentID'=>0])
-                                ->asArray()->all();
-        return ArrayHelper::map($mainClass,'ID','ClassName');
+        return \backend\models\Classify::mainClass();
     }
     /**
      * 返回产品的子分类
@@ -138,15 +135,7 @@ class MirProduct extends \yii\db\ActiveRecord
     public function childClass($parentId)
     {
         $classModel = new \backend\models\Classify;
-        $childData = $classModel->find()->select(['ChildStr'])->where(['ID'=>$parentId])
-                                 ->asArray()->one();
-
-        $ids = explode(',', $childData['ChildStr']);
-        $map = ['in','ID',$ids];
-        $childClass = $classModel->find()->select(['ID','ClassName'])->where($map)
-                                 ->asArray()->all();
-
-        return ArrayHelper::map($childClass,'ID','ClassName');
+        return $classModel->childClass($parentId);
     }
     /**
      * 产品的生产厂商id=>name的map供下拉列表使用
