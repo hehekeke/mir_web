@@ -97,6 +97,7 @@ use backend\models\MirProduct;
             for(id in res){
                 html += '<option value="'+id+'">'+res[id]+'</option>';
             }
+            $('#mirproduct-product_class').html('');
             $('#mirproduct-product_class').append(html);
         })
     }
