@@ -40,9 +40,9 @@ class MirBrand extends \backend\models\MirBase
     public function attributeLabels()
     {
         return [
-            'brand_id' => Yii::t('app', 'Brand ID'),
-            'brand_name' => Yii::t('app', 'Brand Name'),
-            'brand_name_e' => Yii::t('app', 'Brand Name E'),
+            'brand_id' => Yii::t('app', 'ID'),
+            'brand_name' => Yii::t('app', '商品中文名称'),
+            'brand_name_e' => Yii::t('app', '商品英文名称'),
         ];
     }
     /**

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Classify */
 
-$this->title = $model->ID;
+$this->title = '查看分类信息';
 $this->params['breadcrumbs'][] = ['label' => 'Classifies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
