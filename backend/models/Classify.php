@@ -37,7 +37,7 @@ class Classify extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ID', 'ModuleID', 'RootID', 'Depth', 'Orders', 'ParentID', 'Child', 'ShowCount'], 'integer'],
+            [['ModuleID', 'RootID', 'Depth', 'Orders', 'ParentID', 'Child', 'ShowCount'], 'integer'],
             [['ParentStr', 'ChildStr'], 'string'],
             [['ClassName', 'ClassName_e', 'Readme'], 'string', 'max' => 255]
         ];
@@ -93,6 +93,12 @@ class Classify extends \yii\db\ActiveRecord
 
         return ArrayHelper::map($childClass,'ID','ClassName');
     }
+    /**
+     * 获取全部分类，包括主分类及其下面的子分类
+     * @author wonguohui
+     * @Date   2016-01-12T22:08:49+0800
+     * @return [type]
+     */
     public function getAllClassify()
     {
         $mainClass = self::mainClass();
@@ -109,5 +115,98 @@ class Classify extends \yii\db\ActiveRecord
             }
         }
         return $classifyArray;
+    }
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if($this->isNewRecord){
+                /**  新增主分类 */
+                if($this->ParentID == ''){
+                    $this->ParentID = 0;
+                    $this->ParentStr = 0;
+                    $this->Depth = 0;
+                    $this->ModuleID = 1;
+                    return true;
+                }elseif ($this->isMainClass($this->ParentID)) {
+                    /** 新增主分类下面的一个子分类 */
+                    $this->ParentStr = $this->ParentID;
+                    $this->Depth = 1;
+                    $this->ModuleID = 1;
+                    return true;
+                }else{
+                    /** 子分类下再填子分类  */
+                    $this->ParentStr = $this->ParentID;
+                    $this->Depth = 2;
+                    $this->ModuleID = 1;
+                    return true;
+                }
+            }else{
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+    public function afterSave($insert, $changedAttributes)
+    {
+        parent::afterSave($insert,$changedAttributes);
+        /** 如果不是父级分类，给其父级更新其下面的子分类childstr */
+        if($this->ParentID !== 0){
+            $map = ['ID'=>$this->ParentID];
+            $children = $this->find()->select(['ChildStr'])->where($map)->asArray()->one();
+            $data = [];
+            if(empty($children['ChildStr'])){
+                $data[] = $this->ID;
+            }else{
+                $data = explode(',', $children['ChildStr']);
+                $data[] = $this->ID;
+            }
+            $this->updateAll(['ChildStr'=>implode(',', $data)],$map);
+            return true;
+        }else{
+            return true;
+        }
+
+    }
+    /**
+     * 判断是否为一个分类id是否为主分类
+     * @author wonguohui
+     * @Date   2016-01-12T23:41:03+0800
+     * @param  [type] $id
+     * @return boolean
+     */
+    public function isMainClass($id)
+    {
+        $mainClass = self::mainClass();
+        $mainIds = [];
+        foreach ($mainClass as $k => $v) {
+            $mainIds[] = $k;
+        }
+        if(in_array($id,$mainIds)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    /**
+     * 判断是否为一个分类id是否为子分类
+     * @author wonguohui
+     * @Date   2016-01-12T23:41:03+0800
+     * @param  [type] $id
+     * @return boolean
+     */
+    public function isChildClass($id)
+    {
+        $allClass = $this->getAllClassify();
+        $childIds = [];
+        foreach ($allClass as $k => $v) {
+            $childIds[] = $k;
+        }
+
+        if(in_array($id,$childIds)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

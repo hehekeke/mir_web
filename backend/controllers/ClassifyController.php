@@ -67,6 +67,7 @@ class ClassifyController extends CommonController
         $model = new Classify();
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
             return $this->redirect(['view', 'id' => $model->ID]);
         } else {
             return $this->render('create', [

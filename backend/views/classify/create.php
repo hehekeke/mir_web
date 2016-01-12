@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Classify */
 
-$this->title = 'Create Classify';
+$this->title = '创建新分类';
 $this->params['breadcrumbs'][] = ['label' => 'Classifies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

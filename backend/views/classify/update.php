@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Classify */
 
-$this->title = 'Update Classify: ' . ' ' . $model->ID;
+$this->title = '更新分类名称相关信息';
 $this->params['breadcrumbs'][] = ['label' => 'Classifies', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->ID, 'url' => ['view', 'id' => $model->ID]];
 $this->params['breadcrumbs'][] = 'Update';
