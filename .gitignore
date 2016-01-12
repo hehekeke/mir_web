@@ -36,5 +36,5 @@ phpunit.phar
 .phpintel/
 /public/uploads/logo/*
 /index.php
-/public/uploads/*
+#/public/uploads/*
 /files/*

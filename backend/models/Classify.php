@@ -55,7 +55,7 @@ class Classify extends \yii\db\ActiveRecord
             'Depth' => 'Depth',
             'ClassName' => '分类名称',
             'ClassName_e' => '分类名称英文',
-            'Readme' => 'Readme',
+            'Readme' => '分类注释',
             'Orders' => 'Orders',
             'ParentID' => '所属主分类',
             'ParentStr' => 'Parent Str',
@@ -92,5 +92,22 @@ class Classify extends \yii\db\ActiveRecord
                                  ->asArray()->all();
 
         return ArrayHelper::map($childClass,'ID','ClassName');
+    }
+    public function getAllClassify()
+    {
+        $mainClass = self::mainClass();
+        $classifyArray = [];
+        foreach ($mainClass as $k => $v) {
+            $classifyArray[$k] = $v;
+            $child = $this->childClass($k);
+            foreach ($child as $kk => $vv) {
+                if($k == $kk){
+                    continue;
+                }else{
+                    $classifyArray[$kk] = ' |-'.$vv;
+                }
+            }
+        }
+        return $classifyArray;
     }
 }

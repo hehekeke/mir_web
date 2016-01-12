@@ -9,35 +9,35 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="classify-form">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
 
-    <?php $form = ActiveForm::begin(); ?>
+                            <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'ModuleID')->textInput() ?>
 
-    <?= $form->field($model, 'RootID')->textInput() ?>
+                            <?= $form->field($model, 'ClassName')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Depth')->textInput() ?>
+                            <?= $form->field($model, 'ClassName_e')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'ClassName')->textInput(['maxlength' => true]) ?>
+                            <?= $form->field($model, 'Readme')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'ClassName_e')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Readme')->textInput(['maxlength' => true]) ?>
+                            <?= $form->field($model, 'ParentID')->dropDownList([$model->getAllClassify()]) ?>
 
-    <?= $form->field($model, 'Orders')->textInput() ?>
+                            <div class="form-group">
+                                <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                            </div>
 
-    <?= $form->field($model, 'ParentID')->dropDownList(['1'=>'一级','2'=>['3'=>'子1','4'=>'子2']]) ?>
+                            <?php ActiveForm::end(); ?>
 
-    <?= $form->field($model, 'ParentStr')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'Child')->textInput() ?>
-
-    <?= $form->field($model, 'ChildStr')->textarea(['rows' => 6]) ?>
-
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <?php ActiveForm::end(); ?>
-
 </div>

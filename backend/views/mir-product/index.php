@@ -39,11 +39,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'product_pic',
-                                'format'=>['image',['width'=>'172','height'=>'56']],
+                                'format'=>'raw',
                                 // 'headerOptions'=>['width'=>'172','height'=>'56'],
                                 'value'=>function($data){
                                     /** 图片链接待确定 */
-                                    return Html::img("http://www.mir168.com/UpPic/pro/".$data->product_pic);
+                                    return Html::img(Yii::getAlias('@uploads')."/pro/".$data->product_pic,[
+                                            'width'=>'172','height'=>'56'
+                                        ]);
                                 }
                             ],
                             [
