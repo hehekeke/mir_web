@@ -43,7 +43,7 @@ h5{
 	border-bottom: 1px dashed grey;
 }
  @media screen and (max-width:1000px) {
- 	.top{
+ 			.top{
             width: 100%;
             height: 43px;
             background-color: #3c80a2;
@@ -81,11 +81,16 @@ h5{
         	margin-left: 6%;
         	margin-top: 6px;
         }
-       
-        
  }
 
 </style>
+<script type="text/javascript">
+    $(function(){
+        $("#left").click(function(){
+            window.location.href="/frontend/web/index.php";
+        });
+    });
+</script>
 <div class="top _m">
     <div class="pull-left" style="margin-top:8px;margin-left:28px;">
         <div id="triangle-left"></div>
@@ -97,26 +102,19 @@ h5{
 </div>
 <div class="clearfix"></div>
 <div class="_m">
-	<div class="one">
-		<p>诚招：php</p>
-		<p>[北京]Msup</p>
-	</div>
-	<div class="one">
-		<p>诚招：php</p>
-		<p>[北京]Msup</p>
-	</div>
-	<div class="one">
-		<p>诚招：php</p>
-		<p>[北京]Msup</p>
-	</div>
-	<div class="one">
-		<p>诚招：php</p>
-		<p>[北京]Msup</p>
-	</div>
-	<div class="one">
-		<p>诚招：php</p>
-		<p>[北京]Msup</p>
-	</div>
+	<?php for($i=0;$i<count($list);$i++){?>
+	<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $list[$i]->article_id;?>">
+		<div class="one">
+			<p>诚招：<?php echo $glo->enOrCh($list[$i],"article_title");?></p>
+			<p>
+				<?php if($list[$i]->mirMake->maker_place){?>
+					[<?php echo $glo->enOrCh($list[$i]->mirMake,"maker_place") ;?>]
+					<?php echo $glo->enOrCh($list[$i]->mirMake,"maker_name") ;?>
+				<?php }?>
+			</p>
+		</div>
+	</a>
+	<?php }?>
 </div>
 <ol class="breadcrumb _pc">
 	<li>

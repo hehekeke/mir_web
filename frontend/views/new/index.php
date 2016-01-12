@@ -1,5 +1,6 @@
 <?php
-$session = Yii::$app->session;
+$session = Yii::$app->
+session;
 $language = empty($session['language'])?0:1;
 use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
@@ -36,6 +37,9 @@ $glo =new GlobalFunc();
         text-align: center;
         background-color: red;
     }
+    .tab-content-one{
+        border-bottom: 1px dashed grey;
+    }
     @media screen and (max-width:1000px) {
         .top{
             width: 100%;
@@ -47,6 +51,12 @@ $glo =new GlobalFunc();
             text-align: center;
             color: white;
             font-size: 20px;
+        }
+        .tab-content img{
+            height: 76px;
+        }
+        .content{
+            margin: 0;
         }
         ._m .tab-pane img{
             margin-top: 10px;
@@ -64,11 +74,10 @@ $glo =new GlobalFunc();
         }
         .content{
             padding-bottom: 3px;
-            margin-bottom: 20px;
             border-bottom: 1px solid black;
         }
          h4{
-            margin-top: 20px;
+            margin-top: 15px;
             margin-left: 7%;
         }
         #triangle-left { 
@@ -89,10 +98,19 @@ $glo =new GlobalFunc();
             display: inline-block;
             color: white;
         }
+        .fenye{
+            margin: 0 2%;
+        }
     }
 </style>
+<script type="text/javascript">
+    $(function(){
+        $("#left").click(function(){
+            window.location.href="/frontend/web/index.php";
+        });
+    });
+</script>
 <?php
-
 use yii\widgets\LinkPager;
 ?>
 <div class="top _m">
@@ -110,112 +128,122 @@ use yii\widgets\LinkPager;
 <div class="tab-content  _m">
     <div class="tab-pane active" id="linchuang">
         <?php for($i=0;$i<count($news);$i++){?>
-        <div class="content">
-            <div class='pull-left tab-content-left'>
-                <img src='/public/frontend/img/indexTop.png'></div>
-            <div class='pull-left tab-content-right'>
-                <h4>我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h4>
-                <div class='tab-content-date'>2015/3/18</div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <?php }?>
-     
-    </div>
-</div>
-
-<!-- 中间的内容 -->
-<div class="content _pc">
-    <div class="pull-left content-left">
-        <!-- <ul class="nav nav-tabs " role="tablist" id="myTab">
-            <li class="active">
-                <a href="/frontend/web/" role="tab" data-toggle="tab">
-                    首页 > 新闻中心
-                </a>
-            </li>
-        </ul> -->
-         <ol class="breadcrumb _pc">
-            <li>
-                <a href="/frontend/web/"><?php echo Yii::$app->params['title']['home'][$language];?></a>
-            </li>
-            <li>
-                <a href="/frontend/web/index.php?r=new/index"><?php echo Yii::$app->params['title']['news'][$language];?></a>
-            </li>
-        </ol>
-        <div class="tab-content">
-        <?php for($i=0;$i<count($news);$i++){?>
-            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id; ?>">
-            <div class="tab-pane active tab-content-one" id="home">
+         <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id;?>">
+            <div class="content">
                 <div class='pull-left tab-content-left'>
                     <img src='/public/frontend/img/indexTop.png'></div>
                 <div class='pull-left tab-content-right'>
-                    <h4><?php echo $glo->enOrCh($news[$i],'article_title');?></h4>
-                    <div class='tab-content-title-small'><?php echo  $glo->enOrCh($news[$i],'article_zy','60');?></div>
-                    <div class='date'><?php echo date("Y-m-d",strtotime($news[$i]->article_date));?></div>
+                    <h4>
+                        <?php echo  $glo->enOrCh($news[$i],"article_title");?></h4>
+                    <div class='tab-content-date'>
+                        <?php echo  date("Y-m-d",strtotime($glo->enOrCh($news[$i],"article_date")));?></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
         </a>
-        <?php }?>    
+        <?php }?></div>
+</div>
+
+<!-- 中间的内容 -->
+<div class="content ">
+    <div class="pull-left content-left _pc">
+        <!-- <ul class="nav nav-tabs " role="tablist" id="myTab">
+        <li class="active">
+            <a href="/frontend/web/" role="tab" data-toggle="tab">首页 > 新闻中心</a>
+        </li>
+    </ul>
+    -->
+    <ol class="breadcrumb _pc">
+        <li>
+            <a href="/frontend/web/">
+                <?php echo Yii::$app->params['title']['home'][$language];?></a>
+        </li>
+        <li>
+            <a href="/frontend/web/index.php?r=new/index">
+                <?php echo Yii::$app->params['title']['news'][$language];?></a>
+        </li>
+    </ol>
+    <div class="tab-content">
+        <?php for($i=0;$i<count($news);$i++){?>
+        <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->
+            article_id; ?>">
+            <div class="tab-pane active tab-content-one" id="home">
+                <div class='pull-left tab-content-left'>
+                    <img src='/public/frontend/img/indexTop.png'></div>
+                <div class='pull-left tab-content-right'>
+                    <h4>
+                        <?php echo $glo->enOrCh($news[$i],'article_title');?></h4>
+                    <div class='tab-content-title-small'>
+                        <?php echo  $glo->enOrCh($news[$i],'article_zy','60');?></div>
+                    <div class='date'>
+                        <?php echo date("Y-m-d",strtotime($news[$i]->article_date));?></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <?php }?></div>
+        <div class="fenye _pc">
+            <?= LinkPager::widget(['pagination' =>$pages]); ?>
         </div>
-        <?= LinkPager::widget(['pagination' => $pages]); ?>
+</div>
+<div class="fenye _m">
+    <?= LinkPager::widget(['pagination' =>$pages]); ?>
+</div>
+<div class="pull-left content-right rendian _pc">
+    <ul class="nav nav-tabs " role="tablist" id="myTab">
+        <li class="active" style="border-bottom:9px solid orange;">
+            <a href="#home" role="tab" data-toggle="tab" style="color:orange;">本周热点</a>
+        </li>
+    </ul>
+    <div class="tab-content tab-div">
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
     </div>
 
-    <div class="pull-left content-right rendian">
-        <ul class="nav nav-tabs " role="tablist" id="myTab">
-            <li class="active" style="border-bottom:9px solid orange;">
-                <a href="#home" role="tab" data-toggle="tab" style="color:orange;">本周热点</a>
-            </li>
-        </ul>
-        <div class="tab-content tab-div">
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-            <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        </div>
-
-        <ul class="nav nav-tabs renmen" role="tablist" id="myTab">
-            <li class="active" style="border-bottom:9px solid green;">
-                <a href="#home" role="tab" data-toggle="tab" style="color:green;">本周热点</a>
-            </li>
-        </ul>
-        <div class="tab-content remen_div tab-div">
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-            <h5>
-                <span>1</span>
-                我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
-            </h5>
-        </div>
-
+    <ul class="nav nav-tabs renmen" role="tablist" id="myTab">
+        <li class="active" style="border-bottom:9px solid green;">
+            <a href="#home" role="tab" data-toggle="tab" style="color:green;">本周热点</a>
+        </li>
+    </ul>
+    <div class="tab-content remen_div tab-div">
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
+        <h5>
+            <span>1</span>
+            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+        </h5>
     </div>
-    <div class="clearfix"></div>
+
+</div>
+<div class="clearfix"></div>
 </div>

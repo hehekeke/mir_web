@@ -16,6 +16,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\controllers\CommonController;
+
 /**
  * Site controller
  */
@@ -40,12 +41,25 @@ class NewController extends CommonController
 
     public function actionIndex2()
     {
+
+        $comeForm = Yii::$app->request->get("comeForm");
+        if($comeForm == 'jishu'){
+            $title = "技术分享";
+        }else{
+            $title = '新闻中心';
+        }
         $id = Yii::$app->request->get("id");
         $articleModel = new MirArticle();
         $model = $articleModel->find()->where(["article_id"=>$id])->one();
-        // p($model);
+        $prevModeLst = $articleModel->find()->where(["article_class"=>'0'])->andWhere(["<","article_id",$id])->all();
+        $prevModel = $prevModeLst[count($prevModeLst)-1];
+        $nextModel = $articleModel->find()->where(["article_class"=>'0'])->andWhere([">","article_id",$id])->limit("article_id desc")->one();
+        // p($prevMode);
         return $this->render('index2',[
-            "model"=>$model
+            "model"=>$model,
+            'title'=>$title,
+            'prevModel'=>$prevModel,
+            'nextModel'=>$nextModel,
         ]);
     }
 

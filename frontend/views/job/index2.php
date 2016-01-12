@@ -58,6 +58,13 @@ h1{
         }
  }
 </style>
+<script type="text/javascript">
+    $(function(){
+        $("#left").click(function(){
+            window.location.href="/frontend/web/index.php?r=job/index";
+        });
+    });
+</script>
 <div class="top _m">
     <div class="pull-left" style="margin-top:8px;margin-left:28px;">
         <div id="triangle-left"></div>
@@ -86,7 +93,7 @@ h1{
   ：<?php echo date("Y-m-d",strtotime($model->article_date));?></h6>
 
 <div class="_m" style="padding:0 6%;">
-     
+     <?php echo $glo->enOrCh($model,"article_contents");?>
 </div>
 
 <div class="_pc">

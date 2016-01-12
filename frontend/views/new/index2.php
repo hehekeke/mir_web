@@ -5,6 +5,9 @@ use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
 ?>
 <style type="text/css">
+    a{
+        color: black;
+    }
     .breadcrumb > li + li:before {
         color: #CCCCCC;
         content: ">";
@@ -87,9 +90,19 @@ $glo =new GlobalFunc();
             /*margin-left: 2%;*/
             padding-left: 8%;
         }
+        .title{
+            padding-bottom: 20px;
+            border-bottom: 1px solid grey;
+        }
      }
 </style>
-
+<script type="text/javascript">
+    $(function(){
+        $("#left").click(function(){
+            window.location.href="/frontend/web/index.php?r=new/index";
+        });
+    });
+</script>
 <div class="top _m">
     <div class="pull-left" style="margin-top:8px;margin-left:28px;">
         <div id="triangle-left"></div>
@@ -97,19 +110,37 @@ $glo =new GlobalFunc();
             <span style="margin-top:5px;">返回</span>
         </div>
     </div>
-    <p class="pull-left" style="width:70%;">新闻中心</p>
+    <p class="pull-left" style="width:70%;"><?php echo $title;?></p>
 </div>
-    <div class='title _m'>
-        <h3 class="text-center">新闻中心新闻中心新闻中心</h3>
-        <h6 class="text-center">发布日期是：2323121</h6>
-        <div style="padding:0 6%;">
-            萨福克斯开发和打算考第三方还打算考几分还是打款发货的萨克 第三方好的撒付款哈舒服空间的
-        </div>
+<div class='title _m'>
+    <h3 class="text-center"><?php echo $glo->enOrCh($model,'article_title');?></h3>
+    <h6 class="text-center">发布日期是：<?php echo date("Y-m-d",strtotime($model->article_date)); ?> </h6>
+    <div style="padding:0 6%;">
+        <?php echo $glo->enOrCh($model,'article_contents');?>
     </div>
-    <div class='shangxia _m'>
-       <p class='first-p'><span>上一篇</span>：1231232132</p>
-        <p><span>下一遍</span>：1231232132</p> 
-    </div>
+</div>
+<div class='shangxia _m'>
+    <p class='first-p'>
+        <span>上一篇</span>：
+        <?php if($glo->enOrCh($prevModel,'article_title')){?>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $prevModel->article_id;?>">
+                <?php echo $glo->enOrCh($prevModel,'article_title');?>
+            </a>
+        <?php }else{ ?>
+            <?php echo "无";?>
+        <?php } ?>
+    </p>
+    <p>
+        <span>下一篇</span>：
+        <?php if($glo->enOrCh($nextModel,'article_title')){?>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $nextModel->article_id;?>">
+                <?php echo $glo->enOrCh($nextModel,'article_title');?>
+            </a>
+        <?php }else{ ?>
+            <?php echo "无";?>
+        <?php } ?>
+    </p> 
+</div>
         
 <!-- 中间的内容 -->
     <div class="content _pc">
@@ -139,8 +170,26 @@ $glo =new GlobalFunc();
             	<div class="neirong">
                     <?php echo $glo->enOrCh($model,'article_contents');?>
             	</div>
-            	<p class='first-p'><span>上一篇</span>：1231232132</p>
-    			<p><span>下一遍</span>：1231232132</p>
+            	<p class='first-p'>
+                    <span>上一篇</span>：
+                    <?php if($glo->enOrCh($prevModel,'article_title')){?>
+                        <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $prevModel->article_id;?>">
+                            <?php echo $glo->enOrCh($prevModel,'article_title');?>
+                        </a>
+                    <?php }else{ ?>
+                        <?php echo "无";?>
+                    <?php } ?>
+                </p>
+    			<p>
+                    <span>下一篇</span>：
+                    <?php if($glo->enOrCh($nextModel,'article_title')){?>
+                        <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $nextModel->article_id;?>">
+                            <?php echo $glo->enOrCh($nextModel,'article_title');?>
+                        </a>
+                    <?php }else{ ?>
+                        <?php echo "无";?>
+                    <?php } ?>
+                </p>
             </div>
         </div>
         <div class="pull-left content-right rendian">
@@ -161,7 +210,7 @@ $glo =new GlobalFunc();
 
             <ul class="nav nav-tabs renmen" role="tablist" id="myTab">
                 <li class="active" style="border-bottom:9px solid green;">
-                    <a href="#home" role="tab" data-toggle="tab" style="color:green;">本周热点</a>
+                    <a href="#home" role="tab" data-toggle="tab" style="color:green;">热门排行</a>
                 </li>
             </ul>
             <div class="tab-content remen_div ">

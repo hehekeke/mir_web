@@ -51,6 +51,10 @@ class CommonController extends Controller
                             '0'=>'行业招聘',
                             '1'=>'Jobs'
                         ),
+                        'search'=>array(
+                            '0'=>'搜索',
+                            '1'=>'Search'
+                        ),
                         'aboutUs'=>array(
                             '0'=>'关于我们',
                             '1'=>'AboutUs'
@@ -156,17 +160,17 @@ class CommonController extends Controller
                             '0'=>'医学检测网',
                             '1'=>'Medical examination network'
                         ),
-                        'zhanhuihuiyi'=>array(
-                            '0'=>'最新会议',
-                            '1'=>'text'
+                        'youqinglianjie'=>array(
+                            '0'=>'友情链接',
+                            '1'=>'Friendship link'
                         ),
-                        'zhengwen'=>array(
-                            '0'=>'正文',
-                            '1'=>'text'
+                        'tebietuijian'=>array(
+                            '0'=>'特别推荐',
+                            '1'=>'Special recommendation'
                         ),
-                        'zhengwen'=>array(
-                            '0'=>'正文',
-                            '1'=>'text'
+                        'qiteshipin'=>array(
+                            '0'=>'其他视屏',
+                            '1'=>'Other screen'
                         ),
                         'zhengwen'=>array(
                             '0'=>'正文',

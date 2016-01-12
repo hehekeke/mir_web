@@ -172,6 +172,7 @@ class MirProduct extends \yii\db\ActiveRecord
         }
         return $list;
     }
+    
 }
 
 

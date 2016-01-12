@@ -9,7 +9,9 @@
 	display: inline-block;
 	margin-right: 20px;
 }
-
+a{
+	color: black;
+}
 </style>
 <div>
 	<ul class="nav nav-tabs " role="tablist" id="myTab">
@@ -18,60 +20,13 @@
 		</li>
 	</ul>
 </div>
+<?php foreach ($newData as $k => $v) { ?>
 <div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
+	<h4><?php echo $k;?></h4>
+	<?php foreach ($v as $k => $v1) {  ?>
+	<span><a><?php echo $v[$k];?></a></span>
+	<?php }?>
 </div>
+<?php }?>
 
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
-<div class="fenlei">
-	<h4>A</h4>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-	<span><a>公司1公司1公司1公司1公司1公司1</a></span>
-</div>
+

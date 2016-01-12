@@ -36,7 +36,6 @@ class MirIvd extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['mir360_id'], 'required'],
             [['mir360_id'], 'integer'],
             [['mir360_pic', 'mir360_remark', 'mir360_remark_e'], 'string'],
             [['mir360_date'], 'safe'],
@@ -62,5 +61,12 @@ class MirIvd extends \backend\models\MirBase
             'mir360_company_e' => Yii::t('app', 'Mir360 Company E'),
             'mir360_zy' => Yii::t('app', 'Mir360 Zy'),
         ];
+    }
+    public function getIvdlist($type=""){
+        if(empty($type)){
+            $type = array("1","2","3");
+        }
+        $list = $this->find()->select("*")->where(["mir360_class"=>$type])->orderBy('mir360_id desc')->limit(5)->all();
+        return $list;
     }
 }

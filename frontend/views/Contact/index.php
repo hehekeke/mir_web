@@ -1,3 +1,9 @@
+<?php
+$session = Yii::$app->session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
 	
 .breadcrumb > li + li:before {
@@ -11,6 +17,9 @@
 .list-group{
 	width: 210px;
 }
+.list-group a{
+	font-size: 20px;
+}
 .wenzi{
 	margin-top: 40px;
 	margin-left: 9%;
@@ -23,36 +32,85 @@ h3{
 	border-bottom: 1px solid black;
 	margin-bottom: 20px;
 }
- @media screen and (max-width:1000px) {}
+a{
+	color: black;
+}
+ @media screen and (max-width:1000px) {
+ 	.top{
+        width: 100%;
+        height: 43px;
+        background-color: #3c80a2;
+    }
+    .top p{
+        padding-top: 8px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    ._m .tab-pane img{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+     #triangle-left { 
+        width: 0; 
+        height: 0; 
+        border-top: 15px solid transparent; 
+        border-right:15px solid #076595; 
+        border-bottom :15px solid transparent; 
+        float: left;
+    } 
+    #left{
+        width: 34px;
+        height: 30px;
+        background: #076595;
+        margin-left: 15px;
+    }
+    .top span{
+        display: inline-block;
+        color: white;
+    }
+
+
+
+    .list-group{
+    	width: 100%;
+    	/*margin:  0 5%;*/
+    }
+ }
+}
 </style>
-<ol class="breadcrumb">
+<script type="text/javascript">
+    $(function(){
+        $("#left").click(function(){
+            window.location.href="/frontend/web/index.php";
+        });
+    });
+</script>
+<div class="top _m">
+    <div class="pull-left" style="margin-top:8px;margin-left:28px;">
+        <div id="triangle-left"></div>
+        <div id='left'>
+            <span style="margin-top:5px;">返回</span>
+        </div>
+    </div>
+    <p class="pull-left" style="width:70%;">关于我们</p>
+</div>
+<ol class="breadcrumb _pc">
 	<li>
-		<a href="#">新闻中心</a>
+		<a href="/frontend/web/index.php"><?php echo Yii::$app->params['title']['home'][$language];?></a>
 	</li>
 	<li>
-		<a href="#" class="active">关于我们</a>
+		<a href="#" class="active"><?php echo Yii::$app->params['title']['aboutUs'][$language];?></a>
 	</li>
 </ol>
 
 <ul class="list-group pull-left">
-	<li class="list-group-item">
-	<a href="##"><p class="text-center">医学仪器与试剂网</p></a>
-	</li>
-	<li class="list-group-item">
-	<a href="##"><p class="text-center">服务指南</p></a>
-	</li>
-	<li class="list-group-item">
-		<p class="text-center">广告服务指南</p>
-	</li>
-	<li class="list-group-item">
-		<p class="text-center">学术投稿</p>
-	</li>
-	<li class="list-group-item">
-		<p class="text-center">联系我们</p>
-	</li>
-	<li class="list-group-item">
-		<p class="text-center">免责声明</p>
-	</li>
+	<a href="/frontend/web/index.php" class="list-group-item"><p class="text-center">医学仪器与试剂网</p></a>
+	<a href="##" class="list-group-item"><p class="text-center">服务指南</p></a>
+	<a href="##" class="list-group-item"><p class="text-center">广告服务指南</p></a>
+	<a href="##" class="list-group-item"><p class="text-center">学术投稿</p></a>
+	<a href="##" class="list-group-item active"><p class="text-center">联系我们</p></a>
+	<a href="##" class="list-group-item"><p class="text-center">免责声明</p></a>
 </ul>
 <div class="pull-left wenzi _pc">
 	<h3>联系我们</h3>
@@ -68,7 +126,7 @@ h3{
 
 	</address>
 </div>
-<div class="pull-left wenzi _m">
+<!-- <div class="pull-left wenzi _m">
 	<h3>联系我们</h3>
 	<address>
 		<p>尊敬的用户您好：</p>
@@ -82,5 +140,5 @@ h3{
 		</p>
 
 	</address>
-</div>
+</div> -->
 <div class="clearfix"></div>

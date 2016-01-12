@@ -2,11 +2,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
+
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -19,7 +15,8 @@ use backend\models\MirMeeting;
 use backend\models\MirArticle;
 
 use frontend\controllers\CommonController;
-
+use backend\models\MirIvd;
+use backend\models\MirProduct;
 /**
  * Site controller
  */
@@ -84,8 +81,8 @@ class SiteController extends CommonController
         // p($newFriendLinks[0][1]);
         //学术会议和展览展会
         $meetingModel = new MirMeeting();
-        $xueshuMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'1'])->orderBy('meeting_id desc')->limit(5)->all();
-        $zhanhuiMeetings = $meetingModel->find()->select("meeting_id,meeting_name")->where(["meeting_class"=>'2'])->orderBy('meeting_id desc')->limit(5)->all();
+        $xueshuMeetings = $meetingModel->find()->select("meeting_id,meeting_name,meeting_bdate")->where(["meeting_class"=>'1'])->orderBy('meeting_id desc')->limit(5)->all();
+        $zhanhuiMeetings = $meetingModel->find()->select("meeting_id,meeting_name,meeting_bdate")->where(["meeting_class"=>'2'])->orderBy('meeting_id desc')->limit(5)->all();
         $meetingModel = new MirMeeting();
         //新闻中心
         $articleModel = new MirArticle();
@@ -95,6 +92,15 @@ class SiteController extends CommonController
         //技术分享
         $jishus = $articleModel->articleToIndex(3);
         // p($zhaobiao);
+        //临床医学
+        $ivdModel = new  MirIvd();
+        $linchuangyixues = $ivdModel->getIvdlist(3);
+        $zhutizhuanfang = $ivdModel->getIvdlist(2);
+        // p($linchuangyixues);
+        // IVD展厅
+        $porduct = new MirProduct();
+        $porducts = MirProduct::find()->orderBy("product_id desc")->limit(5)->all();
+        // p($porducts[0]->product_pic);
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
                 'zhanhuiMeetings'=>$zhanhuiMeetings,
@@ -102,6 +108,9 @@ class SiteController extends CommonController
                 'news'=>$news,
                 'zhaobiao'=>$zhaobiao,
                 'jishus'=>$jishus,
+                'linchuangyixues'=>$linchuangyixues,
+                'zhutizhuanfang'=>$zhutizhuanfang,
+                'porducts'=>$porducts,
             ]);
     }
 

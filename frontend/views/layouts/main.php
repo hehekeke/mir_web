@@ -44,7 +44,7 @@ $glo =new GlobalFunc();
             display: block;
         }
     .header form{
-        margin-right: 11%;
+        margin-right: 0%;
         margin-top: 28px;
     }
     /*登陆 注册按钮*/
@@ -104,7 +104,7 @@ $glo =new GlobalFunc();
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 19px;
+        font-size: 16px;
     }
     .nav-tabs a{
         color: black;
@@ -121,7 +121,7 @@ $glo =new GlobalFunc();
     }
     .tab-content img{
         width: 178px;
-        height: 118px;
+        height: 93px;
     }
     .tab-content-left{
         width: 33%;
@@ -135,7 +135,6 @@ $glo =new GlobalFunc();
     .tab-content-one{
         margin-top: 15px;
         padding-bottom: 15px;
-        border-bottom: 1px dashed grey;
     }
     .tab-content-title{
         margin-top: 15px;
@@ -152,14 +151,14 @@ $glo =new GlobalFunc();
     }
 
     .content-right img{
-        margin-top: 20px;
+        margin-top: 14px;
         width: 100%;
         height: 210px;
     }
     .img img{
         width: 24%;
         height: 50px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
     .img-r img{
         width: 29%;
@@ -168,7 +167,7 @@ $glo =new GlobalFunc();
     }
     .img-r-right img{
         width: 32%;
-        height: 100px;
+        height: 90px;
     }
 
     .tab-content-third img{
@@ -239,12 +238,12 @@ $glo =new GlobalFunc();
 
         <span class="pull-right btn btn-primary zhongwen" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
 
-        <span class="pull-right btn loign" style='margin-right:55px;'><?php echo $title['register'][$language];?></span>
-        <span class="pull-right btn loign"><?php echo $title['login'][$language];?> |</span>
+        <span class="pull-right btn loign" style='margin-right:55px;'><?php echo Yii::$app->params['title']['register'][$language];?></span>
+        <span class="pull-right btn loign"><?php echo Yii::$app->params['title']['login'][$language];?> |</span>
         <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="输入关键字">
-                <button type="submit" class="btn btn-default">搜索</button>
+                <button type="submit" class="btn btn-default"><?php echo Yii::$app->params['title']['search'][$language];?></button>
             </div>
         </form>
     </div>
@@ -355,7 +354,7 @@ $glo =new GlobalFunc();
         </table>
     </div>
     <div class="_m">
-        <p class="text-center">关于我们</p>
+    <p class="text-center" style="margin-top:40px;"><a href="/frontend/web/index.php?r=contact/index">关于我们</a></p>
         <p class="text-center">热线电话：022-23593650/51转客服部</p>
         <p class="text-center">返回顶部</p>
     </div>
@@ -383,22 +382,6 @@ $glo =new GlobalFunc();
               e.preventDefault();//阻止a链接的跳转行为 
               // $(this).tab('show');//显示当前选中的链接及关联的content 
             });
-            // $('.nav-tabs a[data-toggle="tab"]').click(function(e){
-            //      $(this).tab('show')
-            //     var activeTab = $(e.target).text();
-            //     console.log(e.target);
-            //     console.log(e.relatedTarget);
-            //     $(e.relatedTarget); 
-            //     // var previousTab = $(e.relatedTarget).text(); 
-            //     alert(activeTab);
-            //     // $(".active-tab span").html(activeTab);
-            //     // $(".previous-tab span").html(previousTab);
-            // });
-            // $('.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            //   // e.target // 激活的标签页
-            //   alert(111);
-            //   // e.relatedTarget // 前一个激活的标签页
-            // });
         });
 </script>
 </html>

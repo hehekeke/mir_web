@@ -1,0 +1,50 @@
+<!doctype html>
+
+<head>
+
+   <!-- player skin -->
+   <link rel="stylesheet" href="skin/functional.css">
+
+   <!-- site specific styling -->
+   <style>
+   body { font: 12px "Myriad Pro", "Lucida Grande", sans-serif; text-align: center; padding-top: 5%; }
+   .flowplayer { width: 80%; }
+   </style>
+
+   <!-- for video tag based installs flowplayer depends on jQuery 1.7.2+ -->
+   <script src="/public/Admin/js/jquery.js"></script>
+
+   <!-- include flowplayer -->
+   <script src="flowplayer.min.js"></script>
+
+</head>
+
+<body>
+
+   <!-- the player -->
+   <!-- <div class="flowplayer" data-swf="flowplayer.swf" data-ratio="0.4167">
+      <video>
+         <source type="video/webm" src="https://stream.flowplayer.org/bauhaus.webm">
+         <source type="video/mp4" src="https://stream.flowplayer.org/bauhaus.mp4">
+      </video>
+   </div> -->
+<div class="player">
+   <video>
+         <source type="video/mp4" src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4">
+   </video>
+   <!-- <video > -->
+      <!-- <source type="video/webm" src="http://mydomain.org/intro.webm"> -->
+      <!-- <source type="video/mp4"  src="http://7u2jzm.com2.z0.glb.qiniucdn.com/李亚维.mp4"> -->
+      <!-- <source type="video/ogg"  src="http://mydomain.org/intro.ogv"> -->
+   <!-- </video> -->
+</div>
+
+<script type="text/javascript">
+// run script after document is ready
+$(function () {
+ 
+   // install flowplayer to an element with CSS class "player"
+   $(".player").flowplayer({swf:"/public/flowplayer/flowplayerhls.swf"});
+})
+</script>
+
