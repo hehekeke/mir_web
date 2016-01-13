@@ -48,7 +48,6 @@ use backend\widget\Uploadify;
                         </div>
                         <div class="col-xs-10">
                             <div class="form-group" style="">
-
                                 <label>文章内容</label>
                                 <textarea id="editor" style="height:350px;background-color:#ccc;" name="<?=$model->formName()?>[article_contents]" ><?=$model->article_contents?></textarea>
                                 <?= Ueditor::widget(['obj'=>'editor'])?>
