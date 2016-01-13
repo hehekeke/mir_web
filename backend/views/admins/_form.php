@@ -37,11 +37,7 @@ use yii\widgets\ActiveForm;
                         </div>
                     </div>
                 </div>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
         </div>
-        <!-- /.col-lg-12 -->
     </div>
-    <!-- /.row -->
 </div>

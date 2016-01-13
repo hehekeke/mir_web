@@ -77,5 +77,18 @@ class MirArticle extends \backend\models\MirBase
     public function getMirMake(){
         return $this->hasOne(MirMaker::className(), ['maker_id' => 'article_makerid']);
     }
-    
+    /**
+     * 是否推荐此文章
+     * @author wonguohui
+     * @Date   2016-01-13T22:47:03+0800
+     * @param  $id
+     */
+    public function setTop($id)
+    {
+        $topTrans = ['1'=>0,'0'=>1];
+        $map = ['article_id'=>$id];
+        $curStatus = $this->find()->where($map)->select(['article_istop'])->asArray()->one();
+
+        return $this->updateAll(['article_istop'=>$topTrans[$curStatus['article_istop']]],$map);
+    }
 }

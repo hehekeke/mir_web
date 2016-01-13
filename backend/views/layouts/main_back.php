@@ -167,16 +167,16 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/mir-maker/create">厂商添加</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-maker/create'])?>">厂商添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/mir-maker/index">厂商管理</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-maker/index','dis'=>0])?>">厂商管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/tickling-question-answer/diff">厂商回收站</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-maker/index','dis'=>1])?>">厂商回收站</a>
                                 </li>
                                  <li>
-                                    <a href="/admin.php/tickling-question-answer/diff">厂商留言管理</a>
+                                    <a href="###">厂商留言管理</a>
                                 </li>
                             </ul>
                         </li>
@@ -216,15 +216,15 @@ beginPage() ?>
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-tags"></span>
-                                视屏管理
+                                视频管理
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/category/index">视屏添加</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['video/create'])?>">视频添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/tags/index">视屏列表</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['video/index'])?>">视频列表</a>
                                 </li>
                             </ul>
                         </li>

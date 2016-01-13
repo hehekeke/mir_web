@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\MirArticle;
-use backend\models\MirArticleSearch;
+use backend\models\MirVideo;
+use backend\models\MirVideoSearch;
 use backend\controllers\CommonController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ArticleController implements the CRUD actions for MirArticle model.
+ * VideoController implements the CRUD actions for MirVideo model.
  */
-class ArticleController extends CommonController
+class VideoController extends CommonController
 {
     public function behaviors()
     {
@@ -27,39 +27,22 @@ class ArticleController extends CommonController
     }
 
     /**
-     * Lists all MirArticle models.
+     * Lists all MirVideo models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $model = new \backend\models\MirArticle;
-        $searchModel = new MirArticleSearch();
+        $searchModel = new MirVideoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $classify = $model->classify;
         return $this->render('index', [
-            'classify'=>$classify,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
+
     /**
-     * 修改推荐否
-     * @author wonguohui
-     * @Date   2016-01-13T22:51:49+0800
-     * @return [type]
-     */
-    public function actionTop()
-    {
-        $id = Yii::$app->request->get('id');
-        $model = new \backend\models\MirArticle;
-        $res = $model->setTop($id);
-        if($res){
-            return $this->redirect(['article/index']);
-        }
-    }
-    /**
-     * Displays a single MirArticle model.
+     * Displays a single MirVideo model.
      * @param integer $id
      * @return mixed
      */
@@ -71,16 +54,16 @@ class ArticleController extends CommonController
     }
 
     /**
-     * Creates a new MirArticle model.
+     * Creates a new MirVideo model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new MirArticle();
+        $model = new MirVideo();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->article_id]);
+            return $this->redirect(['view', 'id' => $model->video_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -89,7 +72,7 @@ class ArticleController extends CommonController
     }
 
     /**
-     * Updates an existing MirArticle model.
+     * Updates an existing MirVideo model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -99,7 +82,7 @@ class ArticleController extends CommonController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->article_id]);
+            return $this->redirect(['view', 'id' => $model->video_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -108,7 +91,7 @@ class ArticleController extends CommonController
     }
 
     /**
-     * Deletes an existing MirArticle model.
+     * Deletes an existing MirVideo model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -121,15 +104,15 @@ class ArticleController extends CommonController
     }
 
     /**
-     * Finds the MirArticle model based on its primary key value.
+     * Finds the MirVideo model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return MirArticle the loaded model
+     * @return MirVideo the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = MirArticle::findOne($id)) !== null) {
+        if (($model = MirVideo::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
