@@ -63,7 +63,6 @@ class MirProductSearch extends MirProduct
             // $query->where('0=1');
             return $dataProvider;
         }
-
         $query->andFilterWhere([
             'product_id' => $this->product_id,
             'product_price' => $this->product_price,

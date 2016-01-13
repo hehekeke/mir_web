@@ -42,7 +42,7 @@ use backend\widget\Uploadify;
 
                         <?= $form->field($model, 'article_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
 
-                        <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
+                        <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'article'])?>
                         
                         <?= $form->field($model, 'article_zy')->textarea(['rows' => 5]) ?>
                         </div>
