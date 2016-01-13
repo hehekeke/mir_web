@@ -169,8 +169,8 @@ use yii\widgets\LinkPager;
             article_id; ?>">
             <div class="tab-pane active tab-content-one" id="home">
                 <div class='pull-left tab-content-left'>
-                    <!-- <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'> -->
-                    <img src='/public/frontend/img/首页-01_15.png'>
+                    <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'>
+                    <!-- <img src='/public/frontend/img/首页-01_15.png'> -->
                 </div>
                 <div class='pull-left tab-content-right'>
                     <h4>

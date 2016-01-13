@@ -23,16 +23,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            // ['class' => 'yii\grid\SerialColumn'],
 
-            // 'meeting_id',
+            'meeting_id',
             // 'meeting_class',
             'meeting_name',
             'meeting_loc',
-            'meeting_loc_e',
+            // 'meeting_loc_e',
             // 'meeting_name_e',
-            'meeting_bdate',
-            'meeting_edate',
+            [
+                'attribute'=>'meeting_bdate',
+                'value'=>function($data){
+                    return date("Y-m-d",strtotime($data->meeting_bdate));
+                }
+            ],
+            [
+                'attribute'=>'meeting_edate',
+                'value'=>function($data){
+                    return date("Y-m-d",strtotime($data->meeting_edate));
+                }
+            ],
             // 'meeting_pic',
             // 'meeting_mem:ntext',
             // 'meeting_mem_e:ntext',

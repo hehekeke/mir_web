@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'article_title',
-                                'headerOptions' => ['width' => '420'],
+                                'headerOptions' => ['width' => '220'],
                             ],
                             [
                                 'attribute'=>'article_class',
@@ -44,6 +44,15 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'headerOptions' => ['width' => '160'],
                                 'value'=>function($data){
                                     return date('Y/m/d',strtotime($data->article_date));
+                                }
+                            ],
+                            [
+                                'attribute'=>'article_pic',
+                                'format'=>'raw',
+                                'value'=>function($model){
+                                    return Html::img("/public/uploads/art/".$model->article_pic,
+                                                ['width' => 130]
+                                    );
                                 }
                             ],
                             [

@@ -68,7 +68,8 @@ class MirArticleSearch extends MirArticle
             ->andFilterWhere(['like', 'article_contents_e', $this->article_contents_e])
             ->andFilterWhere(['like', 'article_makerid', $this->article_makerid])
             ->andFilterWhere(['like', 'article_pic', $this->article_pic])
-            ->andFilterWhere(['like', 'article_zy', $this->article_zy]);
+            ->andFilterWhere(['like', 'article_zy', $this->article_zy])
+            ->orderBy("article_id desc");
 
         return $dataProvider;
     }
