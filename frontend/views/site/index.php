@@ -114,7 +114,7 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one" >
                     <div class='pull-left tab-content-left'>
-                        <img src="/public/uploads/<?php echo $news[$i]->article_pic?>"></div>
+                        <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>"></div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
