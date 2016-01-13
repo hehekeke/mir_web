@@ -95,6 +95,7 @@ class SiteController extends CommonController
         //临床医学
         $ivdModel = new  MirIvd();
         $linchuangyixues = $ivdModel->getIvdlist(3);
+        // p($linchuangyixues);
         $zhutizhuanfang = $ivdModel->getIvdlist(2);
         // p($linchuangyixues);
         // IVD展厅
