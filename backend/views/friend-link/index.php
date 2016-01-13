@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label'=>'链接图片',
                 'format'=>'raw',
                 'value'=>function($model){
-                    return Html::img("http://www.mir168.com/uppic/friendlink/".$model->Link_imgurl,
+                    return Html::img("/public/uploads/friendlink/".$model->Link_imgurl,
                                 ['class' => 'img-circle',
                                 'width' => 130]
                     );
