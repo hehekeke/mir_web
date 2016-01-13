@@ -10,7 +10,7 @@
 		height: 400px;
 	}
 	.img_bottom{
-		background-color: grey;
+		background-color: #eeeae9;
 		height: 100px;
 	}
 	.img_bottom p{
@@ -19,7 +19,7 @@
 	}
 	.img_bottom .title{
 		font-weight: 500px;
-		font-size: 28px;
+		font-size: 18px;
 		padding-top: 10px;
 		margin-left: 20px;
 	}
@@ -32,7 +32,7 @@
 	<div class="">
 		<ul class="nav nav-tabs " role="tablist" id="myTab">
 			<li class="active">
-				<a href="#home" role="tab" data-toggle="tab">技术分享</a>
+				<a href="#home" role="tab" data-toggle="tab">精彩看点</a>
 			</li>
 		</ul>
 		<div class="tab-content">
@@ -40,21 +40,21 @@
 				<div class="container">
 					<div class="row" >
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/indexTop.png'>
+							<img src='/public/frontend/img/精彩看点一级页面-01_03.png'>
 							<div class="img_bottom">
-								<div class='title'>fdafas</div>
-								<p>fdasfsadf</p>
-								<p>fdsafksaf</p>
+								<div class='title'>关于儿童疾病的经验探究</div>
+								<p>河北省儿童医院</p>
+								<p>检验科主任：李贵霞</p>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/indexTop.png'>
+							<img src='/public/frontend/img/精彩看点一级页面-01_04.png'>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/indexTop.png'>
+							<img src='/public/frontend/img/精彩看点一级页面-01_05.png'>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/indexTop.png'>
+							<img src='/public/frontend/img/精彩看点一级页面-01_06.png'>
 						</div>
 						
 					</div>

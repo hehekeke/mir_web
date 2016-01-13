@@ -131,7 +131,7 @@ use yii\widgets\LinkPager;
          <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id;?>">
             <div class="content">
                 <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
+                    <img src='/public/uploads/360/<?php echo $news[$i]->article_pic;?>'></div>
                 <div class='pull-left tab-content-right'>
                     <h4>
                         <?php echo  $glo->enOrCh($news[$i],"article_title");?></h4>
@@ -169,7 +169,7 @@ use yii\widgets\LinkPager;
             article_id; ?>">
             <div class="tab-pane active tab-content-one" id="home">
                 <div class='pull-left tab-content-left'>
-                    <img src='/public/frontend/img/indexTop.png'></div>
+                    <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'></div>
                 <div class='pull-left tab-content-right'>
                     <h4>
                         <?php echo $glo->enOrCh($news[$i],'article_title');?></h4>

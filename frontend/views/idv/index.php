@@ -132,7 +132,7 @@ a{
 		<div class="<?php echo $i;?>">
 			<?php for($j=0;$j<3;$j++){?>
 				<div class="col-sm-5 col-md-4">
-					<img src="http://www.mir168.com/UpPic/pro/<?php echo $products[$i][$j]->product_pic;?>" >
+					<img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" >
 				</div>
 			<?php }?>
 		</div>

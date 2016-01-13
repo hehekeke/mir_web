@@ -43,7 +43,7 @@ $glo =new GlobalFunc();
                 <?php for ($i=0; $i < 5 ; $i++) { ?>
                 <div class="lichu">
                     <div class='pull-left tab-content-left'>
-                        <img src='/public/frontend/img/indexTop.png'></div>
+                        <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'></div>
                     <div class='pull-left tab-content-right'>
                         <h4>
                             <?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_title");?></h4>
@@ -57,7 +57,7 @@ $glo =new GlobalFunc();
                 <?php for ($i=0; $i < 5 ; $i++) { ?>
                 <div class="lichu">
                     <div class='pull-left tab-content-left'>
-                        <img src='/public/frontend/img/indexTop.png'></div>
+                        <img src='/public/uploads/<?php echo $zhutizhuanfang[$i]->mir360_pic;?>'></div>
                     <div class='pull-left tab-content-right'>
                         <h4>
                             <?php echo  $glo->enOrCh($zhutizhuanfang[$i],"mir360_title");?></h4>
@@ -78,10 +78,11 @@ $glo =new GlobalFunc();
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <img src="http://www.mir168.com/UpPic/pro/<?php echo $porducts[0]->product_pic;?>"></div>
+                <img src="/public/uploads/pro/<?php echo $porducts[0]->product_pic;?>">
+            </div>
             <div class='img'>
                 <?php for ($i=1; $i < 5 ; $i++) { ?>
-                     <img src='http://www.mir168.com/UpPic/pro/<?php echo $porducts[$i]->product_pic;?>' >
+                     <img src='/public/uploads/pro/<?php echo $porducts[$i]->product_pic;?>' >
                 <?php }?>
             </div>
             <div class='img-r-right'>
@@ -113,7 +114,7 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one" >
                     <div class='pull-left tab-content-left'>
-                        <img src="http://www.mir168.com/edming/uppic/art/<?php echo $news[$i]->article_pic?>"></div>
+                        <img src="/public/uploads/<?php echo $news[$i]->article_pic?>"></div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
