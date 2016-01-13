@@ -23,6 +23,8 @@ class GlobalFunc{
 			}else{
 				$filedNew = $filed."_e";
 			}
+		}else{
+			$filedNew = $filed;
 		}
 		if(empty($data->$filedNew)){
 			$filedNew = $filed;

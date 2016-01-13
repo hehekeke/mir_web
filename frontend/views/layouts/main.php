@@ -185,7 +185,7 @@ $glo =new GlobalFunc();
         margin-left: 20px;
         margin-top: 40px;
         width: 170px;
-        height: 36px;
+        height: 45px;
         border-bottom: 1px dashed black;
     }
     .youqinglianjie{

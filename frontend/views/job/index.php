@@ -24,7 +24,7 @@ a{
 }
 .first img{
 	float: left;
-	width: 18%;
+	width: 14%;
 	height: 66px;
 	margin-right: 20px;
 	margin-bottom: 10px;
@@ -128,8 +128,25 @@ h5{
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['mingqizhaopin'][$language];?></h5>
 	<div>
 		<?php for($i=0;$i<10;$i++){?>
-			<img src="<?php echo $list[$i]->article_pic ;?>">
+			<!-- <img src="<?php echo $list[$i]->article_pic;?>"> -->
 		<?php }?>
+		<img src='/public/frontend/img/行业招聘一级页面-01_03.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_05.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_07.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_09.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_11.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_13.png'>
+
+		<img src='/public/frontend/img/行业招聘一级页面-01_03.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_05.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_07.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_09.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_11.png'>
+		<img src='/public/frontend/img/行业招聘一级页面-01_13.png'>
+
+		
+
+        
 	</div>
 	<div class="clearfix"></div>
 </div>

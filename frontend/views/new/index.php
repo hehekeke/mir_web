@@ -169,7 +169,9 @@ use yii\widgets\LinkPager;
             article_id; ?>">
             <div class="tab-pane active tab-content-one" id="home">
                 <div class='pull-left tab-content-left'>
-                    <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'></div>
+                    <!-- <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'> -->
+                    <img src='/public/frontend/img/首页-01_15.png'>
+                </div>
                 <div class='pull-left tab-content-right'>
                     <h4>
                         <?php echo $glo->enOrCh($news[$i],'article_title');?></h4>
@@ -196,12 +198,12 @@ use yii\widgets\LinkPager;
         </li>
     </ul>
     <div class="tab-content tab-div">
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
-        <h6>&bull;我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
     </div>
 
     <ul class="nav nav-tabs renmen" role="tablist" id="myTab">
@@ -212,35 +214,35 @@ use yii\widgets\LinkPager;
     <div class="tab-content remen_div tab-div">
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
         <h5>
             <span>1</span>
-            我是宇奇我是王宇奇我是王宇奇我是王宇奇我奇
+            2015（第四届）POCT产业发展论坛
         </h5>
     </div>
 

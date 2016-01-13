@@ -13,6 +13,35 @@ $glo =new GlobalFunc();
         padding-bottom: 10px;
         border-bottom: 1px dashed grey;
     }
+    .kanwu{
+        margin-top: 10px;
+    }
+    .left{
+
+        float: left;
+    }
+    .kanwu .content img{
+        margin-left: 10px;
+        width: 71px;
+        height: 117px;
+    }
+    .content-right-kanwu{
+        width: 31%;
+        margin-left: 40px;
+    }
+    .jiantou_right{
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+    .jiantou_left{
+        margin-top: 20px;
+    }
+    .left p{
+        margin-left: 10px;
+    }
+    .lichu{
+        padding-top: 10px;
+    }
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -43,7 +72,9 @@ $glo =new GlobalFunc();
                 <?php for ($i=0; $i < 5 ; $i++) { ?>
                 <div class="lichu">
                     <div class='pull-left tab-content-left'>
-                        <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'></div>
+                        <!-- <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'> -->
+                        <img src='/public/frontend/img/首页-01_06.png'>
+                    </div>
                     <div class='pull-left tab-content-right'>
                         <h4>
                             <?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_title");?></h4>
@@ -78,12 +109,18 @@ $glo =new GlobalFunc();
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <img src="/public/uploads/pro/<?php echo $porducts[0]->product_pic;?>">
+                <!-- <img src="/public/uploads/pro/<?php echo $porducts[0]->product_pic;?>"> -->
+                <img src='/public/frontend/img/首页-01_03.png'>
             </div>
             <div class='img'>
                 <?php for ($i=1; $i < 5 ; $i++) { ?>
-                     <img src='/public/uploads/pro/<?php echo $porducts[$i]->product_pic;?>' >
+                     <!-- <img src='/public/uploads/pro/<?php echo $porducts[$i]->product_pic;?>' > -->
+
                 <?php }?>
+                <img src='/public/frontend/img/首页-01_10.png'>
+                <img src='/public/frontend/img/首页-01_11.png'>
+                <img src='/public/frontend/img/首页-01_12.png'>
+                <img src='/public/frontend/img/首页-01_13.png'>
             </div>
             <div class='img-r-right'>
                 <img src='/public/frontend/img/idv_1.png' >
@@ -114,7 +151,9 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one" >
                     <div class='pull-left tab-content-left'>
-                        <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>"></div>
+                        <!-- <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>"> -->
+                        <img src='/public/frontend/img/首页-01_15.png'>
+                    </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
@@ -141,8 +180,11 @@ $glo =new GlobalFunc();
 
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <img src="/public/frontend/img/indexTop.png"></div>
+                <!-- <img src="/public/frontend/img/indexTop.png"> -->
+                <img src='/public/frontend/img/首页-01_16.png'>
+            </div>
             <div class='img-r'>
+                <!-- <img src='/public/frontend/img/indexTop.png' >
                 <img src='/public/frontend/img/indexTop.png' >
                 <img src='/public/frontend/img/indexTop.png' >
                 <img src='/public/frontend/img/indexTop.png' >
@@ -150,8 +192,17 @@ $glo =new GlobalFunc();
                 <img src='/public/frontend/img/indexTop.png' >
                 <img src='/public/frontend/img/indexTop.png' >
                 <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' ></div>
+                <img src='/public/frontend/img/indexTop.png' > -->
+                <img src='/public/frontend/img/首页-01_20.png'>
+                <img src='/public/frontend/img/首页-01_22.png'>
+                <img src='/public/frontend/img/首页-01_24.png'>
+                <img src='/public/frontend/img/首页-01_28.png'>
+                <img src='/public/frontend/img/首页-01_29.png'>
+                <img src='/public/frontend/img/首页-01_30.png'>
+                <img src='/public/frontend/img/首页-01_34.png'>
+                <img src='/public/frontend/img/首页-01_35.png'>
+                <img src='/public/frontend/img/首页-01_36.png'>
+            </div>
             <div class="tab-pane active tab-content-one" id="home">广告位</div>
         </div>
     </div>
@@ -204,10 +255,10 @@ $glo =new GlobalFunc();
                     <?php echo Yii::$app->params['title']['zhaobiaoguanggao'][$language];?></a>
             </li>
         </ul>
-
         <div class="tab-pane active" id="home">
             <div class="tab-content-third pull-left">
-                <img src="/public/frontend/img/indexTop.png"></div>
+                <img src='/public/frontend/img/首页-01_28.png'>
+            </div>
             <div class="r-top pull-left">
                 <a href="">
                     <p>
@@ -245,14 +296,35 @@ $glo =new GlobalFunc();
             </div>
         </div>
     </div>
-    <div class="pull-left content-right">
+    <div class="pull-left content-right-kanwu">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
                 <a href="#home" role="tab" data-toggle="tab">
                     <?php echo Yii::$app->params['title']['suokan'][$language];?></a>
             </li>
         </ul>
-        <div class="tab-pane active" id="home">1111</div>
+        <div class="tab-pane active" id="home">
+            <div class="kanwu">
+                <div class="left jiantou_left">
+                    <img src='/public/frontend/img/首页-01_03_left.png'>
+                </div>
+                <div class="left content">
+                    <img src='/public/frontend/img/首页-01_47.png'>
+                    <p class="text-center">2015/5</p>
+                </div>
+                <div class="left content">
+                    <img src='/public/frontend/img/首页-01_47.png'>
+                    <p class="text-center">2015/5</p>
+                </div>
+                <div class="left content">
+                    <img src='/public/frontend/img/首页-01_47.png'>
+                    <p class="text-center">2015/5</p>
+                </div>
+                <div class="left jiantou_right">
+                    <img src='/public/frontend/img/首页-01_05_right.png'>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- 友情链接 -->

@@ -88,6 +88,15 @@ a{
 	font-size: 20px;
 	margin-top: 20px;
 }
+.pingpaizhanshi{
+	margin-left: 47px;
+}
+.pingpaizhanshi img{
+	margin-bottom: 6px;
+	margin-top: 6px;
+	width: 9%;
+	margin-left: 6px;
+}
 </style>
 <ol class="breadcrumb _pc">
 	<li>
@@ -98,27 +107,29 @@ a{
 	</li>
 </ol>
 <div class='idv_topImg _pc'>
-	<img src='/public/frontend/img/indexTop.png'></div>
+	<!-- <img src='/public/frontend/img/indexTop.png'> -->
+	<img src='/public/frontend/img/IVD展厅一级页面-01_03.png'>
+</div>
 <div class="row _pc">
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
+			<img src='/public/frontend/img/IVD展厅一级页面-01_05.png'>
+         </a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
+			<img src='/public/frontend/img/IVD展厅一级页面-01_06.png'>
+        </a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
+			<img src='/public/frontend/img/IVD展厅一级页面-01_09.png'>
+         </a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
+			<img src='/public/frontend/img/IVD展厅一级页面-01_11.png'>
+		</a>
 	</div>
 </div>
 
@@ -132,7 +143,8 @@ a{
 		<div class="<?php echo $i;?>">
 			<?php for($j=0;$j<3;$j++){?>
 				<div class="col-sm-5 col-md-4">
-					<img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" >
+					<!-- <img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" > -->
+					<img src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
 				</div>
 			<?php }?>
 		</div>
@@ -141,21 +153,28 @@ a{
 
 <div class="row second _pc">
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+	</div>
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+
+	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src="/public/frontend/img/indexTop.png" ></div>
+		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+	</div>
 </div>
 <!-- 下面八个图形 -->
 
@@ -242,53 +261,18 @@ a{
 		</li>
 		<p class="pull-right more"><a href="/frontend/web/index.php?r=idv/index2">更多</a></p>
 	</ul>
-	<div class="row">
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
+	<div class="row pingpaizhanshi">
+		<img src='/public/frontend/img/首页-01_20.png'>
+        <img src='/public/frontend/img/首页-01_22.png'>
+        <img src='/public/frontend/img/首页-01_24.png'>
+        <img src='/public/frontend/img/首页-01_28.png'>
+        <img src='/public/frontend/img/首页-01_29.png'>
+        <img src='/public/frontend/img/首页-01_30.png'>
+        <img src='/public/frontend/img/首页-01_34.png'>
+        <img src='/public/frontend/img/首页-01_35.png'>
+        <img src='/public/frontend/img/首页-01_36.png'>
+
 	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-	<div class="col-sm-6 col-md-1">
-		<a href="#" class="thumbnail">
-			<img src="/public/frontend/img/indexTop.png" 
-         alt="通用的占位符缩略图"></a>
-	</div>
-</div>
 </div>
 <script type="text/javascript">
 	$(function(){
