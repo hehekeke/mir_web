@@ -41,7 +41,15 @@ class MirMakerSearch extends MirMaker
      */
     public function search($params)
     {
-        $query = MirMaker::find();
+        /**
+         *  根据参数选择展示的商品
+         *  @var dis=>1 不现实的 0=>显示的 
+         */
+        $display = Yii::$app->request->get('dis');
+
+        $map = ['maker_disp'=>$display];
+
+        $query = MirMaker::find()->where($map);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
