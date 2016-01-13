@@ -6,12 +6,8 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 */
 
 // Define a destination
-if($_POST['path'] == 'image'){
-	$targetFolder = '/public/uploads'; // Relative to the root
-}else{
-	$targetFolder = '/public/uploads/video';
-}
-$verifyToken = md5('unique_salt' . $_POST['timestamp']);
+$path = $_POST['path'];
+$targetFolder = '/public/uploads/'.$path; // Relative to the root
 
 if (!empty($_FILES)) {
 	

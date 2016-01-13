@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use backend\models\MirProduct;
+use backend\widget\Uploadify;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirProduct */
 /* @var $form yii\widgets\ActiveForm */
@@ -39,7 +40,10 @@ use backend\models\MirProduct;
                                 
                                 <?= $form->field($model, 'product_tui')->radioList(['1'=>'是','0'=>'否']) ?>
                                 
+                                <?= $form->field($model, 'product_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
 
+                                <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'product'])?>
+                                
                                 <div class="col-lg-6 row">
                                     <?= $form->field($model, 'product_place')->dropDownList(MirProduct::cityMap(),['prompt'=>'请选择','onchange'=>'getCityEnglish('.'$(this).val()'.')']) ?>
                                 </div>
