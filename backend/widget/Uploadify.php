@@ -15,6 +15,7 @@ use \backend\assets\UploadAsset;
  * @example
  * <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
  * 
+ * 指定上传文件夹 classify :产品图片=>'product',文章图片=>'art','视频文件'=>'video'
  */
 class Uploadify extends Widget {
 
@@ -27,6 +28,8 @@ class Uploadify extends Widget {
 	 * @var 具体分类待定
 	 */
 	public $classify = 'image';
+	/**  上传的是否为食品  */
+	public $isVideo  = false;
 
 	public $buttonText = '选择图片';
 	/** 上传按钮的宽度 */
@@ -43,6 +46,7 @@ class Uploadify extends Widget {
 		$multi  = ini_get('multi');
 		$height = ini_get('height');
 
+		$isVideo = ini_get('isVideo');
 		$targetId = ini_get('targetId');
 		$classify = ini_get('classify');
 		$buttonText = ini_get('buttonText');
@@ -55,7 +59,7 @@ class Uploadify extends Widget {
 	public function run()
 	{
 		/** 不同类目文件存在目录，根据classify生成真实具体的路径 */
-		$category = [];
+		$category = ['article'=>'art','product'=>'pro','video'=>'video'];
 		$view = $this->getView();
 
 		$view->registerCssFile(Yii::getAlias('@pluginPath').'/uploadify/uploadify.css',['position' => \yii\web\View::POS_HEAD]);
@@ -68,7 +72,7 @@ class Uploadify extends Widget {
 		$uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
 
 		$fileTypeExts = "*.jpg;*.png;*.gif;";
-		if($this->classify == 'video'){
+		if($isVideo){
 			$fileTypeExts = "*.mp4;";
 		}
 		$view->registerJs('
@@ -81,7 +85,7 @@ class Uploadify extends Widget {
 	            "uploader" : "'.$uploader.'",
 	            "buttonText":"'.$this->buttonText.'",
 	            "method"   : "POST",
-	            "formData" : { "path": "'.$this->classify.'" },
+	            "formData" : { "path": "'.$category[$this->classify].'" },
 	            "multi" : '.$this->multi.',
 	            "height":'.$this->height.',
 	            "width":'.$this->width.',

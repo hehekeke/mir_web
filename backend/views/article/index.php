@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'article_title',
-                                'headerOptions' => ['width' => '460'],
+                                'headerOptions' => ['width' => '420'],
                             ],
                             [
                                 'attribute'=>'article_class',
@@ -57,8 +57,17 @@ $this->params['breadcrumbs'][] = $this->title;
                             [
                                 'class' => 'yii\grid\ActionColumn',
                                 'header'=>'操作',
-                                'template' => '{view}  {update} {delete}',
-                                'headerOptions' => ['width' => '100'],
+                                'template' => '{view}  {update}  {delete}  {top}',
+                                'buttons'=>[
+                                    'top' => function ($url, $model, $key) {
+                                        if($model->article_istop == '0'){
+                                            return Html::a('<span class="glyphicon glyphicon-hand-up"></span>', $url,['title' => '推荐','class'=>'btn btn-xs']);
+                                        }else{
+                                            return Html::a('<span class="glyphicon glyphicon-hand-down"></span>', $url,['class'=>'btn btn-xs','title'=>'取消推荐']);
+                                        }
+                                     },
+                                ],
+                                'headerOptions' => ['width' => '120'],
                             ],
                         ],
                     ]); ?>
