@@ -97,7 +97,38 @@ a{
 	width: 9%;
 	margin-left: 6px;
 }
+.xiaminsigetu{
+	margin-left: 20px;
+}
+.xiaminsigetu img{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 228px;
+	height: 100px;
+}
+.xiaminsigetu span{
+	font-size: 20px;
+	padding-top: 40px;
+	text-align: center;
+}
+.xiaminsigetu div{
+	cursor: pointer;
+}
+/*.banner{ width:100%; overflow:hidden; position:relative;}*/
+.banner  a{ width:100%; height:100%; display:block;}
+.banner  .title{background-color:RGBA(0,0,0,.5); height:100px; color:#fff;  position:absolute; left:0; bottom:10px; width:228px; z-index:1000;}
+
 </style>
+<script type="text/javascript">
+	$(function(){
+		$(".xiaminsigetu div").click(function(){
+			$(".xiaminsigetu").find("span").show();
+			var src = $(this).find("img").attr("src");
+			$(this).find("span").hide();
+			$("#big").attr("src",src);
+		});
+	})
+</script>
 <ol class="breadcrumb _pc">
 	<li>
 		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
@@ -106,28 +137,32 @@ a{
 		<a href="#" class="active"><?php echo Yii::$app->params['title']['ivd'][$language];?></a>
 	</li>
 </ol>
-<div class='idv_topImg _pc'>
+<div class='idv_topImg _pc '>
 	<!-- <img src='/public/frontend/img/indexTop.png'> -->
-	<img src='/public/frontend/img/IVD展厅一级页面-01_03.png'>
+	<img id='big' src='/public/frontend/img/IVD展厅一级页面-01_03.png'>
+	
 </div>
-<div class="row _pc">
+
+
+<div class="row xiaminsigetu _pc">
 	<div class="col-sm-6 col-md-3">
-		<a href="#" class="thumbnail">
+		<div  class=" banner">
 			<img src='/public/frontend/img/IVD展厅一级页面-01_05.png'>
-         </a>
+         </div>
 	</div>
 	<div class="col-sm-6 col-md-3">
-		<a href="#" class="thumbnail">
+		<div class=" banner">
 			<img src='/public/frontend/img/IVD展厅一级页面-01_06.png'>
-        </a>
+			<span class="title">视频中心</span>
+        </div>
 	</div>
 	<div class="col-sm-6 col-md-3">
-		<a href="#" class="thumbnail">
+		<a href="#" class="">
 			<img src='/public/frontend/img/IVD展厅一级页面-01_09.png'>
          </a>
 	</div>
 	<div class="col-sm-6 col-md-3">
-		<a href="#" class="thumbnail">
+		<a href="#" class="">
 			<img src='/public/frontend/img/IVD展厅一级页面-01_11.png'>
 		</a>
 	</div>

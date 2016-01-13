@@ -20,6 +20,7 @@ $glo =new GlobalFunc();
 }
 h5{
 	padding-bottom: 5px;
+	border-bottom: 1px solid grey;
 }
 .first{
 	margin-top: 20px;
@@ -27,16 +28,23 @@ h5{
 	margin-bottom: 20px;
 }
 .first video{
+	margin:0 14%;
+	width: 70%;
+	height: 300px;
+}
+.first img{
 	width: 100%;
 	height: 300px;
 }
 .video{
+	margin-top: 10px;
 	float: left;
 	width: 47%;
 	padding-bottom: 20px;
 	margin-left: 30px;
 	border-bottom: 1px dashed grey; 
 }
+
 .video img{
 	width: 200px;
 	height: 100px;
@@ -46,11 +54,7 @@ h5{
 	margin-top: 30px;
 	margin-left: 30px;
 }
-.end{
-	margin-top: 30px;
-	border-bottom: 1px solid black; 
-	margin-bottom: 30px;
-}
+
 }
 </style>
 <ol class="breadcrumb">
@@ -63,20 +67,18 @@ h5{
 </ol>
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
-	
-	<!-- <div id="content">
-	 		<div class = "player">
-			   <video id="player">
-			      <source  src="http://7u2jzm.com2.z0.glb.qiniucdn.com/%20w.mp4" type="video/mp4" >
-			   </video>
-			</div>
-		</div> -->
-<div class="player">
-   <video>
-         <source type="video/mp4" src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4">
-         <!-- <source type="video/mp4" src="/1.mp4"> -->
-   </video>
-</div>
+
+	<!-- <div class="first ">
+		<div class="player">
+		   <video poster="/public/frontend/img/indexTop.png">
+		         <source type="video/mp4" src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4">
+		   </video>
+		</div>
+	</div> -->
+	<video controls=""  src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+			poster="/public/frontend/img/视频中心一级页面-01_03.png" data-setup="{}">
+		<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+	</video>
 
 	<div class="clearfix"></div>
 </div>
@@ -85,7 +87,7 @@ h5{
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['qiteshipin'][$language];?></h5>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -94,7 +96,7 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -103,7 +105,7 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -112,7 +114,7 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -121,7 +123,7 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -130,7 +132,7 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/indexTop.png'>
+			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -140,7 +142,6 @@ h5{
 
 	<div class="clearfix"></div>
 </div>
-<div class="end"></div>
 <script type="text/javascript">
    $(".player").flowplayer({swf:"/public/flowplayer/flowplayerhls.swf"});
 </script>

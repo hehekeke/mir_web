@@ -86,7 +86,13 @@ h1{
         <a href="#" class="active"><?php echo Yii::$app->params['title']['qiyexinxi'][$language];?></a>
     </li>
 </ol>
-<h1 class="text-center"><?php echo $glo->enOrCh($model->mirMake,"maker_name");?></h1>
+<h1 class="text-center">
+    <?php if(!empty($model->mirMake)){?>
+        <?php echo $glo->enOrCh($model->mirMake,"maker_name");?>
+    <?php } else{ ?>
+        <?php echo $glo->enOrCh($model,"article_title");?>
+    <?php } ?>
+</h1>
 
   <h6 class="text-center">
   <?php echo Yii::$app->params['title']['faburiqi'][$language];?>

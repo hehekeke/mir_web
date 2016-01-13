@@ -23,6 +23,9 @@
 		padding-top: 10px;
 		margin-left: 20px;
 	}
+	a{
+		color: black;
+	}
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -40,12 +43,14 @@
 				<div class="container">
 					<div class="row" >
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/精彩看点一级页面-01_03.png'>
-							<div class="img_bottom">
-								<div class='title'>关于儿童疾病的经验探究</div>
-								<p>河北省儿童医院</p>
-								<p>检验科主任：李贵霞</p>
-							</div>
+							<a href="/frontend/web/index.php?r=see/index2">
+								<img src='/public/frontend/img/精彩看点一级页面-01_03.png'>
+								<div class="img_bottom">
+									<div class='title'>关于儿童疾病的经验探究</div>
+									<p>河北省儿童医院</p>
+									<p>检验科主任：李贵霞</p>
+								</div>
+							</a>
 						</div>
 						<div class="col-xs-6 col-sm-3">
 							<img src='/public/frontend/img/精彩看点一级页面-01_04.png'>
