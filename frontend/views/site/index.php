@@ -355,7 +355,7 @@ $glo =new GlobalFunc();
                                     <a href="<?php echo $newFriendLinks[$i][$j]->
                                         Link_url?>">
                                             &nbsp;&nbsp;&nbsp;
-                                        <img src="http://www.mir168.com/uppic/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>" height="33" width="80" alt="上海丰汇" border="0"></a>
+                                        <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>" height="33" width="80" alt="上海丰汇" border="0"></a>
                                 </td>
                                 <?php }?></tr>
                             <?php }?></table>

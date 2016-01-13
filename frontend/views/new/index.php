@@ -212,38 +212,16 @@ use yii\widgets\LinkPager;
         </li>
     </ul>
     <div class="tab-content remen_div tab-div">
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
-        <h5>
-            <span>1</span>
-            2015（第四届）POCT产业发展论坛
-        </h5>
+        <h5><span style='background-color: #FAC2D7;'>1</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span style='background-color: #CFC502;'>2</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span style='background-color: #FEFDA2;'>3</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>4</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>5</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>6</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>7</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>8</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>9</span>2015（第四届）POCT产业发展论坛</h5>
+        <h5><span>10</span>2015（第四届）POCT产业发展论坛</h5>
     </div>
 
 </div>
