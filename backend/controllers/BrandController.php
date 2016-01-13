@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Classify;
-use backend\models\ClassifySearch;
-use yii\web\Controller;
+use backend\models\MirBrand;
+use backend\models\MirBrandSearch;
+use backend\controllers\CommonController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\controllers\CommonController;
+
 /**
- * ClassifyController implements the CRUD actions for Classify model.
+ * BrandController implements the CRUD actions for MirBrand model.
  */
-class ClassifyController extends CommonController
+class BrandController extends CommonController
 {
     public function behaviors()
     {
@@ -27,26 +27,22 @@ class ClassifyController extends CommonController
     }
 
     /**
-     * Lists all Classify models.
+     * Lists all MirBrand models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $model = new Classify;
-        $searchModel = new ClassifySearch();
+        $searchModel = new MirBrandSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $mainClass = Classify::mainClass();
-
         return $this->render('index', [
-            'mainClass'=>$mainClass,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
     /**
-     * Displays a single Classify model.
+     * Displays a single MirBrand model.
      * @param integer $id
      * @return mixed
      */
@@ -58,17 +54,16 @@ class ClassifyController extends CommonController
     }
 
     /**
-     * Creates a new Classify model.
+     * Creates a new MirBrand model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Classify();
-        
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model = new MirBrand();
 
-            return $this->redirect(['view', 'id' => $model->ID]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->brand_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -77,7 +72,7 @@ class ClassifyController extends CommonController
     }
 
     /**
-     * Updates an existing Classify model.
+     * Updates an existing MirBrand model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -87,7 +82,7 @@ class ClassifyController extends CommonController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->brand_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -96,7 +91,7 @@ class ClassifyController extends CommonController
     }
 
     /**
-     * Deletes an existing Classify model.
+     * Deletes an existing MirBrand model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -109,15 +104,15 @@ class ClassifyController extends CommonController
     }
 
     /**
-     * Finds the Classify model based on its primary key value.
+     * Finds the MirBrand model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Classify the loaded model
+     * @return MirBrand the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Classify::findOne($id)) !== null) {
+        if (($model = MirBrand::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

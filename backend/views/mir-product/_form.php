@@ -44,7 +44,7 @@ use backend\models\MirProduct;
                                     <?= $form->field($model, 'product_place')->dropDownList(MirProduct::cityMap(),['prompt'=>'请选择','onchange'=>'getCityEnglish('.'$(this).val()'.')']) ?>
                                 </div>
                                 <div class="col-lg-7 row">
-                                    <?= $form->field($model, 'product_place_e')->textInput(['readonly'=>true,'style'=>'margin-left:15px']) ?>
+                                    <?= $form->field($model, 'product_place_e')->textInput(['readonly'=>true,'style'=>'margin-left:15px','id'=>'product_e']) ?>
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -87,6 +87,8 @@ use backend\models\MirProduct;
         </div>
     </div>
 </div>
+<?=$this->registerJsFile(Yii::getAlias('@jsPath').'/main.js')?>
+
 <script type="text/javascript">
     /** ajax 方式加载子分类 */
     function getChildClass(mainClassId){
@@ -97,15 +99,8 @@ use backend\models\MirProduct;
             for(id in res){
                 html += '<option value="'+id+'">'+res[id]+'</option>';
             }
+            $('#mirproduct-product_class').html('');
             $('#mirproduct-product_class').append(html);
-        })
-    }
-    /** 城市英文名称 */
-    function getCityEnglish(cityName){
-        var url = "<?=Yii::$app->urlManager->createAbsoluteUrl(['mir-product/city-english'])?>";
-        $.post(url,{"cityName":cityName},function(response){
-            var res = $.parseJSON(response);
-            $('#mirproduct-product_place_e').val(res.city_en);
         })
     }
 </script>

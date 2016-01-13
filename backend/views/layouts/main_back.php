@@ -155,7 +155,7 @@ beginPage() ?>
                                     <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['classify'])?>">产品分类管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/appoint/lecturer">产品品牌管理</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['brand'])?>">产品品牌管理</a>
                                 </li>
                             </ul>
                         </li>

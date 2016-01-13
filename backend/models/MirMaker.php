@@ -26,6 +26,8 @@ use yii\helpers\ArrayHelper;
  */
 class MirMaker extends \backend\models\MirBase
 {
+    public $makerClass = ['0'=>'生产商','1'=>'经销商'];
+    public $makerCharacter = ['私营'=>'私营','国有'=>'国有','合资'=>'合资','独资'=>'独资'];
     /**
      * @inheritdoc
      */
@@ -62,9 +64,9 @@ class MirMaker extends \backend\models\MirBase
             'maker_character_e' => '企业性质英文',
             'maker_place' => '企业所在地',
             'maker_place_e' => '企业所在地英文',
-            'maker_proclass' => 'Maker Proclass',
+            'maker_proclass' => '企业产品类别',
             'maker_date' => 'Maker Date',
-            'maker_class' => 'Maker Class',
+            'maker_class' => '企业类别',
             'maker_contact' => '联系方式',
             'maker_contact_e' => '英文联系方式',
             'maker_disp' => 'Maker Disp',

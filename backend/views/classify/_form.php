@@ -25,9 +25,9 @@ use yii\widgets\ActiveForm;
 
                             <?= $form->field($model, 'Readme')->textInput(['maxlength' => true]) ?>
 
-
-                            <?= $form->field($model, 'ParentID')->dropDownList([$model->getAllClassify()]) ?>
-
+                            <?php if($model->isNewRecord):?>
+                                <?= $form->field($model, 'ParentID')->dropDownList($model->getAllClassify(),['prompt'=>'作为一级分类'])->label('选择分类') ?>
+                            <?php endif; ?>
                             <div class="form-group">
                                 <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                             </div>
