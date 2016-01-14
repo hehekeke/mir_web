@@ -44,7 +44,7 @@ $glo =new GlobalFunc();
 		border-top: 1px dashed black;
 	}
 	.shangxia{
-		padding-left: 30px;
+		/*padding-left: 30px;*/
 	}
 	.shangxia span{
 		color: grey;
