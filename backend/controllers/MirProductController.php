@@ -38,8 +38,8 @@ class MirProductController extends CommonController
 
         $searchModel = new MirProductSearch();
         $params = Yii::$app->request->queryParams;
-
-        if(empty(Yii::$app->request->get('sort'))){
+        $sort = trim(Yii::$app->request->get('sort'));
+        if(empty($sort)){
             $_GET['sort'] = '-product_id';
         }
         
