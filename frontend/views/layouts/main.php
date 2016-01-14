@@ -204,6 +204,9 @@ $glo =new GlobalFunc();
         border-bottom: 1px solid black;
     }
     @media screen and (max-width:1000px) {
+        body{
+            width: 100%;
+        }
         ._pc{
             display: none;
         }

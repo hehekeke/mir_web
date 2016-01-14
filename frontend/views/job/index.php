@@ -22,13 +22,18 @@ a{
 	margin-bottom: 20px;
 	border-bottom: 1px dashed grey;
 }
+.imgs{
+	margin-left: 12px;
+}
 .first img{
+	border: 1px solid grey;
 	float: left;
-	width: 14%;
-	height: 66px;
+	width: 140px;
+	height: 46px;
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
+
 h5{
 	padding-bottom: 5px;
 	border-bottom: 1px solid grey;
@@ -126,26 +131,24 @@ h5{
 </ol>
 <div class="first _pc">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['mingqizhaopin'][$language];?></h5>
-	<div>
+	<div class="imgs">
 		<?php for($i=0;$i<10;$i++){?>
 			<!-- <img src="<?php echo $list[$i]->article_pic;?>"> -->
 		<?php }?>
-		<img src='/public/frontend/img/行业招聘一级页面-01_03.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_05.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_07.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_09.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_11.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_13.png'>
-
-		<img src='/public/frontend/img/行业招聘一级页面-01_03.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_05.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_07.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_09.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_11.png'>
-		<img src='/public/frontend/img/行业招聘一级页面-01_13.png'>
-
+		<img src='/public/frontend/img/job_03.png'>
+		<img src='/public/frontend/img/job_05.png'>
+		<img src='/public/frontend/img/job_07.png'>
+		<img src='/public/frontend/img/job_09.png'>
+		<img src='/public/frontend/img/job_11.png'>
+		<img src='/public/frontend/img/job_13.png'>
 		
 
+		<img src='/public/frontend/img/job_03.png'>
+		<img src='/public/frontend/img/job_05.png'>
+		<img src='/public/frontend/img/job_07.png'>
+		<img src='/public/frontend/img/job_09.png'>
+		<img src='/public/frontend/img/job_11.png'>
+		<img src='/public/frontend/img/job_13.png'>
         
 	</div>
 	<div class="clearfix"></div>
