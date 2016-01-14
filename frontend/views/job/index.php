@@ -41,9 +41,9 @@ h5{
 .tuijian div{
 	width:30%; 
 	margin-top: 20px;
-	padding-left: 20px;
+	padding-left: 40px;
 	padding-bottom: 20px;
-	text-align: center;
+	/*text-align: center;*/
 	border-right: 1px dashed grey;
 	border-bottom: 1px dashed grey;
 }
@@ -163,11 +163,11 @@ h5{
 				<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $list[$i]->article_id;?>">
 					 <h6>&bull;<?php echo $glo->enOrCh($list[$i],"article_title");?></h6>
 					 <h6>
-					 &nbsp;
-					 <?php if($list[$i]->mirMake->maker_place){?>
-					 [<?php echo $glo->enOrCh($list[$i]->mirMake,"maker_place") ;?>]:
-					 <?php echo $glo->enOrCh($list[$i]->mirMake,"maker_name") ;?>
-					 <?php }?>
+						 <?php if($list[$i]->mirMake->maker_place){?>
+						 &bull;[<?php echo $glo->enOrCh($list[$i]->mirMake,"maker_place") ;?>]:
+						 <?php echo $glo->enOrCh($list[$i]->mirMake,"maker_name") ;?>
+						 <?php }?>
+						 &nbsp;
 					 </h6>
 				</a>
 				</div>
