@@ -35,6 +35,7 @@ $glo =new GlobalFunc();
 ?>
     <style type="text/css">
     body{
+        font-family: "微软雅黑";
         width: 1005px;
         margin: 0 auto;
     }
@@ -113,7 +114,7 @@ $glo =new GlobalFunc();
         font-size: 16px;
     }
     .nav-tabs a{
-        font-family: "微软雅黑";
+       
         color: black;
         text-align: center;
     }
