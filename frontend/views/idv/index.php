@@ -133,6 +133,12 @@ a{
 	border-top: none;
 	border-bottom: none;
 }
+.btn-group{
+	height: 39px;
+}
+.btn-group  button{
+	margin-bottom: 3px;
+}
 @media (min-width: 992px){
 	.col-md-4 {
 	  width: 32.5433333%;
@@ -140,6 +146,16 @@ a{
 	.col-md-2{
 		width: 16.30666667%;
 	}
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {  /* hover、focus、active变化时的颜色 */
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+  border-bottom: 3px solid #006699;
 }
 </style>
 <script type="text/javascript">
@@ -150,6 +166,7 @@ a{
 			$(this).find("span").hide();
 			$("#big").attr("src",src);
 		});
+		$(".btn-group button:eq(0)").addClass("jihuo");
 	})
 </script>
 <ol class="breadcrumb _pc">
@@ -202,7 +219,7 @@ a{
 			<?php for($j=0;$j<3;$j++){?>
 				<div class="col-sm-5 col-md-4 ">
 					<!-- <img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" > -->
-					<img  class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
+					<img  class="panel panel-default " src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
 				</div>
 			<?php }?>
 		</div>
