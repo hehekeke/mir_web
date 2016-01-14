@@ -133,15 +133,15 @@ $glo =new GlobalFunc();
                 <img src='/public/frontend/img/首页-01_13.png'>
             </div>
             <div class='img-r-right'>
-                <img src='/public/frontend/img/idv_1.png' >
-                <img src='/public/frontend/img/首页-01_05.png' >
-                <img src='/public/frontend/img/首页-01_07.png' >
-                <img src='/public/frontend/img/首页-01_12.png' >
-                <img src='/public/frontend/img/首页-01_13.png' >
-                <img src='/public/frontend/img/首页-01_14.png' >
-                <img src='/public/frontend/img/首页-01_18.png' >
-                <img src='/public/frontend/img/首页-01_19.png' >
-                <img src='/public/frontend/img/idv_2.png' >
+                <img src='/public/frontend/img/shouye_07.png' >
+                <img src='/public/frontend/img/shouye_09.png' >
+                <img src='/public/frontend/img/shouye_11.png' >
+                <img src='/public/frontend/img/shouye_16.png' >
+                <img src='/public/frontend/img/shouye_17.png' >
+                <img src='/public/frontend/img/shouye_18.png' >
+                <img src='/public/frontend/img/shouye_22.png' >
+                <img src='/public/frontend/img/shouye_23.png' >
+                <img src='/public/frontend/img/shouye_24.png' >
             </div>
         </div>
     </div>

@@ -35,7 +35,8 @@ $glo =new GlobalFunc();
 ?>
     <style type="text/css">
     body{
-        margin: 17px 10% 0 10%;
+        width: 1005px;
+        margin: 0 auto;
     }
      ._m{
             display: none;
@@ -46,6 +47,10 @@ $glo =new GlobalFunc();
     .header form{
         margin-right: 0%;
         margin-top: 28px;
+    }
+    .zhongwen,.yingwen{
+        background-color: #003366;
+        
     }
     /*登陆 注册按钮*/
     .header .loign{
@@ -66,7 +71,7 @@ $glo =new GlobalFunc();
     /*导航栏*/
     .navbar li,.navbar .active{
         width: 125px;
-        background-color: #5d9dbe;
+        background-color: #006699;
     }
     .navbar li a{
         width: 127px;
@@ -75,14 +80,14 @@ $glo =new GlobalFunc();
         font-weight: 800;
     }
     .navbar{
-        border: 1px solid #5d9dbe;
+        border: 1px solid #006699;
         border-radius: 4px;
-        background-color: #5d9dbe;
+        background-color: #006699;
     }
     .kongbai{ 
         width: 2px;
         height: 25px;
-        background-color: #ffffff;
+        background-color: #cccccc;
     }
     .navbar  li  a{
         padding: 14px 2px;
@@ -166,8 +171,8 @@ $glo =new GlobalFunc();
         margin-right: 10px;
     }
     .img-r-right img{
-        width: 32%;
-        height: 90px;
+        width: 101px;
+        height: 101px;
     }
 
     .tab-content-third img{
