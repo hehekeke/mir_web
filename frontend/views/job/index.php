@@ -43,11 +43,14 @@ h5{
 	margin-top: 20px;
 	padding-left: 75px;
 	padding-bottom: 20px;
-	/*text-align: center;*/
-	border-right: 1px dashed grey;
 	border-bottom: 1px dashed grey;
 }
-.tuijian div:nth-child(3n){
+.tuijian h6{
+	margin: 0;
+	padding: 5px 0;
+	border-right: 1px solid grey;
+}
+.tuijian div:nth-child(3n) h6{
 	border-right: none;
 }
  @media screen and (max-width:1000px) {
@@ -172,6 +175,7 @@ h5{
 						 <?php }?>
 						 &nbsp;
 					 </h6>
+
 				</a>
 				</div>
 			<?php }?>
