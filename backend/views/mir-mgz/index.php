@@ -16,29 +16,38 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
     </p>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <?= GridView::widget([
+                        'dataProvider' => $dataProvider,
+                        'filterModel' => $searchModel,
+                        'columns' => [
+                            ['class' => 'yii\grid\SerialColumn'],
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+                            'mgz_page',
+                            'mgz_year',
+                            'mgz_num',
+                             [
+                                'label'=>'杂志图片',
+                                'format'=>'raw',
+                                'value'=>function($model){
+                                    return Html::img("http://www.mir168.com/edming/uppic/mgz/".$model->mgz_pic,
+                                                ['class' => 'img-circle',
+                                                'width' => 130]
+                                    );
+                                }
+                            ],
 
-            'mgz_page',
-            'mgz_year',
-            'mgz_num',
-             [
-                'label'=>'杂志图片',
-                'format'=>'raw',
-                'value'=>function($model){
-                    return Html::img("http://www.mir168.com/edming/uppic/mgz/".$model->mgz_pic,
-                                ['class' => 'img-circle',
-                                'width' => 130]
-                    );
-                }
-            ],
+                            ['class' => 'yii\grid\ActionColumn'],
+                        ],
+                    ]); ?>
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
