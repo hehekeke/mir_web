@@ -36,7 +36,6 @@ class MirIvd extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['mir360_id'], 'integer'],
             [['mir360_pic', 'mir360_remark', 'mir360_remark_e'], 'string'],
             [['mir360_date'], 'safe'],
             [['mir360_title', 'mir360_title_e', 'mir360_class', 'mir360_company', 'mir360_company_e', 'mir360_zy'], 'string', 'max' => 255]

@@ -33,8 +33,6 @@ class MirVideo extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['video_id'], 'required'],
-            [['video_id'], 'integer'],
             [['video_mem', 'video_mem_e'], 'string'],
             [['video_title', 'video_title_e', 'video_filename', 'video_size', 'video_class', 'video_date'], 'string', 'max' => 255]
         ];

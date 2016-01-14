@@ -72,9 +72,10 @@ class Uploadify extends Widget {
 		$swf = Yii::getAlias('@pluginPath').'/uploadify/uploadify.swf';
 		$uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
 
-		$fileTypeExts = "*.jpg;*.png;*.gif;";
-		if($isVideo){
+		if($this->isVideo){
 			$fileTypeExts = "*.mp4;";
+		}else{
+			$fileTypeExts = "*.jpg;*.png;*.gif;";
 		}
 		$view->registerJs('
 			$("#upload").uploadify({

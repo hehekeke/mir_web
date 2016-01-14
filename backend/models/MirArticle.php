@@ -37,10 +37,10 @@ class MirArticle extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['article_id', 'article_istop'], 'integer'],
+            [['article_istop'], 'integer'],
             [['article_date'], 'safe'],
             [['article_contents', 'article_contents_e'], 'string'],
-            [['article_title', 'article_titile_e', 'article_class', 'article_makerid', 'article_pic', 'article_zy'], 'string', 'max' => 255]
+            [['article_title',  'article_class', 'article_makerid', 'article_pic', 'article_zy'], 'string', 'max' => 255]
         ];
     }
 

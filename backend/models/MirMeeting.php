@@ -37,7 +37,6 @@ class MirMeeting extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['meeting_id'], 'integer'],
             [['meeting_bdate', 'meeting_edate'], 'safe'],
             [['meeting_mem', 'meeting_mem_e'], 'string'],
             [['meeting_class', 'meeting_loc', 'meeting_loc_e', 'meeting_name', 'meeting_name_e', 'meeting_pic', 'meeting_sub', 'meeting_sub_e'], 'string', 'max' => 255]

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirMeeting */
 
-$this->title = $model->meeting_id;
+$this->title = '展会详细信息';
 $this->params['breadcrumbs'][] = ['label' => 'Mir Meetings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
