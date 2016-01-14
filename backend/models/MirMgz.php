@@ -31,6 +31,8 @@ class MirMgz extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            ['mgz_znum','required','message'=>'请输入总期数'],
+            ['mgz_page','required','message'=>'请输入页码'],
             [['mgz_id', 'mgz_page', 'mgz_year', 'mgz_num', 'mgz_isfirst', 'mgz_znum'], 'integer'],
             [['mgz_pic'], 'string', 'max' => 255]
         ];

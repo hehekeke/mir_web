@@ -63,7 +63,9 @@ class MirMgzController extends CommonController
         $model = new MirMgz();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->mgz_id]);
+            Yii::$app->getSession()->setFlash('user.success', '第'.$model->mgz_page.'页添加成功，继续添加');
+            $this->refresh();
+            return;
         } else {
             return $this->render('create', [
                 'model' => $model,

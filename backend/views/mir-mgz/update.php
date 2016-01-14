@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\MirMgz */
 
-$this->title = 'Update Mir Mgz: ' . ' ' . $model->mgz_id;
+$this->title = '更新杂志信息';
 $this->params['breadcrumbs'][] = ['label' => 'Mir Mgzs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->mgz_id, 'url' => ['view', 'id' => $model->mgz_id]];
 $this->params['breadcrumbs'][] = 'Update';
