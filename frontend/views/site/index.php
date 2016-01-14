@@ -83,7 +83,7 @@ $glo =new GlobalFunc();
                         <h4>
                             <?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_title");?>
                         </h4>
-                        <!-- <div class='tab-content-title-small'>shfdiashfdsafk</div> -->
+                        <div class='tab-content-title-small'><?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_zy",'30');?></div>
                         <div class='tab-content-date'>2015/3/18</div>
                     </div>
                     <div class="clearfix"></div>
@@ -101,7 +101,7 @@ $glo =new GlobalFunc();
                     <div class='pull-left tab-content-right'>
                         <h4>
                             <?php echo  $glo->enOrCh($zhutizhuanfang[$i],"mir360_title");?></h4>
-                        <!-- <div class='tab-content-title-small'>shfdiashfdsafk</div> -->
+                        <div class='tab-content-title-small'><?php echo  $glo->enOrCh($zhutizhuanfang[$i],"mir360_zy",'30');?></div>
                         <div class='tab-content-date'>2015/3/18</div>
                     </div>
                     <div class="clearfix"></div>
@@ -127,10 +127,10 @@ $glo =new GlobalFunc();
                      <!-- <img src='/public/uploads/pro/<?php echo $porducts[$i]->product_pic;?>' > -->
 
                 <?php }?>
-                <img src='/public/frontend/img/首页-01_10.png'>
-                <img src='/public/frontend/img/首页-01_11.png'>
-                <img src='/public/frontend/img/首页-01_12.png'>
-                <img src='/public/frontend/img/首页-01_13.png'>
+                <img src='/public/frontend/img/sy_03.png'>
+                <img src='/public/frontend/img/sy_04.png'>
+                <img src='/public/frontend/img/sy_05.png'>
+                <img src='/public/frontend/img/sy_06.png'>
             </div>
             <div class='img-r-right'>
                 <img src='/public/frontend/img/shouye_07.png' >
@@ -168,7 +168,7 @@ $glo =new GlobalFunc();
                         <div class='tab-content-title'>
                             <?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_contents",60); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",20); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>
@@ -194,15 +194,6 @@ $glo =new GlobalFunc();
                 <img src='/public/frontend/img/首页-01_16.png'>
             </div>
             <div class='img-r'>
-                <!-- <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' >
-                <img src='/public/frontend/img/indexTop.png' > -->
                 <img src='/public/frontend/img/首页-01_20.png'>
                 <img src='/public/frontend/img/首页-01_22.png'>
                 <img src='/public/frontend/img/首页-01_24.png'>

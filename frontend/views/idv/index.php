@@ -17,10 +17,13 @@ $glo =new GlobalFunc();
 }
 .idv_topImg img{
 	width: 100%;
-	height: 232px;
+	height: 162px;
 }
 a{
 	color: black;
+}
+.btn{
+	border-radius:0px;
 }
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img{
 	height: 100px;
@@ -35,17 +38,16 @@ a{
 	width: 12.5%;
 }
 .col-sm-5 img{
-	width: 100%;
+	width: 101%;
 	height: 147px;
 }
 .col-sm-5{
 	padding: 0px;
-	border: 1px solid grey;
+	border: 1px solid transparent;
 	border-top: none;
 }
 .second .col-sm-1 {
 	padding: 0px;
-	border: 1px solid grey;
 }
 .second .col-sm-1 img{
 	width: 100%;
@@ -98,13 +100,13 @@ a{
 	margin-left: 6px;
 }
 .xiaminsigetu{
-	margin-left: 20px;
+	margin-left: 2px;
 }
 .xiaminsigetu img{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	width: 228px;
-	height: 100px;
+	width: 239px;
+	height: 87px;
 }
 .xiaminsigetu span{
 	font-size: 20px;
@@ -118,6 +120,27 @@ a{
 .banner  a{ width:100%; height:100%; display:block;}
 .banner  .title{background-color:RGBA(0,0,0,.5); height:100px; color:#fff;  position:absolute; left:0; bottom:10px; width:228px; z-index:1000;}
 
+.panel{
+	margin-bottom: 0px;border-radius:0;
+}
+.anniu_xiamian{
+	margin-left: -1px;
+}
+.second{
+	margin-left: 0px;
+}
+.col-sm-5 .panel{
+	border-top: none;
+	border-bottom: none;
+}
+@media (min-width: 992px){
+	.col-md-4 {
+	  width: 32.5433333%;
+	}
+	.col-md-2{
+		width: 16.30666667%;
+	}
+}
 </style>
 <script type="text/javascript">
 	$(function(){
@@ -139,7 +162,7 @@ a{
 </ol>
 <div class='idv_topImg _pc '>
 	<!-- <img src='/public/frontend/img/indexTop.png'> -->
-	<img id='big' src='/public/frontend/img/IVD展厅一级页面-01_03.png'>
+	<img id='big' src='/public/frontend/img/ivd_03.png'>
 	
 </div>
 
@@ -147,23 +170,23 @@ a{
 <div class="row xiaminsigetu _pc">
 	<div class="col-sm-6 col-md-3">
 		<div  class=" banner">
-			<img src='/public/frontend/img/IVD展厅一级页面-01_05.png'>
+			<img src='/public/frontend/img/ivd_06.png'>
          </div>
 	</div>
 	<div class="col-sm-6 col-md-3">
-		<div class=" banner">
-			<img src='/public/frontend/img/IVD展厅一级页面-01_06.png'>
-			<span class="title">视频中心</span>
+		<div class="banner">
+			<img src='/public/frontend/img/ivd_08.png'>
+			<!-- <span class="title">视频中心</span> -->
         </div>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="">
-			<img src='/public/frontend/img/IVD展厅一级页面-01_09.png'>
+			<img src='/public/frontend/img/ivd_10.png'>
          </a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="">
-			<img src='/public/frontend/img/IVD展厅一级页面-01_11.png'>
+			<img src='/public/frontend/img/ivd_12.png'>
 		</a>
 	</div>
 </div>
@@ -173,13 +196,13 @@ a{
 		<button type="button" id="<?php echo $i;?>" class="btn btn-default"><?php echo $mainClass[$i]; ?></button>
 	<?php }?>
 </div>
-<div class="anniu row _pc">
+<div class="anniu anniu_xiamian row _pc">
 	<?php for($i=0;$i<count($products);$i++){?>
 		<div class="<?php echo $i;?>">
 			<?php for($j=0;$j<3;$j++){?>
-				<div class="col-sm-5 col-md-4">
+				<div class="col-sm-5 col-md-4 ">
 					<!-- <img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" > -->
-					<img src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
+					<img  class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
 				</div>
 			<?php }?>
 		</div>
@@ -188,27 +211,25 @@ a{
 
 <div class="row second _pc">
 	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
 	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
 	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
 	</div>
 	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-	</div>
-
-	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
 	</div>
 
 	<div class="col-sm-1 col-md-2">
-		<img src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+	</div>
+	<div class="col-sm-1 col-md-2">
+		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
 	</div>
 </div>
 <!-- 下面八个图形 -->

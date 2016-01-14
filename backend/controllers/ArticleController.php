@@ -79,7 +79,8 @@ class ArticleController extends CommonController
     {
         $model = new MirArticle();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+            p($model);
             return $this->redirect(['view', 'id' => $model->article_id]);
         } else {
             return $this->render('create', [

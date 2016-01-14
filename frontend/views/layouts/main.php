@@ -58,9 +58,10 @@ $glo =new GlobalFunc();
         padding: 6px 0;
     }
     .logo img{
+        margin-top: 5px;
         width: 257px;
-        height: 63px;
-        margin-bottom:20px;
+        height: 48px;
+        margin-bottom:15px;
     }
     .logo .btn-primary{
         margin-top: 20px;
@@ -112,6 +113,7 @@ $glo =new GlobalFunc();
         font-size: 16px;
     }
     .nav-tabs a{
+        font-family: "微软雅黑";
         color: black;
         text-align: center;
     }
@@ -119,10 +121,10 @@ $glo =new GlobalFunc();
         border: none;
     }
     .nav-tabs > li.active{
-        border-bottom: 9px solid #5d9dbe;
+        border-bottom: 9px solid #006699;
     }
     .nav-tabs > li.active a{
-        color: #5d9dbe;
+        color: #006699;
     }
     .tab-content img{
         width: 178px;
@@ -148,11 +150,11 @@ $glo =new GlobalFunc();
     }
     .tab-content-title-small{
         font-size: 16px;
-        color: #808080;
+        color: #595757;
     }
     .tab-content-date{
         font-size: 14px;
-        color: #7E8877;
+        color: #c9caca;
     }
 
     .content-right img{
@@ -161,8 +163,8 @@ $glo =new GlobalFunc();
         height: 210px;
     }
     .img img{
-        width: 24%;
-        height: 50px;
+        width: 74px;
+        height: 48px;
         margin-bottom: 0px;
     }
     .img-r img{

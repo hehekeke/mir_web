@@ -44,7 +44,7 @@ class CommonController extends Controller
                             '1'=>'Meeting'
                         ),
                         'video'=>array(
-                            '0'=>'视屏中心',
+                            '0'=>'视频中心',
                             '1'=>'VIDEO'
                         ),
                         'job'=>array(
