@@ -28,6 +28,7 @@ $glo =new GlobalFunc();
     .content-right-kanwu{
         width: 31%;
         margin-left: 40px;
+        border-bottom: 1px dashed grey;
     }
     .jiantou_right{
         margin-top: 12px;
@@ -45,6 +46,21 @@ $glo =new GlobalFunc();
     .tab-content-one_new{
         border-bottom: 1px dashed grey;
     }
+    .youqinglianjie .left{
+        font-size: 24px;
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .youqinglianjie .right{
+        margin-top: 39px;
+        width: 87%;
+        border-top: 1px solid black;
+    }
+    .youqinglianjie img{
+        margin-left: 10px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -55,7 +71,7 @@ $glo =new GlobalFunc();
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
                 <a href="#linchuanyixue" role="tab" data-toggle="tab">
-                    <?php echo Yii::$app->params['title']['linchuanyixue'][$language];?></a>
+                    <?php echo Yii::$app->params['title']['linchuanzaixian'][$language];?></a>
             </li>
             <li>
                 <a href="#zhutizhuanfang" role="tab" data-toggle="tab">
@@ -257,18 +273,18 @@ $glo =new GlobalFunc();
             </li>
         </ul>
         <div class="tab-pane active" id="home">
-            <div class="tab-content-third pull-left">
+            <!-- <div class="tab-content-third pull-left">
                 <img src='/public/frontend/img/首页-01_28.png'>
-            </div>
-            <div class="r-top pull-left">
+            </div> -->
+            <!-- <div class="r-top pull-left">
                 <a href="">
                     <p>
                         <?php echo $zhaobiao[0]->article_title;?></p>
                 </a>
-            </div>
-            <div class="clearfix"></div>
+            </div> -->
+            <!-- <div class="clearfix"></div> -->
         </div>
-        <?php for($i=1;$i<count($zhaobiao);$i++){ ?>
+        <?php for($i=0;$i<count($zhaobiao);$i++){ ?>
         <a href="">
             <h6>
                 <?php echo $zhaobiao[$i]->article_title;?></h6>
@@ -329,34 +345,22 @@ $glo =new GlobalFunc();
     </div>
 </div>
 <!-- 友情链接 -->
-<table class='youqinglianjie _pc'  border="0" cellspacing="0" cellpadding="0">
-    <tr valign="middle">
-        <td height="44" align="center">
-            <table width="972" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td align="center" class="tblineX">
-                        <p align="left" style="color:#333">
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <?php echo Yii::$app->params['title']['youqinglianjie'][$language];?>：</p>
-                        <table width="700" border="0" cellpadding="0" cellspacing="0">
-                            <?php for($i=0;$i<count($newFriendLinks);$i++){?>
-                            <tr height="40">
-                                <?php for($j=0;$j<count($newFriendLinks[$i]);$j++){?>
-                                <td align="center" valign="middle">
-                                    <a href="<?php echo $newFriendLinks[$i][$j]->
-                                        Link_url?>">
-                                            &nbsp;&nbsp;&nbsp;
-                                        <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>" height="33" width="80" alt="上海丰汇" border="0"></a>
-                                </td>
-                                <?php }?></tr>
-                            <?php }?></table>
-                    </td>
-                </tr>
-
-            </table>
-        </td>
-    </tr>
-</table>
+<div class="youqinglianjie _pc">
+    <div class="pull-left left">
+       &nbsp;&nbsp;<?php echo Yii::$app->params['title']['youqinglianjie'][$language];?>
+    </div>
+    <div class="pull-left right">
+        <?php for($i=0;$i<count($newFriendLinks);$i++){?>
+            <?php for($j=0;$j<count($newFriendLinks[$i]);$j++){?>
+                <a href="<?php echo $newFriendLinks[$i][$j]->Link_url?>">
+                    &nbsp;&nbsp;&nbsp;
+                    <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>" height="33" width="80" alt="上海丰汇" border="0">
+                </a>
+            <?php }?>
+        <?php }?>
+           
+    </div>
+</div>
 
 <!--************************************* 移动端代码 ************************************************************************-->
 <style type="text/css">

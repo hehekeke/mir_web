@@ -95,8 +95,8 @@ class CommonController extends Controller
                             '0'=>'名企招聘',
                             '1'=>'Famous enterprises recruitment'
                         ),
-                        'linchuanyixue'=>array(
-                            '0'=>'临床医学',
+                        'linchuanzaixian'=>array(
+                            '0'=>'临床在线',
                             '1'=>'clinical medicine'
                         ),
                         'zhutizhuanfang'=>array(
@@ -112,7 +112,7 @@ class CommonController extends Controller
                             '1'=>'Brand power'
                         ),
                         'zhaobiaoguanggao'=>array(
-                            '0'=>'招标广告',
+                            '0'=>'招标公告',
                             '1'=>'Bidding advertisement'
                         ),
                         'jishufenxiang'=>array(

@@ -162,9 +162,10 @@ h5{
 
 <div class='second _pc'>
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tuijianzhaopin'][$language];?></h5>
-	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0" style="height:270px;overflow:auto; position: relative;">
 		<div class='tuijian'>
-			<?php for($i=0;$i<count($list);$i++){?>
+			<!-- count($list) -->
+			<?php for($i=0;$i<9;$i++){?>
 				<div class='pull-left'>
 				<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $list[$i]->article_id;?>">
 					 <h6>&bull;<?php echo $glo->enOrCh($list[$i],"article_title");?></h6>

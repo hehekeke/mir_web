@@ -50,13 +50,20 @@ $glo =new GlobalFunc();
         margin-top: 28px;
     }
     .zhongwen,.yingwen{
+        height: 26px;
         background-color: #003366;
         
     }
+    .btn{
+        padding: 3px 12px;
+    }
     /*登陆 注册按钮*/
     .header .loign{
-        font-size: 24px;
-        padding: 6px 0;
+        font-size: 17px;
+        padding: 13px 0;
+    }
+    .logo{
+        height: 86px;
     }
     .logo img{
         margin-top: 5px;
@@ -75,7 +82,11 @@ $glo =new GlobalFunc();
         width: 125px;
         background-color: #006699;
     }
+    .navbar{
+        min-height: 30px;
+    }
     .navbar li a{
+        height: 38px;
         width: 127px;
         color: #ffffff;
         font-size: 20px;
@@ -92,7 +103,7 @@ $glo =new GlobalFunc();
         background-color: #cccccc;
     }
     .navbar  li  a{
-        padding: 14px 2px;
+        padding: 9px 2px;
     }
 
     .indexTop img{
@@ -111,7 +122,7 @@ $glo =new GlobalFunc();
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 16px;
+        font-size: 22px;
     }
     .nav-tabs a{
        
@@ -245,9 +256,9 @@ $glo =new GlobalFunc();
     <!-- 这个是公用的header.html -->
     <div class='logo _pc'>
         <img src='/public/frontend/img/logo_03.png'>
-        <span class="pull-right btn btn-primary yingwen" style='margin-top:28px;'>English</span>
+        <span class="pull-right btn btn-primary yingwen" style='margin-top:33px;'>English</span>
 
-        <span class="pull-right btn btn-primary zhongwen" style='margin-right:15px;margin-top:28px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
+        <span class="pull-right btn btn-primary zhongwen" style='margin-right:15px;margin-top:33px;'>中&nbsp;&nbsp;&nbsp;&nbsp;文</span>
 
         <span class="pull-right btn loign" style='margin-right:55px;'><?php echo Yii::$app->params['title']['register'][$language];?></span>
         <span class="pull-right btn loign"><?php echo Yii::$app->params['title']['login'][$language];?> |</span>
