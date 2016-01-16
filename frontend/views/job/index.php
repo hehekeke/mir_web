@@ -138,10 +138,12 @@ h5{
 <div class="first _pc">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['mingqizhaopin'][$language];?></h5>
 	<div class="imgs">
-		<?php for($i=0;$i<10;$i++){?>
-			<!-- <img src="<?php echo $list[$i]->article_pic;?>"> -->
+		<?php for($i=0;$i<count($pics);$i++){?>
+			<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $pics[$i]->article_id;?>">
+				<img src="/public/uploads/art/<?php echo $pics[$i]->article_pic;?>">
+			</a>
 		<?php }?>
-		<img src='/public/frontend/img/job_03.png'>
+		<!-- <img src='/public/frontend/img/job_03.png'>
 		<img src='/public/frontend/img/job_05.png'>
 		<img src='/public/frontend/img/job_07.png'>
 		<img src='/public/frontend/img/job_09.png'>
@@ -154,7 +156,7 @@ h5{
 		<img src='/public/frontend/img/job_07.png'>
 		<img src='/public/frontend/img/job_09.png'>
 		<img src='/public/frontend/img/job_11.png'>
-		<img src='/public/frontend/img/job_13.png'>
+		<img src='/public/frontend/img/job_13.png'> -->
         
 	</div>
 	<div class="clearfix"></div>

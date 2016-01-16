@@ -22,9 +22,12 @@ class JobController extends CommonController
     {
     	$articleModel = new MirArticle();
     	$list = $articleModel->find()->where(["article_class"=>'5'])->orderBy("article_id desc")->all();
-        // p($list[0]->mirMake->);
+        
+        $pics = $articleModel->find()->select("article_id,article_pic")->where(["article_class"=>'5','article_istop'=>'1'])->orderBy("article_id desc")->all();
+        // p($pics);
         return $this->render('index',[
         	'list'=>$list,
+            'pics'=>$pics,
         ]);
     }
 

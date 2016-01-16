@@ -169,7 +169,7 @@ class CommonController extends Controller
                             '1'=>'Special recommendation'
                         ),
                         'qiteshipin'=>array(
-                            '0'=>'其他视屏',
+                            '0'=>'其他视频',
                             '1'=>'Other screen'
                         ),
                         'zhengwen'=>array(
