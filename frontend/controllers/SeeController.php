@@ -38,6 +38,10 @@ class SeeController extends CommonController
             $type = "临床在线";
         }else if($type == '2'){
             $type = "主题专访";
+        }else if($type == '3'){
+            $type = "专家专栏";
+        }else if($type == '4'){
+            $type = "品牌力量";
         }
         if(!empty($id)){
     		$model = MirIvd::findOne(["mir360_id"=>$id]);

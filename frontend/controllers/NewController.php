@@ -62,5 +62,21 @@ class NewController extends CommonController
             'nextModel'=>$nextModel,
         ]);
     }
+    public function actionIndex3(){
+        $articleModel = new MirArticle();
+        $data = MirArticle::find()->select("article_pic,article_id")->all();
+        for ($i=0; $i < count($data); $i++) { 
+            $pics[$i]['id'] =$data[$i]->article_id;
+            $pics[$i]['pic'] =$data[$i]->article_pic; 
+        }
+        for ($i=0; $i < count($pics); $i++) { 
+            if($pics[$i]['pic'] == 'nopic.gif'){
+                $model = MirArticle::find()->where(["article_id"=>$pics[$i]['id']])->one();
+                $model->article_pic = "moren.png";
+                $model->save();
+            }
+        }
+        echo "ok";
+    }
 
 }

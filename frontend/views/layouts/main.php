@@ -208,7 +208,6 @@ $glo =new GlobalFunc();
         border-bottom: 1px dashed black;
     }
     .youqinglianjie{
-        border-bottom: 1px solid black;
         margin-bottom: 20px;
     }
     .end{

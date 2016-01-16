@@ -41,6 +41,15 @@ $this->params['breadcrumbs'][] = $this->title;
                                     return $data->classify[$data->mir360_class];
                                 }
                             ],
+                             [
+                                'attribute'=>'mir360_pic',
+                                'format'=>'raw',
+                                'value'=>function($model){
+                                    return Html::img("/public/uploads/360/".$model->mir360_pic,
+                                                ['width' => 130]
+                                    );
+                                }
+                            ],
                             [
                                 'attribute'=>'mir360_date',
                                 'headerOptions' => ['width' => '160'],

@@ -70,60 +70,51 @@ $glo =new GlobalFunc();
     <div class="pull-left content-left">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
-                <a href="#linchuanyixue" role="tab" data-toggle="tab">
+                <a href="#a0" role="tab" data-toggle="tab">
                     <?php echo Yii::$app->params['title']['linchuanzaixian'][$language];?></a>
             </li>
             <li>
-                <a href="#zhutizhuanfang" role="tab" data-toggle="tab">
+                <a href="#a1" role="tab" data-toggle="tab">
                     <?php echo Yii::$app->params['title']['zhutizhuanfang'][$language];?></a>
             </li>
             <li>
-                <a href="#messages" role="tab" data-toggle="tab">
+                <a href="#a2" role="tab" data-toggle="tab">
                     <?php echo Yii::$app->params['title']['zhuanjiazhuanlan'][$language];?></a>
             </li>
             <li>
-                <a href="#settings" role="tab" data-toggle="tab">
+                <a href="#a3" role="tab" data-toggle="tab">
                     <?php echo Yii::$app->params['title']['pinpaililiang'][$language];?></a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active tab-content-one" id="linchuanyixue">
-                <?php for ($i=0; $i < 5 ; $i++) { ?>
-                <a href="/frontend/web/index.php?r=see/index2&type=1&id=<?php echo $linchuangyixues[$i]->mir360_id?>">
-                <div class="lichu">
-                    <div class='pull-left tab-content-left'>
-                        <!-- <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'> -->
-                        <img src='/public/frontend/img/首页-01_06.png'>
+            <?php for ($i=0; $i < count($firstData); $i++) { ?>
+                <?php if($i == 0){?>
+                    <div class="tab-pane active  tab-content-one" id="a<?php echo $i;?>">
+                <?php }else{?>
+                    <div class="tab-pane  tab-content-one" id="a<?php echo $i;?>">
+                <?php }?>
+                
+                <?php for ($j=0; $j < count($firstData[$i]); $j++) { ?>
+
+                <a href="/frontend/web/index.php?r=see/index2&type=<?php echo $i+1;?>&id=<?php echo $firstData[$i][$j]->mir360_id?>">
+                    <div class="lichu">
+                        <div class='pull-left tab-content-left'>
+                            <!-- <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'> -->
+                            <img src='/public/frontend/img/首页-01_06.png'>
+                        </div>
+                        <div class='pull-left tab-content-right'>
+                            <h4>
+                                <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title");?>
+                            </h4>
+                            <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'30');?></div>
+                            <div class='tab-content-date'>2015/3/18</div>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class='pull-left tab-content-right'>
-                        <h4>
-                            <?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_title");?>
-                        </h4>
-                        <div class='tab-content-title-small'><?php echo  $glo->enOrCh($linchuangyixues[$i],"mir360_zy",'30');?></div>
-                        <div class='tab-content-date'>2015/3/18</div>
-                    </div>
-                    <div class="clearfix"></div>
+                    </a>
+                    <?php }?>
                 </div>
-                </a>
-                <?php }?></div>
-            <div class="tab-pane tab-content-one" id="zhutizhuanfang">
-                <?php for ($i=0; $i < 5 ; $i++) { ?>
-                <a href="/frontend/web/index.php?r=see/index2&type=2&id=<?php echo $zhutizhuanfang[$i]->mir360_id?>">
-                <div class="lichu">
-                    <div class='pull-left tab-content-left'>
-                        <!-- <img src='/public/uploads/<?php echo $zhutizhuanfang[$i]->mir360_pic;?>'> -->
-                        <img src='/public/frontend/img/首页-01_06.png'>
-                    </div>
-                    <div class='pull-left tab-content-right'>
-                        <h4>
-                            <?php echo  $glo->enOrCh($zhutizhuanfang[$i],"mir360_title");?></h4>
-                        <div class='tab-content-title-small'><?php echo  $glo->enOrCh($zhutizhuanfang[$i],"mir360_zy",'30');?></div>
-                        <div class='tab-content-date'>2015/3/18</div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                </a>
-                <?php }?></div>
+            <?php }?>
         </div>
     </div>
     <div class="pull-left content-right">
@@ -177,12 +168,14 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one tab-content-one_new" >
                     <div class='pull-left tab-content-left'>
-                        <!-- <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>"> -->
-                        <img src='/public/frontend/img/首页-01_15.png'>
+                        <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
                     </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_title");?></div>
+                            <h4>
+                                <?php echo  $glo->enOrCh($news[$i],"article_title");?>
+                            </h4>
+                        </div>
                         <div class='tab-content-title-small'>
                             <?php echo  $glo->enOrCh($news[$i],"article_zy",20); ?></div>
                         <div class='tab-content-date'>
@@ -286,8 +279,8 @@ $glo =new GlobalFunc();
         </div>
         <?php for($i=0;$i<count($zhaobiao);$i++){ ?>
         <a href="">
-            <h6>
-                <?php echo $zhaobiao[$i]->article_title;?></h6>
+            <h4>
+                <?php echo $zhaobiao[$i]->article_title;?></h4>
         </a>
         <?php }?></div>
 </div>
@@ -358,8 +351,8 @@ $glo =new GlobalFunc();
                 </a>
             <?php }?>
         <?php }?>
-           
     </div>
+    <div class="clearfix"></div>
 </div>
 
 <!--************************************* 移动端代码 ************************************************************************-->

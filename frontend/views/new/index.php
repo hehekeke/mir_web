@@ -169,8 +169,7 @@ use yii\widgets\LinkPager;
             article_id; ?>">
             <div class="tab-pane active tab-content-one" id="home">
                 <div class='pull-left tab-content-left'>
-                    <!-- <img src='/public/uploads/<?php echo $news[$i]->article_pic;?>'> -->
-                    <img src='/public/frontend/img/首页-01_15.png'>
+                    <img src='/public/uploads/art/<?php echo $news[$i]->article_pic;?>'>
                 </div>
                 <div class='pull-left tab-content-right'>
                     <h4>
@@ -198,17 +197,18 @@ use yii\widgets\LinkPager;
         </li>
     </ul>
     <div class="tab-content tab-div">
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-        <h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
+        <h5>&bull;2015（第四届）POCT产业发展论坛</h5>
     </div>
 
     <ul class="nav nav-tabs renmen" role="tablist" id="myTab">
         <li class="active" style="border-bottom:9px solid green;">
-            <a href="#home" role="tab" data-toggle="tab" style="color:green;">本周热点</a>
+            <a href="#home" role="tab" data-toggle="tab" style="color:green;">热门排行</a>
         </li>
     </ul>
     <div class="tab-content remen_div tab-div">

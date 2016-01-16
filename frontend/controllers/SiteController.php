@@ -95,8 +95,17 @@ class SiteController extends CommonController
         //临床医学
         $ivdModel = new  MirIvd();
         $linchuangyixues = $ivdModel->getIvdlist(3);
-        // p($linchuangyixues);
+        $pinpaililiang = $ivdModel->getIvdlist(1);
         $zhutizhuanfang = $ivdModel->getIvdlist(2);
+        $zhuanjiazhuanlan = $ivdModel->getIvdlist(4);
+        // p($linchuangyixues);
+        // 把主题专访  四个合并成一个
+        $firstData[] = $linchuangyixues;
+        $firstData[] = $zhutizhuanfang;
+        $firstData[] = $zhuanjiazhuanlan;
+        $firstData[] = $pinpaililiang;
+        // p($firstData);
+
         // p($linchuangyixues);
         // IVD展厅
         $porduct = new MirProduct();
@@ -109,9 +118,9 @@ class SiteController extends CommonController
                 'news'=>$news,
                 'zhaobiao'=>$zhaobiao,
                 'jishus'=>$jishus,
-                'linchuangyixues'=>$linchuangyixues,
-                'zhutizhuanfang'=>$zhutizhuanfang,
+                'firstData'=>$firstData,
                 'porducts'=>$porducts,
+                
             ]);
     }
 

@@ -21,7 +21,7 @@ use Yii;
  */
 class MirIvd extends \backend\models\MirBase
 {
-    public $classify = ['1'=>'企业360','2'=>'主题专访','3'=>'临床在线','4'=>'品牌力量'];
+    public $classify = ['1'=>'品牌力量','2'=>'主题专访','3'=>'临床在线','4'=>'专家专栏'];
     /**
      * @inheritdoc
      */
