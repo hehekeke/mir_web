@@ -64,6 +64,7 @@ $glo =new GlobalFunc();
         padding: 13px 0;
     }
     .logo{
+        margin-top: 20px;
         height: 86px;
     }
     .logo img{
@@ -234,6 +235,7 @@ $glo =new GlobalFunc();
             margin: 0;
             padding: 0;
         }
+
         .logo img{
             width: 100%;
             margin-bottom: 0px;
