@@ -90,7 +90,7 @@ $glo =new GlobalFunc();
         height: 38px;
         width: 127px;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 800;
     }
     .navbar{
@@ -123,12 +123,15 @@ $glo =new GlobalFunc();
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 22px;
+        font-size: 20px;
     }
     .nav-tabs a{
        
         color: black;
         text-align: center;
+    }
+    h4{
+        font-size:16px;
     }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
         border: none;
@@ -162,11 +165,11 @@ $glo =new GlobalFunc();
         color: black;
     }
     .tab-content-title-small{
-        font-size: 16px;
+        font-size: 14px;
         color: #595757;
     }
     .tab-content-date{
-        font-size: 14px;
+        font-size: 12px;
         color: #c9caca;
     }
 
