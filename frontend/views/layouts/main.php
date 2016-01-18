@@ -123,7 +123,7 @@ $glo =new GlobalFunc();
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 20px;
+        font-size: 18px;
     }
     .nav-tabs a{
        
