@@ -17,7 +17,7 @@ beginPage() ?>
 <html lang="<?= Yii::$app->
     language ?>">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> -->
 <meta name="renderer" content="ie-stand">
 
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
