@@ -18,6 +18,7 @@ beginPage() ?>
     language ?>">
 <head>
 <meta name="renderer" content="ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <meta charset="<?= Yii::$app->
