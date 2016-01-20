@@ -19,16 +19,17 @@ beginPage() ?>
 <head>
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> -->
 <meta name="renderer" content="ie-stand">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="<?= Yii::$app->charset ?>">
+<!--[if lte IE 8]>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <meta charset="<?= Yii::$app->
-    charset ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <?php $this->
-    head() ?>
-    <?php
+<?php $this->head() ?>
+<?php
 $session = Yii::$app->session;
 $language = empty($session['language'])?0:1;
 
