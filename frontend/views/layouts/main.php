@@ -157,19 +157,18 @@ $glo =new GlobalFunc();
         margin: 10px 0;
     }
     .tab-content-right{
-        width: 59%;
+        width: 67%;
     }
     .tab-content-one{
         margin-top: 15px;
         padding-bottom: 15px;
     }
     .tab-content-title{
-        margin-top: 15px;
         font-size: 18px;
         color: black;
     }
     .tab-content-title-small{
-        font-size: 14px;
+        font-size: 13px;
         color: #595757;
     }
     .tab-content-date{

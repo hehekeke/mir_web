@@ -61,6 +61,9 @@ $glo =new GlobalFunc();
         margin-top: 15px;
         margin-bottom: 10px;
     }
+    .tab-content-right h4{
+        margin: 0;
+    }
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -106,7 +109,7 @@ $glo =new GlobalFunc();
                             <h4>
                                 <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title");?>
                             </h4>
-                            <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'30');?></div>
+                            <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'70');?></div>
                             <div class='tab-content-date'>2015/3/18</div>
                         </div>
                         <div class="clearfix"></div>
@@ -177,7 +180,7 @@ $glo =new GlobalFunc();
                             </h4>
                         </div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_zy",20); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",100); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>
