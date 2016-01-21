@@ -157,7 +157,7 @@ $glo =new GlobalFunc();
         margin: 10px 0;
     }
     .tab-content-right{
-        width: 66%;
+        width: 67%;
     }
     .tab-content-one{
         margin-top: 15px;
@@ -168,7 +168,7 @@ $glo =new GlobalFunc();
         color: black;
     }
     .tab-content-title-small{
-        font-size: 14px;
+        font-size: 13px;
         color: #595757;
     }
     .tab-content-date{
