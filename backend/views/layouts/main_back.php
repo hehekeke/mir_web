@@ -94,13 +94,13 @@ beginPage() ?>
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/admin.php/admins/create">管理员添加</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['super-user/create'])?>">管理员添加</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/admins/index">管理员管理</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['super-user/index'])?>">管理员管理</a>
                                 </li>
                                 <li>
-                                    <a href="/admin.php/admins/password">修改密码</a>
+                                    <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['super-user/password'])?>">修改密码</a>
                                 </li>
                                 
                             </ul>
