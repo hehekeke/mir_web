@@ -156,14 +156,13 @@ $glo =new GlobalFunc();
         margin: 10px 0;
     }
     .tab-content-right{
-        width: 59%;
+        width: 66%;
     }
     .tab-content-one{
         margin-top: 15px;
         padding-bottom: 15px;
     }
     .tab-content-title{
-        margin-top: 15px;
         font-size: 18px;
         color: black;
     }
