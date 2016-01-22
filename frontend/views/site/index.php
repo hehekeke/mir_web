@@ -107,7 +107,7 @@ $glo =new GlobalFunc();
                         </div>
                         <div class='pull-left tab-content-right'>
                             <h4>
-                                <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title");?>
+                                <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title",'25');?>
                             </h4>
                             <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'70');?></div>
                             <div class='tab-content-date'>2015/3/18</div>

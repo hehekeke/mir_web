@@ -14,8 +14,7 @@ AppAsset::register($this);
 <?php $this->
 beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->
-    language ?>">
+<html lang="<?= Yii::$app->language ?>">
 <head>
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> -->
 <meta name="renderer" content="ie-stand">
