@@ -24,6 +24,8 @@ use backend\widget\Uploadify;
                             <?= $form->field($model, 'mir360_title_e')->textInput(['maxlength' => true]) ?>
 
                             <?= $form->field($model, 'mir360_class')->dropDownList($model->classify) ?>
+                            
+                            <?= $form->field($model, 'mir360_zy')->textarea(['rows' => 6]) ?>
 
                             <?= $form->field($model, 'mir360_date')->textInput()->widget(DateTimePicker::className(), [
                                 'language' => 'zh-CN',
