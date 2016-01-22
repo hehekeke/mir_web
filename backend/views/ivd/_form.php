@@ -39,7 +39,7 @@ use backend\widget\Uploadify;
 
                             <?= $form->field($model, 'mir360_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
                             
-                            <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
+                            <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'ivd'])?>
                         </div>
                         <div class="col-xs-10">
                             <div class="form-group" style="">
