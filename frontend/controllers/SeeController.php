@@ -25,7 +25,6 @@ class SeeController extends CommonController
 
     public function actionIndex2()
     {
-
     	$ivdModel = new  MirIvd();
         $linchuangyixues = $ivdModel->find()->select("mir360_id,mir360_date,mir360_title,mir360_title_e")->where(["mir360_class"=>'3'])->orderBy("mir360_date desc")->all();
         for ($i=0; $i < count($linchuangyixues); $i++) { 

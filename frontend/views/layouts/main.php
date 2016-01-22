@@ -14,8 +14,7 @@ AppAsset::register($this);
 <?php $this->
 beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->
-    language ?>">
+<html lang="<?= Yii::$app->language ?>">
 <head>
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> -->
 <meta name="renderer" content="ie-stand">
@@ -128,7 +127,7 @@ $glo =new GlobalFunc();
         margin-left: 40px;
     }
     .nav-tabs li a{
-        font-size: 18px;
+        font-size: 19px;
     }
     .nav-tabs a{
        
