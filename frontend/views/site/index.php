@@ -176,11 +176,11 @@ $glo =new GlobalFunc();
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <h4>
-                                <?php echo  $glo->enOrCh($news[$i],"article_title");?>
+                                <?php echo  $glo->enOrCh($news[$i],"article_title",25);?>
                             </h4>
                         </div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_zy",100); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",68); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>
