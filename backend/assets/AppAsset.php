@@ -17,8 +17,8 @@ class AppAsset extends AssetBundle
 {
 
     public $basePath = '@webroot';
-    public $baseUrl = '@web/Public/Admin/';
-    public $pluginsUrl = '@web/Public/plugins';
+    public $baseUrl = '@web/public/Admin/';
+    public $pluginsUrl = '@web/public/plugins';
     public $css = [
         // <!-- Bootstrap Core CSS -->
         'css/bootstrap.min.css',
