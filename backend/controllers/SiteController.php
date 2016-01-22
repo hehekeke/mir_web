@@ -21,7 +21,7 @@ class SiteController extends CommonController
     public function behaviors()
     {
         return [
-            'access' => [
+           'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
@@ -57,7 +57,10 @@ class SiteController extends CommonController
     }
 
     public function actionIndex()
-    {       
+    {     
+        if (\Yii::$app->user->isGuest) {
+            return $this->redirect(['site/login']);
+        }
         return $this->render('index');
     }
 
