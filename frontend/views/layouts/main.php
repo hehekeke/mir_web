@@ -22,7 +22,7 @@ beginPage() ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="<?= Yii::$app->charset ?>">
-<!--[if lte IE 8]>
+<!--[if lt IE9]>
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
 <![endif]-->
@@ -38,6 +38,7 @@ $glo =new GlobalFunc();
 
 ?>
     <style type="text/css">
+    article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
     body{
         font-family: "微软雅黑";
         width: 1005px;

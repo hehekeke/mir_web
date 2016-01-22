@@ -70,7 +70,8 @@ class Uploadify extends Widget {
 
 		/** 插件目录 */
 		$swf = Yii::getAlias('@pluginPath').'/uploadify/uploadify.swf';
-		$uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
+		$uploader = '/public/plugin/uploadify/uploadify.php';
+		// $uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
 
 		if($this->isVideo){
 			$fileTypeExts = "*.mp4;";
