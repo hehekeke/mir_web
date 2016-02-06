@@ -67,14 +67,6 @@ h5{
 </ol>
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
-
-	<!-- <div class="first ">
-		<div class="player">
-		   <video poster="/public/frontend/img/indexTop.png">
-		         <source type="video/mp4" src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4">
-		   </video>
-		</div>
-	</div> -->
 	<video controls=""  src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
 			poster="/public/frontend/img/视频中心一级页面-01_03.png" data-setup="{}">
 		<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
@@ -87,7 +79,13 @@ h5{
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['qiteshipin'][$language];?></h5>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="/1.mp4" 
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -96,7 +94,13 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -105,7 +109,13 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -114,7 +124,13 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -123,7 +139,13 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -132,7 +154,13 @@ h5{
 	</div>
 	<div class="video ">
 		<div class="pull-left">
-			<img src = '/public/frontend/img/视频中心一级页面-01_07.png'>
+			<video
+				style='width:300px;height:200px;'
+			    controls=""
+			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
+				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			</video>
 		</div>
 		<div class="pull-left wenzi">
 			的萨芬肯定
@@ -142,8 +170,5 @@ h5{
 
 	<div class="clearfix"></div>
 </div>
-<script type="text/javascript">
-   $(".player").flowplayer({swf:"/public/flowplayer/flowplayerhls.swf"});
-</script>
 
 

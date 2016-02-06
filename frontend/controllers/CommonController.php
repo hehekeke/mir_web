@@ -176,6 +176,10 @@ class CommonController extends Controller
                             '0'=>'正文',
                             '1'=>'text'
                         ),
+                        'tuijianwenzhang'=>array(
+                            '0'=>'推荐文章',
+                            '1'=>'RECOMMEND',
+                        )
 
 
                     );

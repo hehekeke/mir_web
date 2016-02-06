@@ -301,10 +301,14 @@ $glo =new GlobalFunc();
             <div class="tab-pane active " id="zhanhuizhanlan">
                 <div class='pull-left'>
                     <?php for($i=0;$i<count($jishus);$i++){?>
-                    <h4>
-                        &bull;
-                        <?php echo $jishus[$i]->article_title;?></h4>
-                    <?php }?></div>
+                    <a href="/frontend/web/index.php?r=skill/index2&id=<?php echo $jishus[$i]->article_id;?>">
+                        <h4>
+                            &bull;
+                            <?php echo $jishus[$i]->article_title;?>
+                        </h4>
+                    </a>
+                    <?php }?>
+                </div>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -318,21 +322,19 @@ $glo =new GlobalFunc();
         </ul>
         <div class="tab-pane active" id="home">
             <div class="kanwu">
-                <div class="left jiantou_left">
+            <div class="left jiantou_left">
                     <img src='/public/frontend/img/首页-01_03_left.png'>
                 </div>
-                <div class="left content">
-                    <img src='/public/frontend/img/首页-01_47.png'>
-                    <p class="text-center">2015/5</p>
-                </div>
-                <div class="left content">
-                    <img src='/public/frontend/img/首页-01_47.png'>
-                    <p class="text-center">2015/5</p>
-                </div>
-                <div class="left content">
-                    <img src='/public/frontend/img/首页-01_47.png'>
-                    <p class="text-center">2015/5</p>
-                </div>
+            <?php for ($i=0; $i < 3; $i++) { 
+               
+            ?>
+                <a href="/frontend/web/index.php?r=cable/index">
+                    <div class="left content">
+                        <img src='/public/frontend/img/首页-01_47.png'>
+                        <p class="text-center">2015/5</p>
+                    </div>  
+                </a>
+            <?php } ?>
                 <div class="left jiantou_right">
                     <img src='/public/frontend/img/首页-01_05_right.png'>
                 </div>

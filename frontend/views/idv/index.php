@@ -179,7 +179,7 @@ a{
 </ol>
 <div class='idv_topImg _pc '>
 	<!-- <img src='/public/frontend/img/indexTop.png'> -->
-	<img id='big' src='/public/frontend/img/ivd_03.png'>
+	<img id='big' src='/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>'>
 	
 </div>
 

@@ -1,3 +1,10 @@
+<?php
+$session = Yii::$app->
+session;
+$language = empty($session['language'])?0:1;
+use backend\components\GlobalFunc;
+$glo =new GlobalFunc();
+?>
 <style type="text/css">
 	.col-sm-3{
 		width: 22%;
@@ -43,23 +50,46 @@
 				<div class="container">
 					<div class="row" >
 						<div class="col-xs-6 col-sm-3">
-							<a href="/frontend/web/index.php?r=see/index2">
+							<a href="/frontend/web/index.php?r=see/index2&id=<?php echo $linchuangyixues[0]->mir360_id;?>">
 								<img src='/public/frontend/img/精彩看点一级页面-01_03.png'>
 								<div class="img_bottom">
-									<div class='title'>关于儿童疾病的经验探究</div>
+									<div class='title'><?php echo $glo->enOrCh($linchuangyixues[0],"mir360_title");?></div>
 									<p>河北省儿童医院</p>
 									<p>检验科主任：李贵霞</p>
 								</div>
 							</a>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/精彩看点一级页面-01_04.png'>
+							<a href="/frontend/web/index.php?r=see/index2&id=<?php echo $zhutizhuanfang[0]->mir360_id;?>">
+								<img src='/public/frontend/img/精彩看点一级页面-01_04.png'>
+								<div class="img_bottom">
+									<div class='title'>
+										<?php echo  $glo->enOrCh($zhutizhuanfang[0],"mir360_title");?>
+									</div>
+									<p>河北省儿童医院</p>
+									<p>检验科主任：李贵霞</p>
+								</div>
+							</a>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/精彩看点一级页面-01_05.png'>
+							<a href="/frontend/web/index.php?r=see/index2&id=<?php echo $zhuanjiazhuanlan[0]->mir360_id;?>">
+								<img src='/public/frontend/img/精彩看点一级页面-01_05.png'>
+								<div class="img_bottom">
+									<div class='title'><?php echo  $glo->enOrCh($zhuanjiazhuanlan[0],"mir360_title");?></div>
+									<p>河北省儿童医院</p>
+									<p>检验科主任：李贵霞</p>
+								</div>
+							</a>
 						</div>
 						<div class="col-xs-6 col-sm-3">
-							<img src='/public/frontend/img/精彩看点一级页面-01_06.png'>
+							<a href="/frontend/web/index.php?r=see/index2&id=<?php echo $pinpaililiang[0]->mir360_id;?>">
+								<img src='/public/frontend/img/精彩看点一级页面-01_06.png'>
+								<div class="img_bottom">
+									<div class='title'><?php echo  $glo->enOrCh($pinpaililiang[0],"mir360_title");?></div>
+									<p>河北省儿童医院</p>
+									<p>检验科主任：李贵霞</p>
+								</div>
+							</a>
 						</div>
 						
 					</div>

@@ -20,7 +20,18 @@ class SeeController extends CommonController
 
     public function actionIndex()
     {
-        return $this->render('index');
+         $ivdModel = new  MirIvd();
+        $zhutizhuanfang = $ivdModel->getIvdlist(2);
+        $pinpaililiang = $ivdModel->getIvdlist(1);
+        $zhuanjiazhuanlan = $ivdModel->getIvdlist(4);
+        $linchuangyixues = $ivdModel->getIvdlist(3);
+        // p($zhutizhuanfang);
+        return $this->render('index',[
+            'zhutizhuanfang'=>$zhutizhuanfang,
+            'pinpaililiang'=>$pinpaililiang,
+            'zhuanjiazhuanlan'=>$zhuanjiazhuanlan,
+            'linchuangyixues'=>$linchuangyixues,
+        ]);
     }
 
     public function actionIndex2()

@@ -33,12 +33,14 @@ class IdvController extends CommonController
     	$jobs = $articleModel->articleToIndex(5);
         //技术分享
         $jishus = $articleModel->articleToIndex(3);
-        //ivd 四个图
-        $ivdModel = new MirIvd();
-        $ivdList = $ivdModel->getIvdlist(); 
-        // P($ivdList);
-        //产品照片显示
         $productModel = new MirProduct();
+
+        //ivd 四个图
+        $fourPic = $productModel->find()->andWhere(["!=","product_pic","productnopic.gif"])->orderBy("product_id desc")->limit(4)->all();
+        // p($fourPic);
+        // P($ivdList);
+        // p(count($ivdList));
+        //产品照片显示
         $mainClass = $productModel->mainClass();
         foreach ($mainClass as $k => $v) {
             $mainClassId[] = $k;
@@ -55,7 +57,6 @@ class IdvController extends CommonController
         // p($pagesArray);
         // p($mainClass);
         $mainClass = array_values($mainClass);
-        // p($products[0]);
         return $this->render('index',[
         	'dafenlei'=>$dafenlei,
         	'jobs'=>$jobs,
@@ -65,6 +66,7 @@ class IdvController extends CommonController
             'products'=>$products,
             'productArray'=>$productArray,
             'pagesArray'=>$pagesArray,
+            'fourPic'=>$fourPic,
         ]);
     }
 
