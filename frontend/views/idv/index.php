@@ -110,7 +110,7 @@ a{
 }
 .xiaminsigetu span{
 	font-size: 20px;
-	padding-top: 40px;
+	padding-top: 23px;
 	text-align: center;
 }
 .xiaminsigetu div{
@@ -118,7 +118,7 @@ a{
 }
 /*.banner{ width:100%; overflow:hidden; position:relative;}*/
 .banner  a{ width:100%; height:100%; display:block;}
-.banner  .title{background-color:RGBA(0,0,0,.5); height:100px; color:#fff;  position:absolute; left:0; bottom:10px; width:228px; z-index:1000;}
+.banner  .title{background-color:RGBA(0,0,0,.5); height:88px; color:#fff;  position:absolute; left:0; bottom:10px; width:239px; z-index:1000;}
 
 .panel{
 	margin-bottom: 0px;border-radius:0;
@@ -185,27 +185,16 @@ a{
 
 
 <div class="row xiaminsigetu _pc">
+	<?php for ($i=0; $i < 4 ; $i++) { 
+		
+	?>
 	<div class="col-sm-6 col-md-3">
 		<div  class=" banner">
-			<img src='/public/frontend/img/ivd_06.png'>
+			<img src='/public/uploads/pro/<?php echo $fourPic[$i]->product_pic;?>'>
+			<span class="title"><?php echo $fourPic[$i]->product_name;?></span>
          </div>
 	</div>
-	<div class="col-sm-6 col-md-3">
-		<div class="banner">
-			<img src='/public/frontend/img/ivd_08.png'>
-			<!-- <span class="title">视频中心</span> -->
-        </div>
-	</div>
-	<div class="col-sm-6 col-md-3">
-		<a href="#" class="">
-			<img src='/public/frontend/img/ivd_10.png'>
-         </a>
-	</div>
-	<div class="col-sm-6 col-md-3">
-		<a href="#" class="">
-			<img src='/public/frontend/img/ivd_12.png'>
-		</a>
-	</div>
+	<?php }?>
 </div>
 
 <div class="btn-group _pc">
