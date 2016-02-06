@@ -24,6 +24,8 @@ use backend\widget\Uploadify;
                             <?= $form->field($model, 'mir360_title_e')->textInput(['maxlength' => true]) ?>
 
                             <?= $form->field($model, 'mir360_class')->dropDownList($model->classify) ?>
+                            
+                            <?= $form->field($model, 'mir360_zy')->textarea(['rows' => 6]) ?>
 
                             <?= $form->field($model, 'mir360_date')->textInput()->widget(DateTimePicker::className(), [
                                 'language' => 'zh-CN',
@@ -39,7 +41,7 @@ use backend\widget\Uploadify;
 
                             <?= $form->field($model, 'mir360_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
                             
-                            <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
+                            <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'ivd'])?>
                         </div>
                         <div class="col-xs-10">
                             <div class="form-group" style="">

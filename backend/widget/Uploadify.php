@@ -60,7 +60,7 @@ class Uploadify extends Widget {
 	public function run()
 	{
 		/** 不同类目文件存在目录，根据classify生成真实具体的路径 */
-		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink'];
+		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink','ivd'=>'360'];
 		$view = $this->getView();
 
 		$view->registerCssFile(Yii::getAlias('@pluginPath').'/uploadify/uploadify.css',['position' => \yii\web\View::POS_HEAD]);
@@ -70,7 +70,8 @@ class Uploadify extends Widget {
 
 		/** 插件目录 */
 		$swf = Yii::getAlias('@pluginPath').'/uploadify/uploadify.swf';
-		$uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
+		$uploader = '/public/plugin/uploadify/uploadify.php';
+		// $uploader = Yii::getAlias('@pluginPath').'/uploadify/uploadify.php';
 
 		if($this->isVideo){
 			$fileTypeExts = "*.mp4;";

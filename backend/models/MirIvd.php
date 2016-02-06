@@ -52,13 +52,13 @@ class MirIvd extends \backend\models\MirBase
             'mir360_title' => Yii::t('app', '标题'),
             'mir360_title_e' => Yii::t('app', '英文标题'),
             'mir360_class' => Yii::t('app', '类别'),
-            'mir360_pic' => Yii::t('app', 'Mir360 Pic'),
+            'mir360_pic' => Yii::t('app', '图片上传'),
             'mir360_date' => Yii::t('app', '添加时间'),
             'mir360_remark' => Yii::t('app', 'Mir360 Remark'),
             'mir360_remark_e' => Yii::t('app', 'Mir360 Remark E'),
             'mir360_company' => Yii::t('app', 'Mir360 Company'),
             'mir360_company_e' => Yii::t('app', 'Mir360 Company E'),
-            'mir360_zy' => Yii::t('app', 'Mir360 Zy'),
+            'mir360_zy' => Yii::t('app', '摘要'),
         ];
     }
     public function getIvdlist($type=""){
