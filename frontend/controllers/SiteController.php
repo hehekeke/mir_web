@@ -17,6 +17,8 @@ use backend\models\MirArticle;
 use frontend\controllers\CommonController;
 use backend\models\MirIvd;
 use backend\models\MirProduct;
+
+use backend\models\MirMgz;
 /**
  * Site controller
  */
@@ -111,6 +113,14 @@ class SiteController extends CommonController
         $porduct = new MirProduct();
         $porducts = MirProduct::find()->orderBy("product_id desc")->limit(5)->all();
         // p($porducts[0]->product_pic);
+        //索刊
+        $mgzModel = new MirMgz();
+        $mgz = $mgzModel->find()->orderBy("mgz_id desc")->groupBy("mgz_year,mgz_num")->all();
+        for ($i=0; $i < count($mgz); $i++) { 
+            $mgzYear[] = $mgz[$i]->mgz_year;
+            $mgzNum[] = $mgz[$i]->mgz_num;
+        }
+        // p($mgzYear);
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
                 'zhanhuiMeetings'=>$zhanhuiMeetings,
@@ -120,7 +130,8 @@ class SiteController extends CommonController
                 'jishus'=>$jishus,
                 'firstData'=>$firstData,
                 'porducts'=>$porducts,
-                
+                'mgzYear'=>$mgzYear,
+                'mgzNum'=>$mgzNum,
             ]);
     }
 

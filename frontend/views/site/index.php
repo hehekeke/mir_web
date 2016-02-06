@@ -33,9 +33,11 @@ $glo =new GlobalFunc();
     .jiantou_right{
         margin-top: 12px;
         margin-left: 10px;
+        cursor: pointer;
     }
     .jiantou_left{
         margin-top: 20px;
+        cursor: pointer;
     }
     .left p{
         margin-left: 10px;
@@ -313,6 +315,50 @@ $glo =new GlobalFunc();
             </div>
         </div>
     </div>
+    <!-- 索刊的js代码 -->
+    <script type="text/javascript">
+    $(function(){
+        $(".kanwu .content").hide();
+        // $("#2,#3,#4").show();
+        var k = 0;
+        var max = <?php echo count($mgzNum);?>;
+        // for (var i = 0; i <= max; i++) {
+        //     $("#"+i).show();
+        // };
+        showKanwu(k,max);
+        // alert(max);
+        $(".jiantou_left").click(function(){
+            if(k==0){
+
+            }else{
+                k--;
+            }
+            showKanwu(k,max);
+        });
+        $(".jiantou_right").click(function(){
+            if(k==Math.ceil(max/3)-1){
+
+            }else{
+                k++;
+            }
+            showKanwu(k,max);
+        });
+    });
+    function showKanwu(k,max){
+        $(".kanwu .content").hide();
+        if(k==0){
+            $("#"+3*k).show();
+            $("#1").show();
+            $("#2").show();
+        }else{
+            $("#"+3*k).show();
+            var next = 3*k+1;
+            $("#"+next).show();
+            var next_next = next+1;
+            $("#"+next_next).show();
+        }
+    }
+    </script>
     <div class="pull-left content-right-kanwu">
         <ul class="nav nav-tabs " role="tablist" id="myTab">
             <li class="active">
@@ -325,13 +371,13 @@ $glo =new GlobalFunc();
             <div class="left jiantou_left">
                     <img src='/public/frontend/img/首页-01_03_left.png'>
                 </div>
-            <?php for ($i=0; $i < 3; $i++) { 
+            <?php for ($i=0; $i < count($mgzYear); $i++) { 
                
             ?>
-                <a href="/frontend/web/index.php?r=cable/index">
-                    <div class="left content">
+                <a href="/frontend/web/index.php?r=cable/index&mgzYear=<?php echo $mgzYear[$i];?>&mgzNum=<?php echo $mgzNum[$i];?>">
+                    <div id="<?php echo $i;?>" class="left content">
                         <img src='/public/frontend/img/首页-01_47.png'>
-                        <p class="text-center">2015/5</p>
+                        <p class="text-center"><?php echo $mgzYear[$i];?>/<?php echo $mgzNum[$i];?></p>
                     </div>  
                 </a>
             <?php } ?>
