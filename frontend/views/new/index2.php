@@ -199,12 +199,14 @@ $glo =new GlobalFunc();
                 </li>
             </ul>
             <div class="tab-content tab-div">
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
-            	<h6>&bull;2015（第四届）POCT产业发展论坛</h6>
+            	<?php for ($i=0; $i < 7; $i++) { ?>
+                    <h5>&bull;
+                        <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $renDian[$i]->
+                        article_id; ?>">
+                            <?php echo  $glo->enOrCh($renDian[$i],'article_title','22');?>
+                        </a>
+                    </h5>
+                <?php }?>
             </div>
 
 
@@ -214,16 +216,32 @@ $glo =new GlobalFunc();
                 </li>
             </ul>
             <div class="tab-content remen_div ">
-            	<h5><span style='background-color: #FAC2D7;'>1</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span style='background-color: #CFC502;'>2</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span style='background-color: #FEFDA2;'>3</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span>4</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span>5</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span>6</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span>7</span>2015（第四届）POCT产业发展论坛</h5>
-            	<h5><span>8</span>2015（第四届）POCT产业发展论坛</h5>
-                <h5><span>9</span>2015（第四届）POCT产业发展论坛</h5>
-                <h5><span>10</span>2015（第四届）POCT产业发展论坛</h5>
+            	<h5><span style='background-color: #FAC2D7;'>1</span>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $paiHang[0]->
+            article_id; ?>">
+                <?php echo  $glo->enOrCh($paiHang[0],'article_title','20');?>
+            </a>
+        </h5>
+        <h5><span style='background-color: #CFC502;'>2</span>
+             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $paiHang[1]->
+            article_id; ?>">
+                <?php echo  $glo->enOrCh($paiHang[1],'article_title','20');?>
+            </a>
+        </h5>
+        <h5><span style='background-color: #FEFDA2;'>3</span>
+             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $paiHang[2]->
+            article_id; ?>">
+                <?php echo  $glo->enOrCh($paiHang[2],'article_title','20');?>
+            </a>
+        </h5>
+        <?php for ($i=3; $i < 10 ; $i++) {?>
+            <h5><span><?php echo $i+1;?></span>
+            <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $paiHang[$i]->
+            article_id; ?>">
+                <?php echo  $glo->enOrCh($paiHang[$i],'article_title','20');?>
+            </a>
+            </h5>
+        <?php }?>
             </div>
 
         </div>

@@ -33,9 +33,17 @@ class NewController extends CommonController
         $news = $articleModel->articleToIndex(0);
         $news = $data->offset($pages->offset)->limit($pages->limit)->orderBy("article_id desc")->all();
         // p(count($news));
+        // 本周热点
+        $renDian = $articleModel->find()->where(["article_class"=>'0','article_istop'=>'1'])->all();
+        // p($renDian);
+        //热门排行
+        $paiHang = $articleModel->find()->where(["article_class"=>'0','article_istop'=>'0'])->orderBy("article_id desc")->all();
+        // p($paiHang);
         return $this->render('index',[
         	 'news' => $news,
              'pages' => $pages,
+             'renDian'=>$renDian,
+             'paiHang'=>$paiHang
         	]);
     }
 
@@ -55,11 +63,19 @@ class NewController extends CommonController
         $prevModel = $prevModeLst[count($prevModeLst)-1];
         $nextModel = $articleModel->find()->where(["article_class"=>'0'])->andWhere([">","article_id",$id])->limit("article_id desc")->one();
         // p($prevMode);
+        // 本周热点
+        $renDian = $articleModel->find()->where(["article_class"=>'0','article_istop'=>'1'])->all();
+        // p($renDian);
+        //热门排行
+        $paiHang = $articleModel->find()->where(["article_class"=>'0','article_istop'=>'0'])->orderBy("article_id desc")->all();
+        // p($paiHang);
         return $this->render('index2',[
             "model"=>$model,
             'title'=>$title,
             'prevModel'=>$prevModel,
             'nextModel'=>$nextModel,
+            'renDian'=>$renDian,
+            'paiHang'=>$paiHang,
         ]);
     }
     public function actionIndex3(){

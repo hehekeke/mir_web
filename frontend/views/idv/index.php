@@ -248,7 +248,8 @@ a{
 		<div class='col-sm-1 col-md-6'>
 			<img src="/public/frontend/img/首页-01_07.png" ></div>
 		<div class='col-sm-1 col-md-6'>
-			<img src="/public/frontend/img/首页-01_12.png" ></div>
+			<img src="/public/frontend/img/shouye_16.png">
+		</div>
 
 	</div>
 
