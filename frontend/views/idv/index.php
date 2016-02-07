@@ -178,12 +178,8 @@ a{
 	</li>
 </ol>
 <div class='idv_topImg _pc '>
-	<!-- <img src='/public/frontend/img/indexTop.png'> -->
 	<img id='big' src='/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>'>
-	
 </div>
-
-
 <div class="row xiaminsigetu _pc">
 	<?php for ($i=0; $i < 4 ; $i++) { 
 		

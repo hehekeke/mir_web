@@ -120,7 +120,9 @@ class SiteController extends CommonController
             $mgzYear[] = $mgz[$i]->mgz_year;
             $mgzNum[] = $mgz[$i]->mgz_num;
         }
-        // p($mgzYear);
+
+        $fourPic = $porduct->find()->andWhere(["!=","product_pic","productnopic.gif"])->orderBy("product_id desc")->limit(4)->all();
+        // p($fourPic);
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
                 'zhanhuiMeetings'=>$zhanhuiMeetings,
@@ -132,6 +134,7 @@ class SiteController extends CommonController
                 'porducts'=>$porducts,
                 'mgzYear'=>$mgzYear,
                 'mgzNum'=>$mgzNum,
+                'fourPic'=>$fourPic,
             ]);
     }
 

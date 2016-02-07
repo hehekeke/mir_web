@@ -66,6 +66,23 @@ $glo =new GlobalFunc();
     .tab-content-right h4{
         margin: 0;
     }
+    .banner  a{ width:100%; height:100%; display:block;}
+    .banner  .title{background-color:RGBA(0,0,0,.5); height:48px; color:#fff;  position:absolute; left:0; bottom:0px; width:74px; z-index:1000;}
+    .banner  .title{font-size: 12px;}
+    .banner img{
+        cursor: pointer;
+    }
+    .banner span{
+        cursor: pointer;
+    }
+    .title_big{
+        display: inline-block;
+        background-color: #036393;
+        width: 311px;
+        height: 20px;
+        color: white;
+        padding-left: 10px;
+    }
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -131,18 +148,47 @@ $glo =new GlobalFunc();
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <!-- <img src="/public/uploads/pro/<?php echo $porducts[0]->product_pic;?>"> -->
-                <img src='/public/frontend/img/首页-01_03.png'>
+                <img id='shouYeIvd' src="/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>">
+                <span class="title_big">
+                        <?php echo $fourPic[0]->product_name;?>
+                 </span>
             </div>
-            <div class='img'>
-                <?php for ($i=1; $i < 5 ; $i++) { ?>
-                     <!-- <img src='/public/uploads/pro/<?php echo $porducts[$i]->product_pic;?>' > -->
+            <script type="text/javascript">
+            $(function(){
+                $(".banner span:eq(0)").hide();
+                $(".banner img,span").click(function(){
+                    $(".banner span").show();
+                    var imgUrl = $(this).parent().find("img").attr("src");
+                    $(this).hide();
+                    $("#shouYeIvd").attr("src",imgUrl);
+                   $(".title_big").html($(this).html());
+                });
+                var i = 0;
+                setInterval(function(){
+                    $("#shouYeIvd").attr("src",$(".banner img:eq("+i+")").attr("src"));
+                    $(".banner span").show();
+                    $(".banner span:eq("+i+")").hide();
+                    $(".title_big").html($(".banner span:eq("+i+")").html());
+                    if(i==4){
+                         i=0;
+                    }else{
+                        i++;
+                    }
 
+                },3000);
+            })
+            </script>
+            <div class='img'>
+                <?php for ($i=0; $i < 4 ; $i++) {?>
+                <div class="col-sm-6 col-md-3" style="padding:0;">
+                    <div  class="banner">
+                        <img src='/public/uploads/pro/<?php echo $fourPic[$i]->product_pic;?>'>
+                        <span class="title">
+                            <?php echo $fourPic[$i]->product_name;?>
+                        </span>
+                     </div>
+                </div>
                 <?php }?>
-                <img src='/public/frontend/img/sy_03.png'>
-                <img src='/public/frontend/img/sy_04.png'>
-                <img src='/public/frontend/img/sy_05.png'>
-                <img src='/public/frontend/img/sy_06.png'>
             </div>
             <div class='img-r-right'>
                 <img src='/public/frontend/img/shouye_07.png' >
@@ -271,21 +317,12 @@ $glo =new GlobalFunc();
             </li>
         </ul>
         <div class="tab-pane active" id="home">
-            <!-- <div class="tab-content-third pull-left">
-                <img src='/public/frontend/img/首页-01_28.png'>
-            </div> -->
-            <!-- <div class="r-top pull-left">
-                <a href="">
-                    <p>
-                        <?php echo $zhaobiao[0]->article_title;?></p>
-                </a>
-            </div> -->
-            <!-- <div class="clearfix"></div> -->
         </div>
         <?php for($i=0;$i<count($zhaobiao);$i++){ ?>
         <a href="">
             <h4>
-                <?php echo $zhaobiao[$i]->article_title;?></h4>
+                <?php echo $zhaobiao[$i]->article_title;?>
+            </h4>
         </a>
         <?php }?></div>
 </div>
