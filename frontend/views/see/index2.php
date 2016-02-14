@@ -48,8 +48,7 @@ $glo =new GlobalFunc();
 	}
 	.shangxia span{
 		color: grey;
-		display: block;
-		text-align: center;
+		/*text-align: center;*/
 		font-size: 18px;
 		font-weight: 800px;
 	}
@@ -81,7 +80,8 @@ $glo =new GlobalFunc();
 				<h2 class="text-center " >
 					<?php echo $glo->enOrCh($model,'mir360_title');?>
 				</h2>
-            	<span>
+
+            	<span style="text-align: center;display: block;">
                     <?php echo Yii::$app->params['title']['faburiqi'][$language];?>:
                     <?php echo date("Y-m-d",strtotime($model->mir360_date)); ?> 
                     &nbsp;&nbsp;&nbsp;
