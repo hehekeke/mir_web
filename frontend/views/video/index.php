@@ -67,9 +67,9 @@ h5{
 </ol>
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
-	<video controls=""  src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
+	<video controls=""  src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>"  
 			poster="/public/frontend/img/视频中心一级页面-01_03.png" data-setup="{}">
-		<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+		<source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type="video/mp4"/>
 	</video>
 
 	<div class="clearfix"></div>

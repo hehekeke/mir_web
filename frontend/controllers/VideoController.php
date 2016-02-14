@@ -13,6 +13,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\controllers\CommonController;
+
+
+
+use backend\models\MirVideo;
 /**
  * Site controller
  */
@@ -22,7 +26,13 @@ class VideoController extends CommonController
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $videoModel = new MirVideo();
+        // p($videoModel);
+        $videos = $videoModel->find()->orderBy("video_id desc")->all();
+        // p($videos);
+        return $this->render('index',[
+        	'videos'=>$videos,
+        ]);
     }
 
     public function actionIndex2()
