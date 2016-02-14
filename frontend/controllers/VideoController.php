@@ -37,7 +37,13 @@ class VideoController extends CommonController
 
     public function actionIndex2()
     {
-        return $this->render('index2');
+    	$id = Yii::$app->request->get("id");
+    	$videoModel = new MirVideo();
+    	$model = $videoModel::findOne(["video_id"=>$id]); 
+    	// p($model);
+        return $this->render('index2',[
+        	"model"=>$model
+        ]);
     }
 
 }

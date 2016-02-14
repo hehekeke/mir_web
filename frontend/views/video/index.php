@@ -15,6 +15,9 @@ $glo =new GlobalFunc();
     content: ">";
     padding: 0 5px;
 }
+a{
+	color: black;
+}
 .breadcrumb a{
 	font-size: 19px;
 }
@@ -51,8 +54,12 @@ h5{
 }
 
 .wenzi{
+	width: 113px;
 	margin-top: 30px;
 	margin-left: 30px;
+}
+video{
+	padding-left: 20px;
 }
 
 }
@@ -68,7 +75,7 @@ h5{
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
 	<video controls=""  src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>"  
-			poster="/public/frontend/img/视频中心一级页面-01_03.png" data-setup="{}">
+			poster="/public/uploads/video/<?php echo explode(".", $videos[0]->video_filename)[0].".jpg"?>" data-setup="{}">
 		<source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type="video/mp4"/>
 	</video>
 
@@ -77,10 +84,11 @@ h5{
 
 <div class="seond">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['qiteshipin'][$language];?></h5>
+	<?php for($i=1;$i<7;$i++){?>
 	<div class="video ">
 		<div class="pull-left">
 			<video
-				style='width:300px;height:200px;'
+				style='width:218px;height:167px;'
 			    controls=""
 			    src="/1.mp4" 
 				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
@@ -88,87 +96,14 @@ h5{
 			</video>
 		</div>
 		<div class="pull-left wenzi">
-			的萨芬肯定
+			<a href="/frontend/web/index.php?r=video/index2&id=<?php echo $videos[$i]->video_id;?>">
+				<?php echo  $glo->enOrCh($videos[$i],"video_title",'70');?>
+			</a>
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<div class="video ">
-		<div class="pull-left">
-			<video
-				style='width:300px;height:200px;'
-			    controls=""
-			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
-			</video>
-		</div>
-		<div class="pull-left wenzi">
-			的萨芬肯定
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<div class="video ">
-		<div class="pull-left">
-			<video
-				style='width:300px;height:200px;'
-			    controls=""
-			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
-			</video>
-		</div>
-		<div class="pull-left wenzi">
-			的萨芬肯定
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<div class="video ">
-		<div class="pull-left">
-			<video
-				style='width:300px;height:200px;'
-			    controls=""
-			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
-			</video>
-		</div>
-		<div class="pull-left wenzi">
-			的萨芬肯定
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<div class="video ">
-		<div class="pull-left">
-			<video
-				style='width:300px;height:200px;'
-			    controls=""
-			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
-			</video>
-		</div>
-		<div class="pull-left wenzi">
-			的萨芬肯定
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<div class="video ">
-		<div class="pull-left">
-			<video
-				style='width:300px;height:200px;'
-			    controls=""
-			    src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4"  
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
-			</video>
-		</div>
-		<div class="pull-left wenzi">
-			的萨芬肯定
-		</div>
-		<div class="clearfix"></div>
-	</div>
+	<?php }?>
 
-	<div class="clearfix"></div>
 </div>
 
 

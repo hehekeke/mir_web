@@ -75,13 +75,29 @@ $glo =new GlobalFunc();
     .banner span{
         cursor: pointer;
     }
-    .title_big{
+    .title_big,.title_big_video{
         display: inline-block;
         background-color: #036393;
         width: 311px;
         height: 20px;
         color: white;
         padding-left: 10px;
+    }
+    .title_big_video p{
+        display: block;
+        float: left;
+    }
+    .title_big_video div{
+        background-color: #0c507e;
+        float: left;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-left: 1px;
+        cursor: pointer;
+    }
+    .jihuiVideoPic{
+        background-color: yellow;
     }
 </style>
 <!-- index top图片 -->
@@ -121,8 +137,7 @@ $glo =new GlobalFunc();
                 <a href="/frontend/web/index.php?r=see/index2&type=<?php echo $i+1;?>&id=<?php echo $firstData[$i][$j]->mir360_id?>">
                     <div class="lichu">
                         <div class='pull-left tab-content-left'>
-                            <!-- <img src='/public/uploads/360/<?php echo $linchuangyixues[$i]->mir360_pic;?>'> -->
-                            <img src='/public/frontend/img/首页-01_06.png'>
+                            <img src='/public/uploads/360/<?php echo $firstData[$i][$j]->mir360_pic;?>'>
                         </div>
                         <div class='pull-left tab-content-right'>
                             <h4>
@@ -157,11 +172,11 @@ $glo =new GlobalFunc();
             $(function(){
                 $(".banner span:eq(0)").hide();
                 $(".banner img,span").click(function(){
-                    $(".banner span").show();
-                    var imgUrl = $(this).parent().find("img").attr("src");
-                    $(this).hide();
-                    $("#shouYeIvd").attr("src",imgUrl);
-                   $(".title_big").html($(this).html());
+                        $(".banner span").show();
+                        var imgUrl = $(this).parent().find("img").attr("src");
+                        $("#shouYeIvd").attr("src",imgUrl);
+                        $(this).hide();
+                       $(".title_big").html($(this).html());
                 });
                 var i = 0;
                 setInterval(function(){
@@ -174,7 +189,6 @@ $glo =new GlobalFunc();
                     }else{
                         i++;
                     }
-
                 },3000);
             })
             </script>
@@ -247,11 +261,45 @@ $glo =new GlobalFunc();
                     <?php echo Yii::$app->params['title']['video'][$language];?></a>
             </li>
         </ul>
+        <script type="text/javascript">
+            $(function(){
+                var k = 0;
 
+                $(".title_big_video div:eq(0)").css({"background-color":"#f8d410"});
+                setInterval(function(){
+                    $(".title_big_video div").css({"background-color":"#0c507e"});
+                    $(".title_big_video div:eq("+k+")").css({"background-color":"#f8d410"});
+                    // $("#shouYeIvd").attr("src",$(".banner img:eq("+i+")").attr("src"));
+                    // $(".banner span").show();
+                    // $(".banner span:eq("+i+")").hide();
+                    // $(".title_big").html($(".banner span:eq("+i+")").html());
+                    if(k==6){
+                         k=0;
+                    }else{
+                        k++;
+                    }
+                },3000);
+                $(".title_big_video").click(function(){return false;});
+                $(".title_big_video div").click(function(){
+                    $(".title_big_video div").css({"background-color":"#0c507e"});
+                    $(this).css({"background-color":"#f8d410"});
+                    k = $(this).index();
+                    return false;
+                });
+            })
+        </script>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <!-- <img src="/public/frontend/img/indexTop.png"> -->
                 <img src='/public/frontend/img/首页-01_16.png'>
+                <span class="title_big_video">
+                    <p>AA广告有限公司视屏</p>
+                    <div style="margin-left:41px;">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </span>
             </div>
             <div class='img-r'>
                 <img src='/public/frontend/img/首页-01_20.png'>
