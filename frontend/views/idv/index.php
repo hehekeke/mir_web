@@ -158,8 +158,28 @@ a{
   border-bottom: 3px solid #006699;
 }
 </style>
+<ol class="breadcrumb _pc">
+	<li>
+		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
+	</li>
+	<li>
+		<a href="#" class="active"><?php echo Yii::$app->params['title']['ivd'][$language];?></a>
+	</li>
+</ol>
 <script type="text/javascript">
 	$(function(){
+		var i = 0;
+		$(".banner span:eq(0)").hide();
+        setInterval(function(){
+            $("#big").attr("src",$(".banner img:eq("+i+")").attr("src"));
+            $(".banner span").show();
+            $(".banner span:eq("+i+")").hide();
+            if(i==4){
+                 i=0;
+            }else{
+                i++;
+            }
+        },3000);
 		$(".xiaminsigetu div").click(function(){
 			$(".xiaminsigetu").find("span").show();
 			var src = $(this).find("img").attr("src");
@@ -169,14 +189,6 @@ a{
 		$(".btn-group button:eq(0)").addClass("jihuo");
 	})
 </script>
-<ol class="breadcrumb _pc">
-	<li>
-		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
-	</li>
-	<li>
-		<a href="#" class="active"><?php echo Yii::$app->params['title']['ivd'][$language];?></a>
-	</li>
-</ol>
 <div class='idv_topImg _pc '>
 	<img id='big' src='/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>'>
 </div>
