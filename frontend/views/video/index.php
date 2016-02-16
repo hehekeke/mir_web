@@ -90,9 +90,9 @@ video{
 			<video
 				style='width:218px;height:167px;'
 			    controls=""
-			    src="/1.mp4" 
-				poster="/public/frontend/img/视频中心一级页面-01_07.png" data-setup="{}">
-				<source src="http://7u2jzm.com2.z0.glb.qiniucdn.com/1-Arther%20Wu-3.mp4" type="video/mp4"/>
+			    src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" 
+				poster="/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>" data-setup="{}">
+				<source src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" type="video/mp4"/>
 			</video>
 		</div>
 		<div class="pull-left wenzi">
