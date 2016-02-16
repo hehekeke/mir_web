@@ -37,7 +37,6 @@ use backend\widget\Uploadify;
                                         'todayBtn' => true
                                     ]
                                 ]);?>
-
                                 <?= $form->field($model, 'article_istop')->radioList(['1'=>'是','0'=>'否'])?>
 
                                 <?= $form->field($model, 'article_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>

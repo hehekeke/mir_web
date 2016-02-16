@@ -180,7 +180,7 @@ beginPage() ?>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                       <!--  <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-dashboard"></span>
                                 留言管理
@@ -197,7 +197,7 @@ beginPage() ?>
                                     <a href="/admin.php/luck-draw/index">互动回复管理</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="#">
                                 <span class="glyphicon glyphicon-lock"></span>
