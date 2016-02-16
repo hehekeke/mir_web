@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use Yii;
+use backend\models\Classify;
 use backend\models\MirProduct;
 use backend\models\MirProductSearch;
 use yii\web\Controller;
@@ -48,7 +49,10 @@ class MirProductController extends CommonController
         }
         $dataProvider = $searchModel->search($params);
 
+        $mainClass = Classify::mainClass();
+
         return $this->render('index', [
+            'mainClass'=>$mainClass,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

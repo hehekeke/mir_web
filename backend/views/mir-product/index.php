@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use backend\models\MirProduct;
+use backend\models\Classify;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\MirProductSearch */
@@ -54,6 +55,20 @@ $this->params['breadcrumbs'][] = $this->title;
                                     return date('Y/m/d',strtotime($data->product_date));
                                 }
                             ],
+                            [
+                                'attribute'=>'product_mainclass',
+                                'headerOptions'=>['width'=>90],
+                                'filter'=>$mainClass,
+                                'value'=>function($data){
+                                    $classify = Classify::mainClass();
+                                    if($data->product_mainclass == 0){
+                                        return $classify[$data->ID];
+                                    }else{
+                                        return $classify[$data->product_mainclass];
+                                    }
+                                }
+                            ],
+
                             // 'product_pic',
                             // 'product_class',
                             // 'product_place',
