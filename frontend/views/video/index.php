@@ -75,7 +75,7 @@ video{
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
 	<video controls=""  src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>"  
-			poster="/public/uploads/video/<?php echo explode(".", $videos[0]->video_filename)[0].".jpg"?>" data-setup="{}">
+			poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>" data-setup="{}">
 		<source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type="video/mp4"/>
 	</video>
 
