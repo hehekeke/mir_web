@@ -16,7 +16,7 @@ use \backend\assets\UploadAsset;
  * <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
  * 
  * 指定上传文件夹 classify :产品图片=>'product',文章图片=>'art','视频文件'=>'video',杂志图片=>'mgz'
- * 						  友情链接=>'friendlink'
+ * 						  友情链接=>'friendlink',视频封面=>'video_cover'
  */
 class Uploadify extends Widget {
 
@@ -39,6 +39,8 @@ class Uploadify extends Widget {
 	public $height = 40;
 	/** 文件上传大小限制 */
 	public $fileSizeLimit = '2MB';
+	/** 绑定上传按钮的 input hidden id */
+	public $hiddenInputId = 'upload';
 
 	public function  init()
 	{
@@ -53,6 +55,7 @@ class Uploadify extends Widget {
 		$buttonText = ini_get('buttonText');
 
 		$fileSizeLimit = ini_get('fileSizeLimit');
+		$hiddenInputId = ini_get('hiddenInputId');
 
 		parent::init();
 	}
@@ -60,13 +63,15 @@ class Uploadify extends Widget {
 	public function run()
 	{
 		/** 不同类目文件存在目录，根据classify生成真实具体的路径 */
-		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink','ivd'=>'360'];
+
+		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink','ivd'=>'360','video_cover'=>'video_cover'];
+
 		$view = $this->getView();
 
 		$view->registerCssFile(Yii::getAlias('@pluginPath').'/uploadify/uploadify.css',['position' => \yii\web\View::POS_HEAD]);
 		$view->registerJsFile(Yii::getAlias('@pluginPath').'/uploadify/jquery.uploadify.js',['position' => \yii\web\View::POS_END]);
 
-		echo '<input type="hidden" id="upload" />';
+		echo '<input type="hidden" id="'.$this->hiddenInputId.'" />';
 
 		/** 插件目录 */
 		$swf = Yii::getAlias('@pluginPath').'/uploadify/uploadify.swf';
@@ -79,7 +84,7 @@ class Uploadify extends Widget {
 			$fileTypeExts = "*.jpg;*.png;*.gif;";
 		}
 		$view->registerJs('
-			$("#upload").uploadify({
+			$("#'.$this->hiddenInputId.'").uploadify({
 				"onSelect" : function(file){
 	                filetype = file.type;
 	            },
@@ -113,7 +118,7 @@ class Uploadify extends Widget {
 							this.queueData.errorMsg = "上传图片格式不合法";
 							break;
 						case SWFUpload.QUEUE_ERROR.FILE_EXCEEDS_SIZE_LIMIT:
-							this.queueData.errorMsg = "上传图片尺寸最大"+this.settings.fileSizeLimit;
+							this.queueData.errorMsg = "上传尺寸最大"+this.settings.fileSizeLimit;
 							break;
 					}
 				}
