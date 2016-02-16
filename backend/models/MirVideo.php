@@ -34,7 +34,7 @@ class MirVideo extends \backend\models\MirBase
     {
         return [
             [['video_mem', 'video_mem_e'], 'string'],
-            [['video_title', 'video_title_e', 'video_filename', 'video_size', 'video_class', 'video_date'], 'string', 'max' => 255]
+            [['video_title', 'video_title_e', 'video_filename', 'video_size', 'video_class', 'video_date','video_cover'], 'string', 'max' => 255]
         ];
     }
 
@@ -53,6 +53,7 @@ class MirVideo extends \backend\models\MirBase
             'video_size' => Yii::t('app', '视频大小'),
             'video_class' => Yii::t('app', 'Video Class'),
             'video_date' => Yii::t('app', '日期'),
+            'video_cover' => Yii::t('app', '视频封面'),
         ];
     }
 }

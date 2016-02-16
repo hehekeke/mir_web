@@ -24,11 +24,16 @@ use backend\widget\Ueditor;
                                 <?= $form->field($model, 'video_title_e')->textInput(['maxlength' => true]) ?>
 
                                 <?= $form->field($model, 'video_size')->textInput(['maxlength' => true]) ?>
+                                
+                                <?= $form->field($model, 'video_cover')->textInput(['readonly' => true,'id'=>'cover','placeholder'=>'视频封面图片文件名']) ?>
+
+                                <?= Uploadify::widget(['targetId'=>'cover','classify'=>'video_cover','buttonText'=>'选择封面','hiddenInputId'=>'cover_input'])?>
 
                                 <?= $form->field($model, 'video_filename')->textInput(['readonly' => true,'id'=>'video','placeholder'=>'请上传mp4格式视频']) ?>
 
-                                <?= Uploadify::widget(['targetId'=>'video','classify'=>'video','buttonText'=>'选择视频','isVideo'=>true])?>
+                                <?= Uploadify::widget(['targetId'=>'video','classify'=>'video','buttonText'=>'选择视频','isVideo'=>true,'fileSizeLimit'=>'30MB'])?>
                             </div>
+
                             <div class="col-xs-10">
                                 <div class="form-group" style="">
 
