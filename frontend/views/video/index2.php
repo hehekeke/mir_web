@@ -43,7 +43,7 @@ $glo =new GlobalFunc();
 			<div class="tab-pane active " id="zhanhuizhanlan">
 				<div class='pull-left video'>
 						<video controls=""  src="/public/uploads/video/<?php echo $model->video_filename;?>"  
-								poster="/public/uploads/video/<?php echo $model->video_cover;?>" data-setup="{}">
+								poster="/public/uploads/video_cover/<?php echo $model->video_cover;?>" data-setup="{}">
 							<source src="/public/uploads/video/<?php echo $model->video_filename;?>" type="video/mp4"/>
 						</video>
 				</div>
