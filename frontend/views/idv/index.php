@@ -215,8 +215,10 @@ a{
 		<div class="<?php echo $i;?>">
 			<?php for($j=0;$j<3;$j++){?>
 				<div class="col-sm-5 col-md-4 ">
-					<!-- <img src="/public/uploads/360/<?php echo $products[$i][$j]->product_pic;?>" > -->
-					<img  class="panel panel-default " src='/public/frontend/img/IVD展厅一级页面-01_15.png'>
+					<img  
+					alt="<?php echo $products[$i][$j]->product_name;?>"
+					src="/public/uploads/pro/<?php echo $products[$i][$j]->product_pic;?>" >
+					<!-- <img  class="panel panel-default " src='/public/frontend/img/IVD展厅一级页面-01_15.png'> -->
 				</div>
 			<?php }?>
 		</div>
