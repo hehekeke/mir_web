@@ -54,14 +54,16 @@ $glo =new GlobalFunc();
         margin-right: 10px;
     }
     .youqinglianjie .right{
-        margin-top: 39px;
-        width: 87%;
-        border-top: 1px solid black;
+        margin-top: 19px;
+        /*width: 87%;*/
+        /*border-top: 1px solid black;*/
     }
     .youqinglianjie img{
-        margin-left: 10px;
+        /*margin-left: 10px;*/
         margin-top: 15px;
         margin-bottom: 10px;
+        width: 121px;
+        height: 40px;
     }
     .tab-content-right h4{
         margin: 0;
@@ -476,15 +478,18 @@ $glo =new GlobalFunc();
 </div>
 <!-- 友情链接 -->
 <div class="youqinglianjie _pc">
-    <div class="pull-left left">
-       &nbsp;&nbsp;<?php echo Yii::$app->params['title']['youqinglianjie'][$language];?>
+    <div class=" left" style="display: inline-block;">
+       <?php echo Yii::$app->params['title']['youqinglianjie'][$language];?>
+    </div>
+    <div class=" left" style="display: inline-block; border-top:1px solid black;height: 1px;width: 90%;margin-top: 32px;">
+       
     </div>
     <div class="pull-left right">
         <?php for($i=0;$i<count($newFriendLinks);$i++){?>
             <?php for($j=0;$j<count($newFriendLinks[$i]);$j++){?>
                 <a href="<?php echo $newFriendLinks[$i][$j]->Link_url?>">
-                    &nbsp;&nbsp;&nbsp;
-                    <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>" height="33" width="80" alt="上海丰汇" border="0">
+                    
+                    <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>"  alt="上海丰汇" border="0">
                 </a>
             <?php }?>
         <?php }?>
