@@ -49,7 +49,7 @@ $glo =new GlobalFunc();
         border-bottom: 1px dashed grey;
     }
     .youqinglianjie .left{
-        font-size: 24px;
+        font-size: 18px;
         margin-top: 20px;
         margin-right: 10px;
     }
@@ -238,11 +238,12 @@ $glo =new GlobalFunc();
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <h4>
-                                <?php echo  $glo->enOrCh($news[$i],"article_title",25);?>
+                                <?php echo  $glo->enOrCh($news[$i],"article_title");?>
+                                <br/><br/>
                             </h4>
                         </div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_zy",68); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",'68'); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>

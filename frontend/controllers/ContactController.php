@@ -23,6 +23,7 @@ class ContactController extends CommonController
     public function actionIndex()
     {
         // p(111);
+        $this->layout='about.php';
         return $this->render('index');
     }
 

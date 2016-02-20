@@ -35,6 +35,7 @@ $glo =new GlobalFunc();
 		color: black;
 	}
 	h2 {
+		font-size: 24px;
 		padding-bottom: 20px;
 		border-bottom: 1px dashed black;
 	}
@@ -49,7 +50,7 @@ $glo =new GlobalFunc();
 	.shangxia span{
 		color: grey;
 		/*text-align: center;*/
-		font-size: 18px;
+		font-size: 14px;
 		font-weight: 800px;
 	}
 </style>

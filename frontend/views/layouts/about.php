@@ -221,7 +221,6 @@ $glo =new GlobalFunc();
         width: 100%;
         margin-top: 40px;
         margin-bottom: 40px;
-        border-bottom: 1px solid black;
     }
     @media screen and (max-width:1000px) {
         body{
@@ -353,39 +352,10 @@ $glo =new GlobalFunc();
         <div class="clearfix "></div>
        <div class="end _pc"></div>
        <div class="_pc">
-        <table class=' text-center' width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
-            <tr>
-                <td height="30" align="center">
-                    <a href="about1.asp">MIR医学仪器与试剂网</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="about2.asp">服务指南</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="about3.asp">广告服务指南</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="about4.asp">学术投稿</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="about5.asp">联系我们</a>
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="about6.asp">免责声明</a>
-                </td>
-            </tr>
-            <tr>
-                <td height="30" align="center">
-                    <a href="#">Copyright &copy;2016&nbsp;天津市讯星科技发展广告有限公司</a>
-                    <a href="http://www.miibeian.gov.cn"></a>
-                </td>
-            </tr>
-            <tr>
-                <td height="30" align="center">
-                    <a href="http://www.miibeian.gov.cn" target="_blank">津ICP14002484</a>
-                </td>
-            </tr>
-        </table>
+       
     </div>
     <div class="_m">
-    <p class="text-center" style="margin-top:40px;"><a href="/frontend/web/index.php?r=contact/index">关于我们</a></p>
-        <p class="text-center">热线电话：022-23593650/51转客服部</p>
-        <p class="text-center">返回顶部</p>
+   
     </div>
         <!-- 友情链接 -->
         

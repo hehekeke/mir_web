@@ -5,7 +5,8 @@ use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
 use yii\widgets\LinkPager;
 ?>
-<style type="text/css">
+<style type="text/css"> 
+    /* 设置<a href="https://www.baidu.com/s?wd=%E6%BB%9A%E5%8A%A8%E6%9D%A1&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y3rH-bnHRzuWbYmW6LnHDs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHTsnHT1rj03rjmLrHTvnHRsn0" target="_blank" class="baidu-highlight">滚动条</a>的样式 */::-webkit-scrollbar {    width: 12px;}/* 滚动槽 */::-webkit-scrollbar-track {    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);    border-radius: 10px;}/* <a href="https://www.baidu.com/s?wd=%E6%BB%9A%E5%8A%A8%E6%9D%A1&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1Y3rH-bnHRzuWbYmW6LnHDs0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EnHTsnHT1rj03rjmLrHTvnHRsn0" target="_blank" class="baidu-highlight">滚动条</a>滑块 */::-webkit-scrollbar-thumb {    border-radius: 10px;    background: rgba(0,0,0,0.1);    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);}::-webkit-scrollbar-thumb:window-inactive {    background: rgba(255,0,0,0.4);}
     .h6-1{
         width: 55%;
         margin-left: 10px;
