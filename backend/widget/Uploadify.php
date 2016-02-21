@@ -16,7 +16,7 @@ use \backend\assets\UploadAsset;
  * <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
  * 
  * 指定上传文件夹 classify :产品图片=>'product',文章图片=>'art','视频文件'=>'video',杂志图片=>'mgz'
- * 						  友情链接=>'friendlink',视频封面=>'video_cover'
+ * 						  友情链接=>'friendlink',视频封面=>'video_cover',mir_360专访=>'360'
  */
 class Uploadify extends Widget {
 

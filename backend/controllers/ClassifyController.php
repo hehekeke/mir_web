@@ -37,7 +37,9 @@ class ClassifyController extends CommonController
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         $mainClass = Classify::mainClass();
-
+        if(empty($sort)){
+            $_GET['sort'] = '-ID';
+        }
         return $this->render('index', [
             'mainClass'=>$mainClass,
             'searchModel' => $searchModel,

@@ -34,6 +34,7 @@ phpunit.phar
 /backend/assets/*
 #phpintel
 .phpintel/
+/public/uploads/*
 /public/uploads/logo/*
 /index.php
 
