@@ -101,6 +101,14 @@ $glo =new GlobalFunc();
     .jihuiVideoPic{
         background-color: yellow;
     }
+    .guangaowei{
+        width: 100%;
+        height: 90px;
+        background-color: #dddddd;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 30px;
+    }
 </style>
 <!-- index top图片 -->
 <div class="indexTop _pc">
@@ -235,17 +243,17 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one tab-content-one_new" >
                     <div class='pull-left tab-content-left'>
-                        <img src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
+                        <img style="height: 73px;" src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
                     </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
                             <h4>
                                 <?php echo  $glo->enOrCh($news[$i],"article_title");?>
-                                <br/><br/>
+                                <br/>
                             </h4>
                         </div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_zy",'68'); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",'65'); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>
@@ -253,7 +261,7 @@ $glo =new GlobalFunc();
                 </div>
             </a>
             <?php }?>
-            <div class="tab-pane active tab-content-one" id="home">广告位</div>
+            <div class="tab-pane active tab-content-one guangaowei" id="home" >广告位</div>
 
         </div>
     </div>
@@ -315,7 +323,7 @@ $glo =new GlobalFunc();
                 <img src='/public/frontend/img/首页-01_35.png'>
                 <img src='/public/frontend/img/首页-01_36.png'>
             </div>
-            <div class="tab-pane active tab-content-one" id="home">广告位</div>
+            <div class="tab-pane active tab-content-one guangaowei" id="home">广告位</div>
         </div>
     </div>
 </div>
@@ -391,7 +399,7 @@ $glo =new GlobalFunc();
             <div class="tab-pane active " id="zhanhuizhanlan">
                 <div class='pull-left'>
                     <?php for($i=0;$i<count($jishus);$i++){?>
-                    <a href="/frontend/web/index.php?r=skill/index2&id=<?php echo $jishus[$i]->article_id;?>">
+                    <a style="height:21px;display: block;" href="/frontend/web/index.php?r=skill/index2&id=<?php echo $jishus[$i]->article_id;?>">
                         <h4>
                             &bull;
                             <?php echo $jishus[$i]->article_title;?>

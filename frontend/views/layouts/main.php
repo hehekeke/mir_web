@@ -179,7 +179,7 @@ $glo =new GlobalFunc();
     .content-right img{
         margin-top: 14px;
         width: 100%;
-        height: 210px;
+        height: 232px;
     }
     .img img{
         width: 74px;
@@ -188,7 +188,7 @@ $glo =new GlobalFunc();
     }
     .img-r img{
         width: 29%;
-        height:60px;
+        height:72px;
         margin-right: 10px;
     }
     .img-r-right img{

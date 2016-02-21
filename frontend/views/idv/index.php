@@ -17,7 +17,8 @@ $glo =new GlobalFunc();
 }
 .idv_topImg img{
 	width: 100%;
-	height: 162px;
+	height: 182px;
+	border: 1px solid #dddddd;
 }
 a{
 	color: black;
@@ -32,7 +33,7 @@ a{
 	padding: 0px;
 }
 .btn-group{
-	width: 100%;
+	width: 100.5%;
 }
 .btn-group .btn-default{
 	width: 12.5%;
@@ -50,7 +51,7 @@ a{
 	padding: 0px;
 }
 .second .col-sm-1 img{
-	width: 100%;
+	width: 103%;
 	height: 70px;
 }
 .bagetuxing{
@@ -100,13 +101,14 @@ a{
 	margin-left: 6px;
 }
 .xiaminsigetu{
-	margin-left: 2px;
+	margin-left: 1px;
 }
 .xiaminsigetu img{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 239px;
 	height: 87px;
+	border: 1px solid #dddddd;
 }
 .xiaminsigetu span{
 	font-size: 20px;
@@ -141,7 +143,7 @@ a{
 }
 @media (min-width: 992px){
 	.col-md-4 {
-	  width: 32.5433333%;
+	  width: 32.6733333%;
 	}
 	.col-md-2{
 		width: 16.30666667%;
@@ -251,6 +253,7 @@ a{
 <!-- 下面八个图形 -->
 
 <div class="row bagetuxing _pc">
+
 	<div class="col-sm-1 col-md-3 first">
 		<img src="/public/frontend/img/首页-01_13.png" ></div>
 
@@ -267,7 +270,7 @@ a{
 
 	</div>
 
-	<div class="col-sm-1 col-md-3 er">
+	<div class="col-sm-1 col-md-3 er" style="width: 24.9%;">
 		<div class='col-sm-1 col-md-6'>
 			<img src="/public/frontend/img/首页-01_14.png" ></div>
 		<div class='col-sm-1 col-md-6'>
@@ -277,9 +280,10 @@ a{
 		<div class='col-sm-1 col-md-6'>
 			<img src="/public/frontend/img/idv_2.png" ></div>
 	</div>
-	<div class="col-sm-1 col-md-3">
+	<div class="col-sm-1 col-md-3" style="padding-left:0px;">
 		<div class="col-sm-1 col-md-3 first">
-			<img src="/public/frontend/img/首页-01_13.png" ></div>
+			<img style="width: 226px;" src="/public/frontend/img/首页-01_13.png" >
+		</div>
 	</div>
 </div>
 
