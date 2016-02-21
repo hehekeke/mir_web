@@ -34,6 +34,9 @@ class MirMakerController extends CommonController
     {
         $searchModel = new MirMakerSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        if(empty($sort)){
+            $_GET['sort'] = '-maker_id';
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,

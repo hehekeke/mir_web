@@ -66,7 +66,8 @@ class MirVideoSearch extends MirVideo
             ->andFilterWhere(['like', 'video_mem_e', $this->video_mem_e])
             ->andFilterWhere(['like', 'video_size', $this->video_size])
             ->andFilterWhere(['like', 'video_class', $this->video_class])
-            ->andFilterWhere(['like', 'video_date', $this->video_date]);
+            ->andFilterWhere(['like', 'video_date', $this->video_date])
+            ->orderBy("video_id DESC");
 
         return $dataProvider;
     }

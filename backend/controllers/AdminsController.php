@@ -35,7 +35,9 @@ class AdminsController extends CommonController
         $dataProvider = new ActiveDataProvider([
             'query' => Admins::find(),
         ]);
-
+        if(empty($_GET['sort'])){
+            $_GET['sort'] = '-Admin_id';
+        }
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);

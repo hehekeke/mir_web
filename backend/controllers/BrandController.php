@@ -34,7 +34,9 @@ class BrandController extends CommonController
     {
         $searchModel = new MirBrandSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        if(empty($sort)){
+            $_GET['sort'] = '-brand_id';
+        }
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

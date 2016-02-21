@@ -25,8 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'dataProvider' => $dataProvider,
                         'filterModel' => $searchModel,
                         'columns' => [
-                            ['class' => 'yii\grid\SerialColumn'],
-
+                            'mgz_id',
                             'mgz_page',
                             'mgz_year',
                             'mgz_num',

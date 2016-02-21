@@ -36,6 +36,9 @@ class IvdController extends CommonController
         $searchModel = new MirIvdSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        if(empty($sort)){
+            $_GET['sort'] = '-mir360_id';
+        }
         $classify = $model->classify;
         return $this->render('index', [
             'classify'=>$classify,
