@@ -497,7 +497,7 @@ $glo =new GlobalFunc();
             <?php for($j=0;$j<count($newFriendLinks[$i]);$j++){?>
                 <a href="<?php echo $newFriendLinks[$i][$j]->Link_url?>">
                     
-                    <img src="/timthumb.php?src=public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>"  alt="上海丰汇" border="0">
+                    <img src="/public/uploads/friendlink/<?php echo $newFriendLinks[$i][$j]->Link_imgurl?>"  alt="上海丰汇" border="0">
                 </a>
             <?php }?>
         <?php }?>
