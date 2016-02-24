@@ -150,7 +150,7 @@ $glo =new GlobalFunc();
                             <img src='/public/uploads/360/<?php echo $firstData[$i][$j]->mir360_pic;?>'>
                         </div>
                         <div class='pull-left tab-content-right'>
-                            <h4>
+                            <h4 style="margin-bottom: 10px;">
                                 <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title",'25');?>
                                 <br/>
                             </h4>
@@ -248,7 +248,7 @@ $glo =new GlobalFunc();
                     </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
-                            <h4>
+                            <h4 style="margin-bottom: 10px;">
                                 <?php echo  $glo->enOrCh($news[$i],"article_title");?>
                                 <br/>
                             </h4>
