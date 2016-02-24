@@ -132,7 +132,7 @@ $glo =new GlobalFunc();
         text-align: center;
     }
     h4{
-        font-size:14px;
+        font-size:16px;
     }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
         border: none;
