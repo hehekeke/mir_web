@@ -80,7 +80,7 @@ $glo =new GlobalFunc();
     .title_big,.title_big_video{
         display: inline-block;
         background-color: #036393;
-        width: 311px;
+        width: 312px;
         height: 20px;
         color: white;
         padding-left: 10px;
@@ -302,9 +302,9 @@ $glo =new GlobalFunc();
         </script>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <img src='/public/frontend/img/首页-01_16.png'>
+                <img src='/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>'>
                 <span class="title_big_video">
-                    <p>AA广告有限公司视屏</p>
+                    <p><?php echo  $glo->enOrCh($videos[0],"video_title");?></p>
                     <div style="margin-left:41px;">1</div>
                     <div>2</div>
                     <div>3</div>
@@ -313,16 +313,11 @@ $glo =new GlobalFunc();
                     <div>6</div>
                 </span>
             </div>
-            <div class='img-r'>
-                <img src='/public/frontend/img/首页-01_20.png'>
-                <img src='/public/frontend/img/首页-01_22.png'>
-                <img src='/public/frontend/img/首页-01_24.png'>
-                <img src='/public/frontend/img/首页-01_28.png'>
-                <img src='/public/frontend/img/首页-01_29.png'>
-                <img src='/public/frontend/img/首页-01_30.png'>
-                <img src='/public/frontend/img/首页-01_34.png'>
-                <img src='/public/frontend/img/首页-01_35.png'>
-                <img src='/public/frontend/img/首页-01_36.png'>
+            <div class='img-r' style="height: 324px;">
+                <?php for($i=1;$i<count($videos);$i++){?>
+                    <img src='/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>'>
+                    
+               <?php }?>
             </div>
             <div class="tab-pane active tab-content-one guangaowei" id="home">广告位</div>
         </div>
@@ -348,7 +343,7 @@ $glo =new GlobalFunc();
                     <?php for($i=0;$i<count($zhanhuiMeetings);$i++){ ?>
                     <a href="/frontend/web/index.php?r=meeting/index2&id=<?php echo $zhanhuiMeetings[$i]->
                         meeting_id;?>">
-                        <h4>
+                        <h4 style="font-size: 14px;">
                             &bull;
                             <?php echo  $glo->enOrCh($zhanhuiMeetings[$i],"meeting_name");?></h4>
                     </a>
@@ -360,7 +355,7 @@ $glo =new GlobalFunc();
                     <?php for($i=0;$i<count($xueshuMeetings);$i++){ ?>
                     <a href="/frontend/web/index.php?r=meeting/index2&id=<?php echo $xueshuMeetings[$i]->
                         meeting_id;?>">
-                        <h4>
+                        <h4 style="font-size: 14px;">
                             &bull;
                             <?php echo  $glo->enOrCh($xueshuMeetings[$i],"meeting_name");?></h4>
                     </a>
@@ -380,7 +375,7 @@ $glo =new GlobalFunc();
         </div>
         <?php for($i=0;$i<count($zhaobiao);$i++){ ?>
         <a href="">
-            <h4>
+            <h4 style="font-size: 14px;">
                 <?php echo $zhaobiao[$i]->article_title;?>
             </h4>
         </a>
@@ -401,7 +396,7 @@ $glo =new GlobalFunc();
                 <div class='pull-left'>
                     <?php for($i=0;$i<count($jishus);$i++){?>
                     <a style="height:21px;display: block;" href="/frontend/web/index.php?r=skill/index2&id=<?php echo $jishus[$i]->article_id;?>">
-                        <h4>
+                        <h4 style="font-size: 14px;">
                             &bull;
                             <?php echo $jishus[$i]->article_title;?>
                         </h4>

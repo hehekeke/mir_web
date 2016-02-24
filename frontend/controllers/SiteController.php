@@ -19,6 +19,7 @@ use backend\models\MirIvd;
 use backend\models\MirProduct;
 
 use backend\models\MirMgz;
+use backend\models\MirVideo;
 /**
  * Site controller
  */
@@ -123,6 +124,9 @@ class SiteController extends CommonController
 
         $fourPic = $porduct->find()->andWhere(["!=","product_pic","productnopic.gif"])->orderBy("product_id desc")->limit(4)->all();
         // p($fourPic);
+        //获得视屏中心的照片
+        $videoModel = new MirVideo();
+        $videos = $videoModel->find()->orderBy("video_id desc")->all();
         return $this->render('index',[
                 'newFriendLinks'=>$newFriendLinks,
                 'zhanhuiMeetings'=>$zhanhuiMeetings,
@@ -135,6 +139,7 @@ class SiteController extends CommonController
                 'mgzYear'=>$mgzYear,
                 'mgzNum'=>$mgzNum,
                 'fourPic'=>$fourPic,
+                'videos'=>$videos,
             ]);
     }
 

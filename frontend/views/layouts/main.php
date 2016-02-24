@@ -145,7 +145,7 @@ $glo =new GlobalFunc();
     }
     .tab-content img{
         width: 178px;
-        height: 93px;
+        height: 105px;
     }
     .tab-content-left{
         width: 33%;
@@ -184,9 +184,8 @@ $glo =new GlobalFunc();
         margin-bottom: 0px;
     }
     .img-r img{
-        width: 29%;
+        width: 101px;
         height:72px;
-        margin-right: 10px;
     }
     .img-r-right img{
         width: 101px;

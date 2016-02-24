@@ -31,8 +31,8 @@ h5{
 	margin-bottom: 20px;
 }
 .first video{
-	margin:0 14%;
-	width: 70%;
+	margin:0 17%;
+	width: 56%;
 	height: 300px;
 }
 .first img{
