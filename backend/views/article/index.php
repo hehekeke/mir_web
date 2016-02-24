@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     return ($data->article_istop == 0)?'否':'是';
                                 }
                             ],
-
+                            'article_rank',
                             [
                                 'class' => 'yii\grid\ActionColumn',
                                 'header'=>'操作',

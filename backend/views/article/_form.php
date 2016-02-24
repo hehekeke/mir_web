@@ -40,6 +40,8 @@ use backend\widget\Uploadify;
 
                                 <?= $form->field($model, 'article_istop')->radioList(['1'=>'是','0'=>'否'])?>
 
+                                <?= $form->field($model, 'article_rank')->textInput(['maxlength' => true]) ?>
+
                                 <?= $form->field($model, 'article_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
 
                                 <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'article'])?>
