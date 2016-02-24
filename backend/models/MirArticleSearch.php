@@ -18,7 +18,7 @@ class MirArticleSearch extends MirArticle
     public function rules()
     {
         return [
-            [['article_id', 'article_istop'], 'integer'],
+            [['article_id', 'article_istop','article_rank'], 'integer'],
             [['article_title', 'article_titile_e', 'article_class', 'article_date', 'article_contents', 'article_contents_e', 'article_makerid', 'article_pic', 'article_zy'], 'safe'],
         ];
     }
@@ -59,6 +59,7 @@ class MirArticleSearch extends MirArticle
             'article_id' => $this->article_id,
             'article_date' => $this->article_date,
             'article_istop' => $this->article_istop,
+            'article_rank' => $this->article_rank,
         ]);
 
         $query->andFilterWhere(['like', 'article_title', $this->article_title])
