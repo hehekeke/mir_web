@@ -147,7 +147,7 @@ $glo =new GlobalFunc();
                 <a href="/frontend/web/index.php?r=see/index2&type=<?php echo $i+1;?>&id=<?php echo $firstData[$i][$j]->mir360_id?>">
                     <div class="lichu">
                         <div class='pull-left tab-content-left'>
-                            <img src='/timthumb.php?src=public/uploads/360/<?php echo $firstData[$i][$j]->mir360_pic;?>'>
+                            <img src='/public/uploads/360/<?php echo $firstData[$i][$j]->mir360_pic;?>'>
                         </div>
                         <div class='pull-left tab-content-right'>
                             <h4>
@@ -173,7 +173,7 @@ $glo =new GlobalFunc();
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="home">
-                <img id='shouYeIvd' src="/timthumb.php?src=public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>">
+                <img id='shouYeIvd' src="/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>">
                 <span class="title_big">
                         <?php echo $fourPic[0]->product_name;?>
                  </span>
@@ -206,7 +206,7 @@ $glo =new GlobalFunc();
                 <?php for ($i=0; $i < 4 ; $i++) {?>
                 <div class="col-sm-6 col-md-3" style="padding:0;">
                     <div  class="banner">
-                        <img src='/timthumb.php?src=public/uploads/pro/<?php echo $fourPic[$i]->product_pic;?>'>
+                        <img src='/public/uploads/pro/<?php echo $fourPic[$i]->product_pic;?>'>
                         <span class="title">
                             <?php echo $fourPic[$i]->product_name;?>
                         </span>
@@ -215,15 +215,15 @@ $glo =new GlobalFunc();
                 <?php }?>
             </div>
             <div class='img-r-right'>
-                <img src='/timthumb.php?src=public/frontend/img/shouye_07.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_09.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_11.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_16.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_17.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_18.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_22.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_23.png' >
-                <img src='/timthumb.php?src=public/frontend/img/shouye_24.png' >
+                <img src='/public/frontend/img/shouye_07.png' >
+                <img src='/public/frontend/img/shouye_09.png' >
+                <img src='/public/frontend/img/shouye_11.png' >
+                <img src='/public/frontend/img/shouye_16.png' >
+                <img src='/public/frontend/img/shouye_17.png' >
+                <img src='/public/frontend/img/shouye_18.png' >
+                <img src='/public/frontend/img/shouye_22.png' >
+                <img src='/public/frontend/img/shouye_23.png' >
+                <img src='/public/frontend/img/shouye_24.png' >
             </div>
         </div>
     </div>
@@ -243,7 +243,7 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one tab-content-one_new" >
                     <div class='pull-left tab-content-left'>
-                        <img style="height: 73px;" src="/timthumb.php?src=public/uploads/art/<?php echo $news[$i]->article_pic?>">
+                        <img style="height: 73px;" src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
                     </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
