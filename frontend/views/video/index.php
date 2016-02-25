@@ -57,7 +57,7 @@ h5{
 
 .first_video{
 	margin-top: 20px;
-	margin-left: 20%;
+	margin-left: 16%;
 }
 }
 </style>
@@ -74,7 +74,7 @@ h5{
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
 	<div class="first_video">
-		<video   width="600" height="333" class="video-js vjs-default-skin" controls preload="none" 
+		<video   width="750" height="422" class="video-js vjs-default-skin" controls preload="none" 
 	      	poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>"
 	      	data-setup="{}">
 		    <source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type='video/mp4' />
