@@ -90,9 +90,9 @@ h5{
 	<div class="video ">
 		<div class="pull-left">
 		 <video   width="336" height="187" class="video-js vjs-default-skin" controls preload="none" 
-	      	poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>"
+	      	poster="/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>"
 	      	data-setup="{}">
-		    <source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type='video/mp4' />
+		    <source src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" type='video/mp4' />
 		 </video>
 		</div>
 		<div class="pull-left wenzi">
