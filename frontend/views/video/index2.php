@@ -4,6 +4,10 @@ $language = empty($session['language'])?0:1;
 use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
 ?>
+<head>
+	<link href="video-js.css" rel="stylesheet" type="text/css">
+    <script src="video.js"></script>
+</head>
 <style type="text/css">
 	.video img{
 		margin-top: 40px;
@@ -28,7 +32,7 @@ $glo =new GlobalFunc();
 		margin-left: 40px;
 
 	}
-	video{
+	.video {
 		margin-top: 40px;
 	}
 </style>
@@ -42,10 +46,10 @@ $glo =new GlobalFunc();
 		<div class="tab-content">
 			<div class="tab-pane active " id="zhanhuizhanlan">
 				<div class='pull-left video'>
-						<video controls=""  src="/public/uploads/video/<?php echo $model->video_filename;?>"  
-								poster="/public/uploads/video_cover/<?php echo $model->video_cover;?>" data-setup="{}">
-							<source src="/public/uploads/video/<?php echo $model->video_filename;?>" type="video/mp4"/>
-						</video>
+					<video   width="336" height="187" class="video-js vjs-default-skin" controls preload="none" 
+				      	poster="/public/uploads/video_cover/<?php echo $model->video_cover;?>"  data-setup="{}">
+					    <source src="/public/uploads/video/<?php echo $model->video_filename;?>" type='video/mp4' />
+					</video>
 				</div>
 				<div class='pull-left wenzi'>
 					<h4 class="text-center">
