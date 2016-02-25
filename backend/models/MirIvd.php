@@ -36,7 +36,8 @@ class MirIvd extends \backend\models\MirBase
     public function rules()
     {
         return [
-            [['mir360_pic', 'mir360_remark', 'mir360_remark_e'], 'string'],
+            [['mir360_rank'], 'integer'],
+            [['mir360_pic','mir360_pic_m', 'mir360_remark', 'mir360_remark_e'], 'string'],
             [['mir360_date'], 'safe'],
             [['mir360_title', 'mir360_title_e', 'mir360_class', 'mir360_company', 'mir360_company_e', 'mir360_zy'], 'string', 'max' => 255]
         ];
@@ -52,8 +53,10 @@ class MirIvd extends \backend\models\MirBase
             'mir360_title' => Yii::t('app', '标题'),
             'mir360_title_e' => Yii::t('app', '英文标题'),
             'mir360_class' => Yii::t('app', '类别'),
-            'mir360_pic' => Yii::t('app', 'Mir360 Pic'),
+            'mir360_pic' => Yii::t('app', '访谈图片'),
+            'mir360_pic_m' => Yii::t('app', '访谈小图'),
             'mir360_date' => Yii::t('app', '添加时间'),
+            'mir360_rank' => Yii::t('app', '排序'),
             'mir360_remark' => Yii::t('app', 'Mir360 Remark'),
             'mir360_remark_e' => Yii::t('app', 'Mir360 Remark E'),
             'mir360_company' => Yii::t('app', 'Mir360 Company'),

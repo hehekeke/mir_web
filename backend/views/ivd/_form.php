@@ -38,8 +38,14 @@ use backend\widget\Uploadify;
                             ]); ?>
 
                             <?= $form->field($model, 'mir360_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
-                            
+
                             <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'ivd'])?>
+
+                            <?= $form->field($model, 'mir360_pic_m')->textInput(['id'=>'pic_m','readonly'=>true,'placeholder'=>'请上传小图']) ?>
+                            
+                            <?= Uploadify::widget(['targetId'=>'pic_m','multi'=>'false','classify'=>'ivd','hiddenInputId'=>'pic_m_input'])?>
+
+                            <?= $form->field($model, 'mir360_rank')->textInput(['placeholder'=>'访谈排序']) ?>
                         </div>
                         <div class="col-xs-10">
                             <div class="form-group" style="">
