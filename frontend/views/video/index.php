@@ -51,7 +51,7 @@ h5{
 .wenzi{
 	float: left;
 	width: 90px;
-	margin-top: 80px;
+	/*margin-top: 80px;*/
 	margin-left: 30px;
 }
 
@@ -102,6 +102,26 @@ h5{
 		</div>
 		<div class="clearfix"></div>
 	</div>
+
+
+	<div class="video ">
+		<div class="pull-left">
+		 <video   width="336" height="187" class="video-js vjs-default-skin" controls preload="none" 
+	      	poster="/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>"
+	      	data-setup="{}">
+		    <source src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" type='video/mp4' />
+		 </video>
+		</div>
+		<div class="pull-left wenzi">
+			<a href="/frontend/web/index.php?r=video/index2&id=<?php echo $videos[$i]->video_id;?>">
+				<?php echo  $glo->enOrCh($videos[$i],"video_title",'70');?>
+			</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+
+
+
 	<?php }?>
 
 </div>

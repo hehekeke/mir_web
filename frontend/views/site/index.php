@@ -304,7 +304,7 @@ $glo =new GlobalFunc();
             <div class="tab-pane active" id="home">
                 <img src='/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>'>
                 <span class="title_big_video">
-                    <p><?php echo  $glo->enOrCh($videos[0],"video_title");?></p>
+                    <p style="width: 136px;"><?php echo  $glo->enOrCh($videos[0],"video_title");?></p>
                     <div style="margin-left:41px;">1</div>
                     <div>2</div>
                     <div>3</div>
