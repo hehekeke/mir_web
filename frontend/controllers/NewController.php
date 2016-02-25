@@ -28,10 +28,10 @@ class NewController extends CommonController
     {
     	//新闻中心
         $articleModel = new MirArticle();
-    	$data = $articleModel->find()->where(["article_class"=>'0']);
+    	$data = $articleModel->find()->where(["article_class"=>'0'])->orderBy("article_rank desc");
        	$pages = new Pagination(['totalCount'=>$data->count(), 'pageSize' => '10']);
         $news = $articleModel->articleToIndex(0);
-        $news = $data->offset($pages->offset)->limit($pages->limit)->orderBy("article_id desc")->all();
+        $news = $data->offset($pages->offset)->limit($pages->limit)->orderBy("article_rank desc,article_id desc")->all();
         // p(count($news));
         // 本周热点
         $renDian = $articleModel->find()->where(["article_class"=>'0','article_istop'=>'1'])->all();
