@@ -226,29 +226,50 @@ a{
 		</div>
 	<?php }?>
 </div>
-
+<script type="text/javascript">
+	$(function(){
+		// $(".anniu div").hide();
+		$(".anniu .1,.2,.3,.4,.5,.6,.7").hide();
+		$(".second .11,.22,.33,.44,.55,.66,.77").hide();
+		$(".btn-group button").click(function(){
+			var id = $(this).attr("id");
+			$(".anniu .0,.1,.2,.3,.4,.5,.6,.7").hide();
+			$(".second .00,.11,.22,.33,.44,.55,.66,.77").hide();
+			$(".anniu ."+id).show();
+			$(".second ."+id+id).show();
+		});
+		$(".more").click(function(){
+			window.location.href="/frontend/web/index.php?r=idv/index2";
+		});
+	});
+</script>
 <div class="row second _pc">
-	<div class="col-sm-1 col-md-2">
+	<div class="00">
+		<div class="col-sm-1 col-md-2">
 		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-	</div>
+		</div>
 
-	<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-	</div>
+		<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+		</div>
 
-	<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-	</div>
-	<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-	</div>
+		<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+		</div>
+		<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+		</div>
 
-	<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+		<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
+		</div>
+		<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
+		</div>
 	</div>
-	<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-	</div>
+	
+
+
 </div>
 <!-- 下面八个图形 -->
 
@@ -351,20 +372,7 @@ a{
 
 	</div>
 </div>
-<script type="text/javascript">
-	$(function(){
-		// $(".anniu div").hide();
-		$(".anniu .1,.2,.3,.4,.5,.6,.7").hide();
-		$(".btn-group button").click(function(){
-			var id = $(this).attr("id");
-			$(".anniu .0,.1,.2,.3,.4,.5,.6,.7").hide();
-			$(".anniu ."+id).show();
-		});
-		$(".more").click(function(){
-			window.location.href="/frontend/web/index.php?r=idv/index2";
-		});
-	});
-</script>
+
 
 
 
