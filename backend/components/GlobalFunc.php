@@ -29,8 +29,14 @@ class GlobalFunc{
 		if(empty($data->$filedNew)){
 			$filedNew = $filed;
 		}
+
 		if($len){
-			return mb_substr($data->$filedNew,0,$len,'utf-8');
+			if(mb_strlen($data->$filedNew)>$len){
+				return mb_substr($data->$filedNew,0,$len,'utf-8')."...";
+			}else{
+				return mb_substr($data->$filedNew,0,$len,'utf-8');
+			}
+			
 		}else{
 			return $data->$filedNew;
 		}

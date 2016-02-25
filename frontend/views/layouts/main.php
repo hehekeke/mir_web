@@ -164,6 +164,7 @@ $glo =new GlobalFunc();
         color: black;
     }
     .tab-content-title-small{
+        line-height: 19px;
         font-size: 13px;
         color: #595757;
     }

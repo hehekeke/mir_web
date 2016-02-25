@@ -151,10 +151,10 @@ $glo =new GlobalFunc();
                         </div>
                         <div class='pull-left tab-content-right'>
                             <h4 style="margin-bottom: 10px;">
-                                <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title",'25');?>
+                                <?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_title");?>
                                 <br/>
                             </h4>
-                            <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'70');?></div>
+                            <div class='tab-content-title-small'><?php echo  $glo->enOrCh($firstData[$i][$j],"mir360_zy",'80');?></div>
                             <div class='tab-content-date'>2015/3/18</div>
                         </div>
                         <div class="clearfix"></div>
@@ -254,7 +254,7 @@ $glo =new GlobalFunc();
                             </h4>
                         </div>
                         <div class='tab-content-title-small'>
-                            <?php echo  $glo->enOrCh($news[$i],"article_zy",'65'); ?></div>
+                            <?php echo  $glo->enOrCh($news[$i],"article_zy",'80'); ?></div>
                         <div class='tab-content-date'>
                             <?php echo $news[$i]->article_date?></div>
                     </div>
