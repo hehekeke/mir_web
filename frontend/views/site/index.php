@@ -244,7 +244,7 @@ $glo =new GlobalFunc();
             <a href="/frontend/web/index.php?r=new/index2&id=<?php echo $news[$i]->article_id?>">
                 <div class="tab-pane active tab-content-one tab-content-one_new" >
                     <div class='pull-left tab-content-left'>
-                        <img style="height: 73px;" src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
+                        <img  src="/public/uploads/art/<?php echo $news[$i]->article_pic?>">
                     </div>
                     <div class='pull-left tab-content-right' style="boder-bottom:1px dashed grey;">
                         <div class='tab-content-title'>
@@ -313,7 +313,7 @@ $glo =new GlobalFunc();
                     <div>6</div>
                 </span>
             </div>
-            <div class='img-r' style="height: 324px;">
+            <div class='img-r' style="height: 408px;">
                 <?php for($i=1;$i<count($videos);$i++){?>
                     <img src='/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>'>
                     
@@ -504,6 +504,10 @@ $glo =new GlobalFunc();
 <!--************************************* 移动端代码 ************************************************************************-->
 <style type="text/css">
       @media screen and (max-width:1000px) {
+        .logo{
+            margin-top: 0px;
+            height: auto;
+        }
         .nav-pills {
             background-color: #e5e5e5;
         }
@@ -515,11 +519,11 @@ $glo =new GlobalFunc();
             color: orange;
         }
         .logo_index img{
-            width: 100%;
+            width: 110%;
             height: 80px;
         }
         ._m .tab-pane img{
-            margin-top: 10px;
+            margin-top: 0px;
             margin-left: 20px;
         }
        

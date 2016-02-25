@@ -5,9 +5,8 @@ use backend\components\GlobalFunc;
 $glo =new GlobalFunc();
 ?>
 <head>
-	<link rel="stylesheet" href="/public/flowplayer/skin/minimalist.css">
-	<script src="/public/Admin/js/jquery.js"></script>
-	<script type="text/javascript" src="/public/flowplayer/flowplayer.min.js"></script>
+	<link href="video-js.css" rel="stylesheet" type="text/css">
+    <script src="video.js"></script>
 </head>
 <style type="text/css">
 .breadcrumb > li + li:before {
@@ -30,15 +29,11 @@ h5{
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 }
-.first video{
-	margin:0 17%;
-	width: 56%;
-	height: 300px;
-}
-.first img{
+
+/*.first img{
 	width: 100%;
 	height: 300px;
-}
+}*/
 .video{
 	margin-top: 10px;
 	float: left;
@@ -54,16 +49,20 @@ h5{
 }
 
 .wenzi{
-	width: 113px;
-	margin-top: 30px;
+	float: left;
+	width: 90px;
+	margin-top: 80px;
 	margin-left: 30px;
 }
-video{
-	padding-left: 20px;
-}
 
+.first_video{
+	margin-top: 20px;
+	margin-left: 20%;
+}
 }
 </style>
+<script>
+</script>
 <ol class="breadcrumb">
 	<li>
 		<a href="#"><?php echo Yii::$app->params['title']['home'][$language];?></a>
@@ -74,26 +73,27 @@ video{
 </ol>
 <div class="first">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
-	<video controls=""  src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>"  
-			poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>" data-setup="{}">
-		<source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type="video/mp4"/>
-	</video>
-
+	<div class="first_video">
+		<video   width="600" height="333" class="video-js vjs-default-skin" controls preload="none" 
+	      	poster="http://120.27.99.112/public/uploads/video_cover/14562861315314.jpg"
+	      	data-setup="{}">
+		    <source src="http://120.27.99.112/public/uploads/video/14562911942413.mp4" type='video/mp4' />
+		  </video>
+	</div>
+	 
 	<div class="clearfix"></div>
 </div>
 
 <div class="seond">
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['qiteshipin'][$language];?></h5>
-	<?php for($i=1;$i<7;$i++){?>
+	<?php for($i=1;$i<count($videos);$i++){?>
 	<div class="video ">
 		<div class="pull-left">
-			<video
-				style='width:218px;height:167px;'
-			    controls=""
-			    src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" 
-				poster="/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>" data-setup="{}">
-				<source src="/public/uploads/video/<?php echo $videos[$i]->video_filename;?>" type="video/mp4"/>
-			</video>
+		 <video   width="350" height="187" class="video-js vjs-default-skin" controls preload="none" 
+	      	poster="http://120.27.99.112/public/uploads/video_cover/14562861315314.jpg"
+	      	data-setup="{}">
+		    <source src="http://120.27.99.112/public/uploads/video/14562911942413.mp4" type='video/mp4' />
+		 </video>
 		</div>
 		<div class="pull-left wenzi">
 			<a href="/frontend/web/index.php?r=video/index2&id=<?php echo $videos[$i]->video_id;?>">

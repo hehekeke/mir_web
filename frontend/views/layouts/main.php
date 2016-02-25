@@ -11,15 +11,14 @@ use frontend\widgets\Alert;
 
 AppAsset::register($this);
 ?>
-<?php $this->
-beginPage() ?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /> -->
 <meta name="renderer" content="ie-stand">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
 <meta charset="<?= Yii::$app->charset ?>">
 
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
@@ -235,7 +234,7 @@ $glo =new GlobalFunc();
         }
 
         .logo img{
-            width: 100%;
+            width: 108%;
             margin-bottom: 0px;
         }
         .daohang{
@@ -340,17 +339,13 @@ $glo =new GlobalFunc();
         </ul>
     </nav>
         <?php $this->beginBody() ?>
-                <?= Breadcrumbs::widget([
-            'links' =>
-                isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-                <?= Alert::widget() ?>
+              
                 <?= $content ?>
         <div class="clearfix "></div>
        <div class="end _pc"></div>
        <div class="_pc">
         <table class=' text-center' width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
-            <tr>
+            <!-- <tr>
                 <td height="30" align="center">
                     <a href="about1.asp">MIR医学仪器与试剂网</a>
                     &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -364,7 +359,7 @@ $glo =new GlobalFunc();
                     &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="about6.asp">免责声明</a>
                 </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td height="30" align="center">
                     <a href="#">Copyright &copy;2016&nbsp;天津市讯星科技发展广告有限公司</a>
@@ -386,7 +381,8 @@ $glo =new GlobalFunc();
         <!-- 友情链接 -->
         
 
-    <?php $this->endBody() ?></body>
+    <?php $this->endBody() ?>
+</body>
     <script>
         $(function () {
             $(".yingwen").click(function(){
