@@ -16,7 +16,8 @@ use \backend\assets\UploadAsset;
  * <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false'])?>
  * 
  * 指定上传文件夹 classify :产品图片=>'product',文章图片=>'art','视频文件'=>'video',杂志图片=>'mgz'
- * 						  友情链接=>'friendlink',视频封面=>'video_cover',mir_360专访=>'360'
+ * 						  友情链接=>'friendlink',视频封面=>'video_cover',mir_360专访=>'360',
+ * 						  广告图片=>'ad'
  */
 class Uploadify extends Widget {
 
@@ -63,7 +64,7 @@ class Uploadify extends Widget {
 	public function run()
 	{
 		/** 不同类目文件存在目录，根据classify生成真实具体的路径 */
-		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink','ivd'=>'360','video_cover'=>'video_cover'];
+		$category = ['article'=>'art','product'=>'pro','video'=>'video','mgz'=>'mgz','friendlink'=>'friendlink','ivd'=>'360','video_cover'=>'video_cover','ad'=>'ad'];
 		$view = $this->getView();
 
 		$view->registerCssFile(Yii::getAlias('@pluginPath').'/uploadify/uploadify.css',['position' => \yii\web\View::POS_HEAD]);
