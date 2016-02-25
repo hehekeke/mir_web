@@ -75,9 +75,9 @@ h5{
 	<h5>|&nbsp;&nbsp;<?php echo Yii::$app->params['title']['tebietuijian'][$language];?></h5>
 	<div class="first_video">
 		<video   width="600" height="333" class="video-js vjs-default-skin" controls preload="none" 
-	      	poster="http://120.27.99.112/public/uploads/video_cover/14562861315314.jpg"
+	      	poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>"
 	      	data-setup="{}">
-		    <source src="http://120.27.99.112/public/uploads/video/14562911942413.mp4" type='video/mp4' />
+		    <source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type='video/mp4' />
 		  </video>
 	</div>
 	 
@@ -90,9 +90,9 @@ h5{
 	<div class="video ">
 		<div class="pull-left">
 		 <video   width="336" height="187" class="video-js vjs-default-skin" controls preload="none" 
-	      	poster="http://120.27.99.112/public/uploads/video_cover/14562861315314.jpg"
+	      	poster="/public/uploads/video_cover/<?php echo $videos[0]->video_cover;?>"
 	      	data-setup="{}">
-		    <source src="http://120.27.99.112/public/uploads/video/14562911942413.mp4" type='video/mp4' />
+		    <source src="/public/uploads/video/<?php echo $videos[0]->video_filename;?>" type='video/mp4' />
 		 </video>
 		</div>
 		<div class="pull-left wenzi">
