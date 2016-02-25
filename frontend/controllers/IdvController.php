@@ -33,6 +33,8 @@ class IdvController extends CommonController
     	$jobs = $articleModel->articleToIndex(5);
         //技术分享
         $jishus = $articleModel->articleToIndex(3);
+        
+
         $productModel = new MirProduct();
 
         //ivd 四个图
@@ -46,16 +48,17 @@ class IdvController extends CommonController
             $mainClassId[] = $k;
         }
         for ($i=0; $i < count($mainClassId)-1; $i++) { 
-            $products[] = MirProduct::find()->where(['product_mainclass'=>$mainClassId[$i]])->orderBy("product_id desc")->all();
+            $products[] = MirProduct::find()->where(['product_mainclass'=>$mainClassId[$i]])->orderBy("product_rank desc,product_id desc")->limit(9)->all();
             $data = $productModel->find()->where(["product_mainclass"=>$mainClassId[$i]]);
             $pages = new Pagination(['totalCount'=>$data->count(), 'pageSize' => '10']);
-            $dataShow = $data->offset($pages->offset)->limit($pages->limit)->orderBy("product_id desc")->all();
+            $dataShow = $data->offset($pages->offset)->limit($pages->limit)->orderBy("product_rank desc,product_id desc")->all();
             $pagesArray[] = $pages;
             $productArray[] = $dataShow;
             
         }
+        // p(count($products[1]));
         // p($pagesArray);
-        // p($mainClass);
+        // p($productArray);
         $mainClass = array_values($mainClass);
         return $this->render('index',[
         	'dafenlei'=>$dafenlei,

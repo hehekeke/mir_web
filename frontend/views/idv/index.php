@@ -39,6 +39,7 @@ a{
 	width: 12.5%;
 }
 .col-sm-5 img{
+	border: 1px solid #dddddd;
 	width: 101%;
 	height: 147px;
 }
@@ -244,31 +245,15 @@ a{
 	});
 </script>
 <div class="row second _pc">
-	<div class="00">
-		<div class="col-sm-1 col-md-2">
-		<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-		</div>
-
-		<div class="col-sm-1 col-md-2">
-			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-		</div>
-
-		<div class="col-sm-1 col-md-2">
-			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-		</div>
-		<div class="col-sm-1 col-md-2">
-			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-		</div>
-
-		<div class="col-sm-1 col-md-2">
-			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_17.png'>
-		</div>
-		<div class="col-sm-1 col-md-2">
-			<img class="panel panel-default" src='/public/frontend/img/IVD展厅一级页面-01_18.png'>
-		</div>
+<?php for($i=0;$i<count($products);$i++){?>
+	<div class="<?php echo $i;?><?php echo $i;?>">
+		<?php for($j=3;$j<9;$j++){?>
+			<div class="col-sm-1 col-md-2">
+			<img class="panel panel-default" src='/public/uploads/pro/<?php echo $products[$i][$j]->product_pic;?>'>
+			</div>
+		<?php }?>
 	</div>
-	
-
+<?php }?>
 
 </div>
 <!-- 下面八个图形 -->
