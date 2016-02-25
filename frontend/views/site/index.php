@@ -314,10 +314,19 @@ $glo =new GlobalFunc();
                 </span>
             </div>
             <div class='img-r' style="height: 408px;">
-                <?php for($i=1;$i<count($videos);$i++){?>
+                <!-- <?php for($i=1;$i<count($videos);$i++){?>
                     <img src='/public/uploads/video_cover/<?php echo $videos[$i]->video_cover;?>'>
                     
-               <?php }?>
+               <?php }?> -->
+                <img src='/public/frontend/img/首页-01_20.png'>
+                <img src='/public/frontend/img/首页-01_22.png'>
+                <img src='/public/frontend/img/首页-01_24.png'>
+                <img src='/public/frontend/img/首页-01_28.png'>
+                <img src='/public/frontend/img/首页-01_29.png'>
+                <img src='/public/frontend/img/首页-01_30.png'>
+                <img src='/public/frontend/img/首页-01_34.png'>
+                <img src='/public/frontend/img/首页-01_35.png'>
+                <img src='/public/frontend/img/首页-01_36.png'>
             </div>
             <div class="tab-pane active tab-content-one guangaowei" id="home">广告位</div>
         </div>
