@@ -299,7 +299,7 @@ a{
 				<div class='pull-left'>
 					<?php for($i=0;$i<count($jishus);$i++){?>
 					<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $jobs[$i]->article_id;?>">
-						<h4>&bull;<?php echo $glo->enOrCh($jishus[$i],'article_title','30'); ?></h4>
+						<h4 style="font-size: 14px;">&bull;<?php echo $glo->enOrCh($jishus[$i],'article_title'); ?></h4>
 					</a>
 				<?php }?>
 				</div>
@@ -319,7 +319,7 @@ a{
 				<div class='pull-left'>
 				<?php for($i=0;$i<count($jobs);$i++){?>
 					<a href="/frontend/web/index.php?r=job/index2&id=<?php echo $jobs[$i]->article_id;?>">
-						<h4>&bull;<?php echo $glo->enOrCh($jobs[$i],'article_title'); ?></h4>
+						<h4 style="font-size: 14px;">&bull;<?php echo $glo->enOrCh($jobs[$i],'article_title'); ?></h4>
 					</a>
 				<?php }?>
 				</div>
