@@ -39,7 +39,7 @@ class MirArticle extends \backend\models\MirBase
         return [
             [['article_istop','article_rank'], 'integer'],
             [['article_date'], 'safe'],
-            [['article_contents', 'article_contents_e'], 'string'],
+            [['article_contents', 'article_contents_e','article_source'], 'string'],
             [['article_title',  'article_class', 'article_makerid', 'article_pic', 'article_zy'], 'string', 'max' => 255]
         ];
     }
@@ -56,6 +56,7 @@ class MirArticle extends \backend\models\MirBase
             'article_class' => Yii::t('app', '文章类别'),
             'article_date' => Yii::t('app', '发布日期'),
             'article_rank' => Yii::t('app', '文章排序'),
+            'article_source' => Yii::t('app', '文章来源'),
             'article_contents' => Yii::t('app', '文章内容'),
             'article_contents_e' => Yii::t('app', '文章内容英文'),
             'article_istop' => Yii::t('app', '是否置顶'),

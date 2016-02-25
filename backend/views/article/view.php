@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'article_istop',
             'article_makerid',
             'article_pic',
+            'article_source',
             'article_zy',
         ],
     ]) ?>

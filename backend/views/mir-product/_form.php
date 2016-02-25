@@ -39,6 +39,8 @@ use backend\widget\Uploadify;
                                 <?= $form->field($model, 'product_price')->textInput(['placeholder'=>'默认值价格0显示为“面议”']) ?>
                                 
                                 <?= $form->field($model, 'product_tui')->radioList(['1'=>'是','0'=>'否']) ?>
+
+                                <?= $form->field($model, 'product_rank')->textInput(['placeholder'=>'产品排序序号，用户前端显示']) ?>
                                 
                                 <?= $form->field($model, 'product_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
 

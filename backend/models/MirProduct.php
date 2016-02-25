@@ -52,7 +52,7 @@ class MirProduct extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_id', 'product_disp'], 'integer'],
+            [['product_id', 'product_disp','product_rank'], 'integer'],
             [['product_price'], 'number'],
             [['product_standards', 'product_standards_e', 'product_model', 'product_model_e', 'product_performance', 'product_performance_e', 'product_parameter', 'product_parameter_e', 'product_contrast', 'product_contrast_e', 'product_appraise', 'product_appraise_e'], 'string'],
             [['product_name', 'product_name_e', 'product_date', 'product_class', 'product_place', 'product_place_e', 'product_pic', 'product_mainclass', 'product_brand', 'product_tui', 'product_maker'], 'string', 'max' => 255]
@@ -91,6 +91,7 @@ class MirProduct extends \yii\db\ActiveRecord
             'product_tui' => '推荐产品',
             'product_maker' => '生产厂商',
             'product_disp' => 'Product Disp',
+            'product_rank' => '排序',
         ];
     }
     /**

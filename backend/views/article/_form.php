@@ -41,6 +41,8 @@ use backend\widget\Uploadify;
 
                                 <?= $form->field($model, 'article_rank')->textInput(['maxlength' => true]) ?>
 
+                                <?= $form->field($model, 'article_source')->textInput() ?>
+
                                 <?= $form->field($model, 'article_pic')->textInput(['id'=>'pic','readonly'=>true]) ?>
 
                                 <?= Uploadify::widget(['targetId'=>'pic','multi'=>'false','classify'=>'article'])?>
