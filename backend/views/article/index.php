@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'article_class',
+                                'headerOptions' => ['width' => '90'],
                                 'filter'=>$classify,
                                 'value'=>function($data){
 
@@ -41,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             ],
                             [
                                 'attribute'=>'article_date',
-                                'headerOptions' => ['width' => '160'],
+                                'headerOptions' => ['width' => '120'],
                                 'value'=>function($data){
                                     return date('Y/m/d',strtotime($data->article_date));
                                 }
@@ -61,6 +62,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'value'=>function($data){
                                     return ($data->article_istop == 0)?'否':'是';
                                 }
+                            ],
+                            [
+                                'attribute'=>'article_source',
+                                'headerOptions'=>['width'=>100]
                             ],
                             'article_rank',
                             [

@@ -56,6 +56,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                 }
                             ],
                             [
+                                'attribute'=>'product_rank',
+                                'headerOptions'=>['width'=>50]
+                            ],
+                            [
                                 'attribute'=>'product_mainclass',
                                 'headerOptions'=>['width'=>90],
                                 'filter'=>$mainClass,

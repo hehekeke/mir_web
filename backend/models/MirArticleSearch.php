@@ -19,7 +19,7 @@ class MirArticleSearch extends MirArticle
     {
         return [
             [['article_id', 'article_istop','article_rank'], 'integer'],
-            [['article_title', 'article_titile_e', 'article_class', 'article_date', 'article_contents', 'article_contents_e', 'article_makerid', 'article_pic', 'article_zy'], 'safe'],
+            [['article_title', 'article_source','article_titile_e', 'article_class', 'article_date', 'article_contents', 'article_contents_e', 'article_makerid', 'article_pic', 'article_zy'], 'safe'],
         ];
     }
 
@@ -70,6 +70,7 @@ class MirArticleSearch extends MirArticle
             ->andFilterWhere(['like', 'article_makerid', $this->article_makerid])
             ->andFilterWhere(['like', 'article_pic', $this->article_pic])
             ->andFilterWhere(['like', 'article_zy', $this->article_zy])
+            ->andFilterWhere(['like', 'article_source', $this->article_source])
             ->orderBy("article_id desc");
 
         return $dataProvider;
