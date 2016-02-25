@@ -57,7 +57,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                     return date('Y/m/d',strtotime($data->mir360_date));
                                 }
                             ],
-
+                            // 'mir360_rank',
+                            [
+                                'attribute'=>'mir360_rank',
+                                'headerOptions'=>['width'=>60]
+                            ],
                             // 'mir360_remark:ntext',
                             // 'mir360_remark_e:ntext',
                             // 'mir360_company',

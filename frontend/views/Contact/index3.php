@@ -104,41 +104,31 @@ a{
 	</li>
 </ol>
 
+
 <ul class="list-group pull-left">
-	<a href="/frontend/web/index.php" class="list-group-item"><p class="text-center">医学仪器与试剂网</p></a>
-	<a href="/frontend/web/index.php?r=contact/index3" class="list-group-item"><p class="text-center">服务指南</p></a>
-	<a href="/frontend/web/index.php?r=contact/index2" class="list-group-item"><p class="text-center">广告服务指南</p></a>
-	<a href="/frontend/web/index.php?r=contact/index4" class="list-group-item"><p class="text-center">学术投稿</p></a>
-	<a href="/frontend/web/index.php?r=contact/index" class="list-group-item active"><p class="text-center">联系我们</p></a>
-	<a href="/frontend/web/index.php?r=contact/index5" class="list-group-item"><p class="text-center">免责声明</p></a>
+    <a href="/frontend/web/index.php" class="list-group-item"><p class="text-center">医学仪器与试剂网</p></a>
+    <a href="/frontend/web/index.php?r=contact/index3" class="list-group-item active"><p class="text-center">服务指南</p></a>
+    <a href="/frontend/web/index.php?r=contact/index2" class="list-group-item"><p class="text-center">广告服务指南</p></a>
+    <a href="/frontend/web/index.php?r=contact/index4" class="list-group-item"><p class="text-center">学术投稿</p></a>
+    <a href="/frontend/web/index.php?r=contact/index" class="list-group-item "><p class="text-center">联系我们</p></a>
+    <a href="/frontend/web/index.php?r=contact/index5" class="list-group-item"><p class="text-center">免责声明</p></a>
 </ul>
 <div class="pull-left wenzi _pc">
 	<h3>联系我们</h3>
-	<address>
-		<p>尊敬的用户您好：</p>
+    <div>
+        服务指南
 
-		<p class="text-justify">欢迎浏览MIR医学仪器与试剂网！您有任何关于网站信息或网络问题，欢迎垂询！</p>
-		<p>热线电话：022-23593650/51转客服部</p>
-		<p>传真号码：022-23593656</p>
-		<p>
-			电子邮箱：mir@mir168.com 	&nbsp;	&nbsp;	&nbsp;mir-c.s.d@mir168.com
-		</p>
+      MIR网站为开放式网站，注册会员可无条件浏览到网站内所有共享信息。当您注册成为MIR的会员后，您可以享受到：
+      1.    浏览MIR 为您提供的最全面、最丰富的业内信息。
+      2.    利用方便的站内搜索查找到检验医学行业各类仪器设备、试剂等产品，并了解到产品的厂家、参数、价格等，方便比对。
+      3.    进入MIR的市场论坛，参与最热门的市场话题，并能了解到权威人士的独到见解。
+      4.     进入互动端口，进行工作求助，得到别人的帮助并能利用经验帮助别人。
+      5.    进入MIR行业新闻版块，浏览全球检验医学的最新时讯。
+      6.    在厂商专栏内得到厂家全面的产品说明和售后支持。
+      7.    利用MIR广告服务得到更多的商业机会。
+      8.    利用MIR最全面的行业相关链接，方便进行相关浏览。
+    </div>
 
-	</address>
 </div>
-<!-- <div class="pull-left wenzi _m">
-	<h3>联系我们</h3>
-	<address>
-		<p>尊敬的用户您好：</p>
 
-		<p class="text-justify">欢迎浏览MIR医学仪器与试剂网！<br/>
-		您有任何关于网站信息或网络问题，欢迎垂询！</p>
-		<p>热线电话：022-23593650/51转客服部</p>
-		<p>传真号码：022-23593656</p>
-		<p>
-			电子邮箱：mir@mir168.com 	&nbsp;	&nbsp;	&nbsp;mir-c.s.d@mir168.com
-		</p>
-
-	</address>
-</div> -->
 <div class="clearfix"></div>

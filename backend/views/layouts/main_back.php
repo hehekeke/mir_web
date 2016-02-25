@@ -200,6 +200,17 @@ beginPage() ?>
                         </li> -->
                         <li class="nav-item">
                             <a href="#">
+                                <span class="glyphicon glyphicon-bullhorn" ></span>
+                                广告管理
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['ad/index'])?>">列表</a></li>
+                                <li><a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['ad/create'])?>">添加广告</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
                                 <span class="glyphicon glyphicon-lock"></span>
                                 友情链接管理
                                 <span class="fa arrow"></span>

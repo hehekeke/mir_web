@@ -10,7 +10,6 @@ $path = $_POST['path'];
 $targetFolder = '/public/uploads/'.$path; // Relative to the root
 
 if (!empty($_FILES)) {
-	
 	$tempFile = $_FILES['Filedata']['tmp_name'];
 	$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
 	// Validate the file type

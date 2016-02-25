@@ -19,14 +19,43 @@ use frontend\controllers\CommonController;
 class ContactController extends CommonController
 {
     
-
+	//联系我们
     public function actionIndex()
     {
         // p(111);
         $this->layout='about.php';
         return $this->render('index');
     }
+    //广告服务指南
+     public function actionIndex2()
+    {
+        // p(111);
+        $this->layout='about.php';
+        return $this->render('index2');
+    }
+    //服务指南
+     public function actionIndex3()
+    {
+        // p(111);
+        $this->layout='about.php';
+        return $this->render('index3');
+    }
 
+
+     //学术投稿
+     public function actionIndex4()
+    {
+        // p(111);
+        $this->layout='about.php';
+        return $this->render('index4');
+    }
+    //免责声明
+     public function actionIndex5()
+    {
+        // p(111);
+        $this->layout='about.php';
+        return $this->render('index5');
+    }
 }
 
     
