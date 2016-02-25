@@ -89,7 +89,7 @@ h5{
 	<?php for($i=1;$i<count($videos);$i++){?>
 	<div class="video ">
 		<div class="pull-left">
-		 <video   width="350" height="187" class="video-js vjs-default-skin" controls preload="none" 
+		 <video   width="336" height="187" class="video-js vjs-default-skin" controls preload="none" 
 	      	poster="http://120.27.99.112/public/uploads/video_cover/14562861315314.jpg"
 	      	data-setup="{}">
 		    <source src="http://120.27.99.112/public/uploads/video/14562911942413.mp4" type='video/mp4' />
