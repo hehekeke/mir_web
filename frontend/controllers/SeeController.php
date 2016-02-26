@@ -25,6 +25,7 @@ class SeeController extends CommonController
         $pinpaililiang = $ivdModel->getIvdlist(1);
         $zhuanjiazhuanlan = $ivdModel->getIvdlist(4);
         $linchuangyixues = $ivdModel->getIvdlist(3);
+        
         // p($zhutizhuanfang);
         return $this->render('index',[
             'zhutizhuanfang'=>$zhutizhuanfang,

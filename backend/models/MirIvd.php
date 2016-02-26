@@ -68,7 +68,7 @@ class MirIvd extends \backend\models\MirBase
         if(empty($type)){
             $type = array("1","2","3");
         }
-        $list = $this->find()->select("*")->where(["mir360_class"=>$type])->orderBy('mir360_id desc')->limit(5)->all();
+        $list = $this->find()->select("*")->where(["mir360_class"=>$type])->orderBy('mir360_rank desc,mir360_id desc')->limit(5)->all();
         return $list;
     }
 }
