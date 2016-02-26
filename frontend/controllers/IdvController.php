@@ -15,6 +15,7 @@ use frontend\controllers\CommonController;
 use backend\models\MirIvd;
 use backend\models\MirProduct;
 use backend\models\MirBrand;
+use backend\models\MirAd;
 
 use yii\data\Pagination;
 /**
@@ -37,8 +38,11 @@ class IdvController extends CommonController
 
         $productModel = new MirProduct();
 
-        //ivd 四个图
-        $fourPic = $productModel->find()->andWhere(["!=","product_pic","productnopic.gif"])->orderBy("product_id desc")->limit(4)->all();
+        //ivd 五个广告图
+        $adModel = new MirAd();
+        $ads = $adModel->find()->orderBy("ad_rank desc,id desc")->limit(5)->all();
+        // p($ads);
+
         // p($fourPic);
         // P($ivdList);
         // p(count($ivdList));
@@ -69,7 +73,7 @@ class IdvController extends CommonController
             'products'=>$products,
             'productArray'=>$productArray,
             'pagesArray'=>$pagesArray,
-            'fourPic'=>$fourPic,
+            'ads'=>$ads,
         ]);
     }
 

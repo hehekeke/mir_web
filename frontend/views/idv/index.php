@@ -17,7 +17,7 @@ $glo =new GlobalFunc();
 }
 .idv_topImg img{
 	width: 100%;
-	height: 182px;
+	height: 360px;
 	border: 1px solid #dddddd;
 }
 a{
@@ -170,39 +170,39 @@ a{
 	</li>
 </ol>
 <script type="text/javascript">
-	$(function(){
-		var i = 0;
-		$(".banner span:eq(0)").hide();
-        setInterval(function(){
-            $("#big").attr("src",$(".banner img:eq("+i+")").attr("src"));
-            $(".banner span").show();
-            $(".banner span:eq("+i+")").hide();
-            if(i==4){
-                 i=0;
-            }else{
-                i++;
-            }
-        },3000);
-		$(".xiaminsigetu div").click(function(){
-			$(".xiaminsigetu").find("span").show();
-			var src = $(this).find("img").attr("src");
-			$(this).find("span").hide();
-			$("#big").attr("src",src);
-		});
-		$(".btn-group button:eq(0)").addClass("jihuo");
-	})
+	// $(function(){
+	// 	var i = 0;
+	// 	$(".banner span:eq(0)").hide();
+ //        setInterval(function(){
+ //            $("#big").attr("src",$(".banner img:eq("+i+")").attr("src"));
+ //            $(".banner span").show();
+ //            $(".banner span:eq("+i+")").hide();
+ //            if(i==4){
+ //                 i=0;
+ //            }else{
+ //                i++;
+ //            }
+ //        },3000);
+	// 	$(".xiaminsigetu div").click(function(){
+	// 		$(".xiaminsigetu").find("span").show();
+	// 		var src = $(this).find("img").attr("src");
+	// 		$(this).find("span").hide();
+	// 		$("#big").attr("src",src);
+	// 	});
+	// 	$(".btn-group button:eq(0)").addClass("jihuo");
+	// })
 </script>
 <div class='idv_topImg _pc '>
-	<img id='big' src='/public/uploads/pro/<?php echo $fourPic[0]->product_pic;?>'>
+	<img id='big' src='/public/uploads/ad/<?php echo $ads[0]->ad_picture;?>'>
 </div>
 <div class="row xiaminsigetu _pc">
-	<?php for ($i=0; $i < 4 ; $i++) { 
+	<?php for ($i=1; $i < 5 ; $i++) { 
 		
 	?>
 	<div class="col-sm-6 col-md-3">
 		<div  class=" banner">
-			<img src='/public/uploads/pro/<?php echo $fourPic[$i]->product_pic;?>'>
-			<span class="title"><?php echo $fourPic[$i]->product_name;?></span>
+			<img src='/public/uploads/ad/<?php echo $ads[$i]->ad_picture;?>'>
+			<!-- <span class="title"><?php echo $fourPic[$i]->product_name;?></span> -->
          </div>
 	</div>
 	<?php }?>
